@@ -420,6 +420,9 @@ text-transform: capitalize; line-height: 100%;}
     
 }
 @media only screen and (max-width: 767px) and (min-width: 200px) {
+    .white-dots ul.slick-dots li button {background: var(--white);}
+    .white-dots ul.slick-dots li.slick-active button {background-color: var(--teal);}
+    
   .hide-in-mobile {display: none;}
   .container, .container-lg {padding: 0 24px; max-width: 100%;}
     #mainContent {padding: 72px 0 0 0;}
