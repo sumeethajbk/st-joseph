@@ -1,0 +1,27 @@
+@import url("../css/default-page.css");
+@import url("../css/_patient-staff-stories.css");
+@import url("../css/_meet-our-donors.css");
+@import url("../css/_financial-statements.css");
+@import url("../css/_micro-cta.css");
+@import url("../css/_stats-module.css");
+
+.repeater-bg {height: calc(100% - 90.95%);}
+.ps-bg {background: var(--elevated);}
+
+.general-default-container {padding: 80px 0 119px 0;}
+
+.meet-our-donors {padding: 0 0 15px 0;}
+.meet-donors-bg {background: var(--elevated); height: 100%;}
+.meet-donors-main::after {display: none;}
+
+/*-- media css starts here --*/
+@media only screen and (max-width: 1023px) and (min-width:200px){
+	    .repeater-bg {background: var(--white);}
+
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+	.general-default-container {padding: 64px 0;}
+    .patient-staff-main {padding: 64px 0 28px 0;}
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+}

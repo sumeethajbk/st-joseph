@@ -1,0 +1,76 @@
+/* Banner */
+.split-banner-section {clear: both; width: 100%; position: relative; overflow: hidden; min-height: 512px;}
+.split-banner-section .container {max-width: 100%; padding-right: 0;}
+.split-banner-main .split-banner-text {clear: both;  padding: 40px 55px 40px 64px;  position: relative; width: 33.33333333333333%; display: flex;
+  height: 100%; flex-wrap: wrap; align-items: center;}
+.split-banner-main .split-banner-text .split-txt-inner {max-width: 361px; margin-left: auto;}
+.split-banner-main .split-banner-text .split-banner-bg {background: var(--optionaltxt); height: 1000%; width: 1000%; display: block; right: 0; top: -100%; z-index: -1;}
+.split-banner-main .split-banner-text h1 {color: var(--white); font-size: 40px; font-weight: 500; letter-spacing: -0.8px; margin-bottom: 32px;}
+.split-banner-main .split-banner-text h1 span {color: var(--link);}
+.split-banner-main .split-banner-text .optional-text {color: var(--link); margin-bottom: 24px;}
+.split-banner-main .split-banner-text p {font-size: 1.125rem; margin-bottom:32px; line-height: 1.44; color:var(--white); font-weight: 400;}
+.split-banner-main .split-banner-text hr.small {background: var(--optionaltxt);}
+.split-banner-main .split-banner-text .button.btn-white {color: var(--linkhover);}
+
+.split-banner-main .contact-links {margin: 0;}
+.split-banner-main .contact-links li {margin-bottom: 9px; display: block; width: 100%;}
+.split-banner-main .contact-links li:last-child {margin-bottom: 0;}
+.split-banner-main .contact-links li:before {display: none;}
+.split-banner-main .contact-links li i {font-size: 20px; line-height: 100%; color: var(--linkhover); letter-spacing:normal; font-weight: 400;  position: absolute; left: 0; top:3px; width: 20px; text-align: center;}
+.split-banner-main .contact-links li a {line-height: 100%; font-size: 20px; font-weight: 500; color: var(--link); letter-spacing: -0.4px; padding-left: 30px; display: inline-block;}
+.split-banner-main .contact-links li a:hover {color: var(--linkhover);}
+
+.split-banner-main .split-banner-thumb {width:66.66666666666666%; position: relative; display: flex; flex-wrap: wrap; height: 100%;}
+.split-banner-main .split-banner-thumb .contact-img:after {background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display:block;}
+.split-banner-main .split-banner-thumb .contact-img {display: flex; flex-wrap: wrap; height: 100%; width: 100%;}
+
+
+
+
+/*-- media css starts here --*/
+@media only screen and (max-width: 1400px){
+    .split-banner-main .split-banner-text {padding: 64px 34px 60px 0;}
+}
+
+@media only screen and (max-width: 1199px) and (min-width:1024px){
+    .split-banner-main .split-banner-text {width: 38.333%;}
+    .split-banner-main .split-banner-thumb {width: 61.667%;}
+}
+
+@media only screen and (max-width: 1140px) and (min-width:1024px){
+    .members-grid, .members-grid:nth-child(3n+1) {width: 47.829%; margin: 26px 0 0 3.0534351145038165%;}
+    .members-grid:nth-child(2n+1) {margin-left: 0;}
+}
+
+@media only screen and (min-width: 1024px){
+.split-banner-main {align-items: center; height: 512px;}
+}
+
+@media only screen and (max-width: 1023px) and (min-width:768px){
+    .split-banner-main .split-banner-thumb .contact-img {height: 512px;}
+    .split-banner-main .split-banner-text {padding:40px 40px 36px 40px;}
+    .split-banner-main .split-banner-text h1 {margin-bottom: 23px;}
+    .split-banner-main .split-banner-text hr.small {margin: 20px 0 21px;}
+
+}
+
+
+
+@media only screen and (max-width: 1023px) and (min-width:200px){
+    .split-banner-section .container {padding: 0;}
+    .split-banner-main {flex-direction: column-reverse;}
+    .split-banner-main .split-banner-thumb {width: 100%; overflow: hidden; position: relative;}
+    .split-banner-main .split-banner-thumb .contact-img {position: inherit; width: 100%;}
+    .split-banner-main .split-banner-text {width: 100%; padding:40px 40px 36px 40px;}
+    .split-banner-main .split-banner-text .split-txt-inner {max-width: 100%;}
+
+    
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .split-banner-main .split-banner-thumb .contact-img {height: inherit;}
+    .split-banner-main .split-banner-text {padding:32px 32px 28px 32px;}
+    .split-banner-main .split-banner-text h1 {font-size: 32px; line-height: 125%; letter-spacing: -0.64px; margin-bottom: 32px;}
+    .split-banner-main .split-banner-text .optional-text {margin-bottom: 23px;}
+    
+
+}

@@ -1,0 +1,64 @@
+.campaign-access-request {clear: both; width: 100%; position: relative;}
+.car-main {justify-content: space-between; position: relative;}
+
+.car-lt {background: var(--linkhover); width: 50%; flex-grow: 1; display: flex; align-items: center; padding: 80px 80px 80px 0; flex-wrap: wrap; justify-content: center;}
+.car-lt:before {content: ""; background: var(--linkhover); position: absolute; left: -1000%; top: 0; width: 1000%; height: 100%; display: block; z-index: -1;}
+.car-lt .e-anim-icon {width: 288px; height: 336px;}
+.car-lt .e-anim-icon img {width: 100%; height: 100%;}
+
+.car-rt {background: var(--elevated); width: 50%; flex-grow: 1; padding: 80px 0 80px 80px; position: relative;}
+.car-rt:before {content: ""; background: var(--elevated); position: absolute; right: -1000%; top: 0; width: 1000%; height: 100%; display: block; z-index: -1;}
+.car-rt h1 {font-size: 31.112px; line-height: 125%; letter-spacing: -0.622px; margin-bottom: 32px;}
+.car-rt h1 span {display: block; margin: 15px 0 0 0;}
+.car-rt h1 span img {max-height: 69px; width: auto;}
+.car-rt .car-intro > p { font-size: 14px; color: var(--linkhover); line-height: 150%;}
+.car-rt .car-intro .frm_forms .frm_submit {text-align: center;}
+.car-rt .default_form_dark {margin-top: 40px;}
+.car-rt .default_form_dark .frm_forms .frm_form_fields .frm_form_field{margin-bottom:24px;}
+.car-rt .default_form_dark .frm_forms .frm_form_fields textarea {min-height: 163px;}
+
+/*
+#mainContent {padding: 114px 0 0 0;}
+.main_header .header {padding: 25px 0;}
+*/
+
+/*-- media css starts here --*/
+@media only screen and (max-width: 1400px){
+    .car-lt {padding-right: 64px;}
+    .car-rt {padding-left: 64px;}
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+    .car-lt {padding-right: 40px;}
+    .car-rt {padding-left: 40px;}
+}
+
+@media only screen and (max-width: 1023px) and (min-width:768px){
+    
+    .car-lt {padding: 80px 0;}
+    .car-rt {padding: 80px 0;}
+}
+
+
+
+@media only screen and (max-width: 1023px) and (min-width:200px){
+    .campaign-access-request .container {}
+    .car-lt {width: 100%;}
+    .car-lt::before {left: -40px;}
+    .car-rt {width: 100%;}
+    .car-rt::before {right: -40px;}
+    
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+   .car-lt {padding: 104px 0;}
+    .car-lt .e-anim-icon {width: 156px; height: 182px;}
+    .car-rt {padding: 40px 0;}
+    .car-rt h1 span img {width: 340px; height: 43px;}
+    .car-rt h1 {margin-bottom: 31px;}
+    .car-rt .default_form_dark {margin-top: 41px;}
+
+}
+
+@media only screen and (max-width: 389px) and (min-width: 200px){
+   
+}

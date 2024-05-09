@@ -1,0 +1,31 @@
+.featured-initiative {clear: both; width: 100%; padding: 40px 0 40px; background: var(--mauve); color: var(--white);}
+.featured-initiative .featured-int {align-items: center; position: relative;}
+.featured-initiative p {font-size: 14px; line-height: 150%; margin-bottom: 1px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; text-overflow: ellipsis;}
+.featured-initiative .h5 {color: var(--white); margin-bottom: 11px; letter-spacing: -0.48px;}
+.featured-initiative .featured-line {position: absolute; left: 0; top: 0; width: 2px; height: 100%; display: block; background: var(--white);}
+.featured-initiative .featured-int-lt {width: 81.71875%; flex-grow: 1; padding:2px 0 0 24px;}
+
+.featured-initiative .featured-int-rt {width: calc(100% - 81.71875%); display: flex; justify-content: flex-end;}
+.featured-initiative .featured-int-rt .trans-btn:hover {color: var(--mauve);}
+
+/*-- media css starts here --*/
+@media only screen and (max-width:1280px) and (min-width: 1024px){
+}
+
+@media only screen and (max-width:1023px) and (min-width:200px){
+	
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .featured-initiative .featured-int-lt {width: 70%;}
+    .featured-initiative .h5 {margin-bottom: 8px;}
+    .featured-initiative .featured-int-rt {width: calc(100% - 70%);}
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .featured-initiative .featured-int-lt {width: 100%; padding: 0px 0 0 24px;}
+    .featured-initiative .featured-int-rt {width: 100%; justify-content: flex-start; margin: 24px 0 0 0; padding: 0px 0 0 24px;}
+    .featured-initiative {padding: 20px 0 20px;}
+    .featured-initiative .h5 {margin: -1px 0 8px 0;}
+    
+    
+}

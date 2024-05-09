@@ -1,0 +1,16 @@
+.accordion-module {clear: both; width: 100%; padding:36px 0 55px;}
+
+.accordion-item { position: relative; margin:0 0 23px 0; border-bottom: 1px solid var(--teal);}
+.accordion-item .content { display: none; padding: 5px 0 31px 0; line-height: 150%; font-size: 18px; font-weight: 400;}
+.accordion-main .accordion:last-child .accordion-item{margin-bottom: 0;}
+.accordion-item.active .accordion-heading::after { content: "\f00d"; color: var(--mauve); transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out;}
+.accordion-item .accordion-heading::after { content: "\2b"; font-family: 'Font Awesome 6 Pro'; font-style: normal; font-weight: 300; font-size: 24px; line-height:100%; color:var(--teal); right: 0; top: 20px; position: absolute; display: inline-block; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out;}
+.accordion-item .accordion-heading { display: block; line-height:150%; font-size: 18px; color: var(--linkhover); text-decoration: none; font-weight: 600; padding:20px 30px 20px 0; position: relative;}
+
+
+
+/*-- media starts here --*/
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .accordion-item .accordion-heading {padding: 15px 50px 17px 22px;}
+    .accordion-item .content {padding: 7px 22px 17px 22px;}
+}

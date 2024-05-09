@@ -1,0 +1,72 @@
+@import url("../css/_hero-banner.css");
+@import url("../css/_signup-module.css");
+@import url("../css/_short-intro-section.css");
+@import url("../css/_cta-module.css");
+@import url("../css/_stories-slider.css");
+@import url("../css/_gratitude-wall.css");
+@import url("../css/_patient-staff-stories.css");
+@import url("../css/_home-our-story.css");
+@import url("../css/_meet-our-donors.css");
+@import url("../css/_stats-module.css");
+
+.home .default-banner-main {min-height: 760px;}
+.home .default-banner-section .container {max-width: 1280px;}
+.home .default-banner-section .banner-bg:after {background-color: rgba(78, 75, 72, 0.35);}
+.home .default-banner-section .banner-bg:before{background: linear-gradient(180deg, rgba(19, 41, 75, 0.50) 0%, rgba(19, 41, 75, 0.00) 100%); content: ""; position: absolute; top: 0; left: 0; width: 100%; display: block; height: 104px; z-index: 1;}
+.home .default-banner-main .default-banner-text .default-banner-bg {display: none;}
+.home .default-banner-main .default-banner-text h1 {font-size: 64px; line-height: 125%; letter-spacing: -1.28px; margin-bottom: 33px;}
+.home .default-banner-main .default-banner-text .optional-text {color:rgba(255, 255, 255, 0.75); margin-bottom: 31px;}
+.home .default-banner-main .default-banner-text {max-width: 600px; padding: 80px 0; margin-top: auto;}
+.home .default-banner-main .default-banner-text .button {margin: 0 21px 0 0;}
+
+
+.cta-module {padding: 0 0 40px 0;}
+.cta-overlay {height: calc(100% - 51.6%); top: inherit; bottom: 0;}
+
+/*-- media css starts here --*/
+@media only screen and (max-width: 1280px) and (min-width:1024px){
+    .home .default-banner-main .default-banner-text {padding: 64px 0;}
+
+}
+
+@media only screen and (min-width:1024px){
+    #mainContent {padding: 0;}
+}
+
+@media (min-width:768px) {}
+
+
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .home .default-banner-main {min-height: 1024px;}
+    .home .default-banner-section .banner-bg {height: inherit; position: absolute;}
+    .home .default-banner-section .banner-bg img {object-position: 0 0;}
+    .home .default-banner-main .default-banner-text {padding: 64px 24px; max-width: 688px;}
+    .home .default-banner-main .default-banner-text h1 {font-size: 48px; line-height:125%; margin-bottom: 32px; letter-spacing: -0.96px;}
+    .home .default-banner-main .default-banner-text .optional-text {margin-bottom: 32px;}
+}
+
+@media only screen and (max-width: 1023px) and (min-width:200px){
+       .home .default-banner-section .banner-bg:after {display: block;}
+
+
+}
+
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .home .default-banner-main {min-height: inherit;}
+    .home .default-banner-main .default-banner-text .default-banner-bg {display: block; background-color: rgb(0, 156, 166);}
+    .home .default-banner-main .default-banner-text {padding: 32px 0; max-width: 100%;}
+    .home .default-banner-main .default-banner-text h1 {font-size: 32px; letter-spacing: -0.64px; line-height: 125%; margin-bottom: 25px;}
+    .home .default-banner-main .default-banner-text .optional-text {margin-bottom: 23px;}
+    .home .default-banner-main .default-banner-text .button {width: 100%; margin: 0 0 19px 0; background: var(--linkhover);}
+    .home .default-banner-main .default-banner-text .button:hover {color: var(--linkhover); background: var(--white);}
+    .home .default-banner-main .default-banner-text .btn-wrap {justify-content: center;}
+    .home .default-banner-section .banner-bg:after {background-color: rgba(157, 151, 154, 0.2);}
+    .home .default-banner-section .banner-bg:before {display: none;}
+    
+    
+    .cta-overlay {height: calc(100% - 19%);}
+}
+
+
+@media only screen and (max-width: 389px) {}

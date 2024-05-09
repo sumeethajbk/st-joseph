@@ -1,0 +1,29 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+	--white-15: rgb(255 255 255 / 15%);
+    --white-20: rgb(255 255 255 / 20%);
+    --white-50: rgb(255 255 255 / 50%);
+    --white-75: rgb(255 255 255 / 75%);
+    --dark: #2B2C2D;
+	--link: #00787F;
+    --linkhover: #13294B;
+    --teal: #00838B;
+    --tealborder:rgba(0, 156, 166, 0.30);
+    --lightwhite: #E5F5F7;
+    --optionaltxt: #009CA6;
+    --elevated: #e5f5f7;
+    --elevateddark: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #009CA6;
+    --lilictint: #f5f2f6;
+    --lilicdark: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #B07DB8;
+    --goldtint: #FEF9EE;
+    --gold: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #FFC72C;
+    --purple: #563E82;
+    --foreground: #4E4B48;
+    --green: #008945;
+    --mauve: #C53B6E;
+    --yellow: #FFC72C;
+    --lilac: #B07DB8;
+    --stone: #978B87
+    
+}

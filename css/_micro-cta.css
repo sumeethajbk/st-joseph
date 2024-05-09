@@ -1,0 +1,36 @@
+.micro-cta {clear: both; width: 100%; position: relative; margin:88px 0 56px 0;}
+.micro-cta .bg {background: var(--optionaltxt);}
+.micro-cta-lt{width: calc(100% - 406px); padding:40px; flex-grow: 1; }
+.micro-cta-lt .optional-text {color: var(--white); margin: 0 0 24px 0;}
+.micro-cta-lt {display: flex; flex-direction: column; align-items: flex-start; justify-content: center; height: 100%;}
+.micro-cta-lt .h4{line-height: 125%; letter-spacing: -0.64px; margin-bottom: 20px;}
+.micro-cta-lt p {font-size: 16px; line-height: 150%;}
+.micro-cta-btns .button {margin: 0 16px 0 0;}
+.micro-cta-btns .button:last-child {margin-right: 0;}
+.micro-cta-btns .readmore{color: var(--white);}
+.micro-cta-btns .readmore:after {color: var(--white);}
+
+.micro-cta-rt{width:350px; margin-left: 6.222222222222222%;}
+.micro-cta-img {width: 350px; position: absolute; z-index: 1; height: 350px; border-radius:50%; top: -17px; right: 40px;}
+.micro-cta-img img {border-radius: 50%; outline: 24px solid rgba(0, 131, 139, 0.20);}
+.micro-cta-img:after {background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display:block; border-radius: 50%;}
+
+
+
+/*-- media css starts here --*/
+@media only screen and (max-width:1280px) and (min-width: 1024px){
+}
+
+@media only screen and (max-width:1023px) and (min-width:200px){
+    .micro-cta-wrap {flex-direction: column-reverse;}
+    .micro-cta-lt .optional-text {margin:0 auto 24px auto;}
+    .micro-cta-lt {width: 100%; margin: 0; text-align: center;}
+    .micro-cta-rt {width: 100%; margin: 0;}
+    .micro-cta-img {position: relative; right: 0; left: 0;  margin: auto;}
+    .micro-cta-btns {justify-content: center;}
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    
+}

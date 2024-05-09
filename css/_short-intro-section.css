@@ -1,0 +1,45 @@
+.short-intro-section{ clear: both; width: 100%; z-index: 1; position: relative;}
+.short-intro-bg {left: 0; top: 0; width:100%; height: 100%; display: block; background: var(--white); z-index: -1;}
+.short-intro-wrap{padding:80px 0 76px;}
+
+.short-intro-lt {width: 46.875%; margin-right: 6.25%; flex-grow: 1;}
+.short-intro-lt .optional-text {margin: 0 0 24px 0;}
+.short-intro-lt h2 {font-size: 40px; line-height: 125%; letter-spacing: -0.8px;}
+
+.short-intro-rt {font-size: 18px; line-height: 150%; width: calc(100% - 53.125%); padding: 18px 0 0 0; flex-grow: 1;}
+.short-intro-row {justify-content: center; padding: 5px 0 0 0;}
+.short-intro-list {width: 21.71875%; margin: 4.375% 0 0 4.375%; display: inline-block; vertical-align: top;}
+.short-intro-list:nth-child(4n+1) {margin-left: 0;}
+.short-intro-list p {color: var(--linkhover); line-height: 150%; letter-spacing: -0.4px; font-size: 20px; font-family: 'Oswald', sans-serif; margin-bottom: 15px;}
+.short-intro-icon{display: block; margin-bottom: 20px; width: 80px; height: 80px;}
+
+.row-of-five .short-intro-list {width: 16.484375%;}
+.row-of-five .short-intro-list:nth-child(5n+1) {margin-left: 0;}
+
+
+/* media starts here */
+@media only screen and (max-width: 1280px) and (min-width: 1024px){
+    .short-intro-row {padding: 0; margin-top: -5px;} 
+
+    
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .short-intro-row {padding: 12px 0 0 0;}
+    .short-intro-wrap {padding:64px 0 60px;}
+    .short-intro-lt {width: 100%; margin: 0;}
+    
+    .short-intro-rt {width: 100%; padding: 13px 0 0 0;}
+    .short-intro-list, .short-intro-list:nth-child(4n+1) {width: 45.93023255813954%; margin: 7.55813953488372% 0 0 8.13953488372093%;}
+    .short-intro-list:nth-child(2n+1) {margin-left: 0;}
+    
+
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .short-intro-wrap {padding:40px 0 36px;}
+    .short-intro-lt {width: 100%; margin: 0;}
+    .short-intro-lt h2 {font-size: 32px; letter-spacing: -0.64px;}
+    
+    .short-intro-row {padding: 20px 0 0 0;}
+    .short-intro-rt {width: 100%; padding: 13px 0 0 0;}
+    .short-intro-list {width: 100%; margin: 44px 0 0 0;}
+}

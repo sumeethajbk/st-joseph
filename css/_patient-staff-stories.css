@@ -1,0 +1,48 @@
+.patient-staff-stories {position: relative; clear: both; width: 100%;}
+.patient-staff-main {width: 100%; padding:64px 0 78px 0; clear: both;}
+.ps-bg {bottom: 0; left: 0; display:block; width: 100%; height: 67.9%; background: var(--white);}
+.ps-lists {clear: both; font-size: 0; width: 100%; position: relative;}
+.ps-grid {display: inline-block; width:22.65625%; vertical-align: top; margin: 39px 0 0 3.125%;}
+.ps-grid:nth-child(4n+1) {margin-left: 0;}
+.ps-grid .ps-thumb {margin: 0 0 23px 0; clear: both; width: 100%; position: relative;}
+.ps-grid .ps-thumb:after {background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display:block;}
+.ps-grid .ps-cnt {clear: both; width: 100%;}
+.ps-grid .ps-cnt p {font-size: 20px; font-weight: 500; line-height: 150%; color: var(--linkhover);}
+
+/*-- media css starts here --*/
+@media only screen and (max-width: 1280px) and (min-width:1024px){
+}
+
+@media only screen and (min-width:1024px){
+    .patient-staff-main .heading {padding-bottom: 0;}
+    
+}
+
+@media only screen and (min-width:768px) {}
+
+@media only screen and (max-width: 1023px) and (min-width:200px){
+   
+
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .patient-staff-main {padding: 64px 0 48px 0;}
+    .ps-lists {column-count: 2; column-gap: 30px; white-space: normal; display: initial;}
+    .ps-grid {padding: 0 0 40px 0; width: 100%; margin: 10px 0 0 0;}
+    .ps-grid .ps-cnt {break-inside: avoid;}
+    .ps-bg {height: 77.9%;}
+}
+
+
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .patient-staff-main {padding: 39px 0 40px;}
+    .patient-staff-main .heading-btn {margin-top: 40px;}
+    .ps-grid {width: 342px; margin: 0 24px 0 0;}
+    .ps-grid .ps-cnt {margin-bottom: 30px;}
+    .ps-lists {padding: 0 0 65px 0;}
+    .ps-lists ul.slick-dots {min-height: 72px; width: calc(100% - 151px); margin: 0 auto; position: absolute; left: 0; right: 0;}
+    .ps-lists .slick-arrow {top: inherit; bottom: 0;}
+}
+
+
+@media only screen and (max-width: 389px) {}

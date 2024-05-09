@@ -1,0 +1,55 @@
+.cta-module{overflow: hidden; clear: both; width: 100%; position: relative; padding: 40px 0 80px;}
+.cta-overlay {height: calc(100% - 50%); width: 100%; background: var(--elevated); display: block; top: 0;}
+.cta-main {background-color: var(--green); position: relative; color: var(--white); min-height: 428px;}
+
+.cta-main-text{width: calc(100% - 50%); padding:64px; flex-grow: 1; }
+.cta-txt .optional-text {color: var(--white); margin: 0 0 24px 0;}
+.cta-txt {display: flex; flex-direction: column; align-items: flex-start; justify-content: center; height: 100%;}
+.cta-txt .h3{color: var(--white); line-height: 125%; letter-spacing: -0.8px; margin-bottom: 20px;}
+.cta-txt p {font-size: 16px; line-height: 150%;}
+.cta-btns .button {margin: 0 28px 0 0;}
+.cta-btns .button:hover {outline: 6px solid var(--tealborder); background: var(--white);}
+.cta-btns .readmore{color: var(--white);}
+.cta-btns .readmore:after {color: var(--white);}
+
+.cta-image{position: relative; text-align: right; width: 50%; margin-left: auto;}
+.cta-image:after {background-color: rgba(157, 151, 154, 0.2); content: ""; position: absolute; left: 0; top:0; display: block; width: 100%; height: 100%;}
+.cta-thumb {width: 100%; height: 100%;}
+
+.cta-main.purplebg {background: var(--purple);}
+.cta-main.purplebg .button {color: var(--purple);}
+.cta-main.mauvebg {background: var(--mauve);}
+.cta-main.mauvebg .button {color: var(--mauve);}
+.cta-main.lilacebg {background: var(--lilac);}
+.cta-main.lilacbg .button {color: var(--lilac);}
+.cta-main.tealebg {background: var(--teal);}
+.cta-main.tealbg .button {color: var(--teal);}
+
+.cta-module.donate-cta {padding: 40px 0;}
+.cta-module.donate-cta .cta-overlay {height: calc(100% - 48.7%);}
+
+.cta-module.volunteer-cta {padding: 40px 0;}
+.cta-module.volunteer-cta .cta-overlay {height: calc(100% - 48.7%);}
+.cta-module.volunteer-cta .cta-main {flex-direction: row-reverse;}
+
+/*-- media css starts here --*/
+@media only screen and (max-width:1280px) and (min-width: 1024px){
+    .cta-main-text {padding: 64px 48px;}
+}
+
+@media only screen and (max-width:1023px) and (min-width:200px){
+	.cta-main, .cta-module.volunteer-cta .cta-main{flex-direction: column-reverse;}
+	.cta-image{width: 100%; position: relative;}
+    .cta-main-text{width: 100%; padding:48px; display: block; margin: 0; z-index: 3; position: relative;}
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .cta-image {height: 460px;}
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .cta-main-text {padding:24px 20px 35px;} 
+    .cta-txt .optional-text {margin: 0 0 23px 0;}
+    .cta-txt .h3 {margin-bottom: 21px;}
+    .cta-txt p {margin-bottom: 24px;}
+    .cta-btns {justify-content: center;}
+    .cta-btns .button {width: 100%; margin:0 0 22px 0;}
+}

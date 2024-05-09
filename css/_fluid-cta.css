@@ -1,0 +1,56 @@
+.fluid-cta-module{overflow: hidden; clear: both; width: 100%; margin-top: 46px; margin-bottom: 36px;}
+.fluid-cta-main {position: relative; color: var(--white);}
+.fluid-cta-thumb {z-index: -1; top: 0; bottom: 0; margin: auto; width: 100%; height:512px; display: flex; align-items: center; position: absolute; flex-wrap: wrap; overflow: hidden;}
+
+.fluid-cta-txt {max-width: 1000px; margin: 0 auto;}
+.fluid-cta-txt .bg {background: var(--optionaltxt); border-radius: 50%;}
+.fluid-cta-txt .ripple {display: none;}
+.fluid-cta-inner-txt .optional-text {color: var(--white); margin: 0 0 20px 0; opacity: 0.6;}
+.fluid-cta-inner-txt {display: flex; flex-direction: column; align-items:center; justify-content: center; height:600px; width: 600px; margin: 0 auto; text-align: center; padding: 64px; flex-wrap: wrap; border-radius: 50%;}
+
+.fluid-cta-inner-txt h3, .fluid-cta-inner-txt .h3{color: var(--white)!important; line-height: 125%; letter-spacing: -0.8px; margin-bottom: 32px;}
+.fluid-cta-inner-txt h3 span, .fluid-cta-inner-txt .h3 span {color: var(--linkhover);}
+
+.fluid-cta-btns {clear: both; width: 100%; max-width: 223px; margin: 0 auto;}
+.fluid-cta-btns .button {color: var(--linkhover); margin: 0 0 13px 0;}
+.fluid-cta-btns .button:last-child {margin: 0;}
+.fluid-cta-btns .readmore{color: var(--white);}
+.fluid-cta-btns .readmore:after {color: var(--white); }
+
+.pulse1, .pulse2 {width: 1000px; height: 1000px; background:var(--optionaltxt); border-radius: 50%; text-align: center; position: absolute; transform: scale(0.1, 0.1); left: 0; top: 0; bottom: 0; right: 0; margin: auto; display: flex; justify-content: center; align-items: center;}
+.pulse1 {animation: ring-1 2s 0.5s ease-out infinite;}
+.pulse2 {animation: ring-1 2s 1s ease-out infinite;}
+
+@keyframes ring-1 {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+  100% {
+    transform: scale(1.0, 1.0);
+    opacity: 0
+  }
+}
+
+
+
+/*-- media css starts here --*/
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .fluid-cta-inner-txt {width: 560px; height: 560px;}
+    .pulse1, .pulse2 {width:768px; height: 768px;}
+    
+    
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .fluid-cta-thumb {position: inherit; height: inherit;}
+    .fluid-cta-thumb .ripple {display: none;}
+    .fluid-cta-inner-txt {height: 87.692vw; width: 87.692vw; padding: 40px; flex-wrap: nowrap; z-index: 1; position: relative;}
+    .fluid-cta-inner-txt h3 {font-size: 20px; line-height: 140%; letter-spacing: -0.48px; margin-bottom: 21px;}
+    .fluid-cta-txt .ripple {display: block;}
+    .fluid-cta-txt {position: relative; margin-top: -160px;}
+    .pulse1, .pulse2 {width:104.615vw; height: 104.615vw; left: -9px;}
+}

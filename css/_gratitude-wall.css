@@ -1,0 +1,31 @@
+.gratitude-wall {clear: both; width: 100%; padding: 80px 0;}
+.masonry-main {-webkit-column-count: 3; column-count: 3; -webkit-column-gap: 0; column-gap: 0; white-space: normal;}
+.masonry-block {padding:51px 40px 44px; background: var(--optionaltxt); color: var(--linkhover); break-inside: avoid; display: flex; flex-direction: column;
+  align-items: flex-start; position: relative; z-index: 1;}
+.masonry-bg {width: 100%; height: 100%; left: 0; top: 0; z-index: -1; display: block;}
+.masonry-block p {font-size: 28px; font-weight: 400; line-height: 150%; font-family: "Playfair Display", sans-serif; margin-bottom: 16px;}
+.masonry-block span {display: block;}
+.gratitude-name {font-size: 14px; font-family: Oswald, sans-serif; font-weight: 500; line-height: 125%; letter-spacing: 0.7px; text-transform: uppercase; margin-bottom: 2px;}
+.gratitude-pos {opacity: 0.75; font-size: 12px; line-height: 150%;}
+
+.gratitude-by {width: 100%; clear: both; position: relative; padding:4px 0 4px 16px;}
+.gratitude-by .grat-line {position: absolute; left: 0; top: 0; width: 1px; height: 100%; display: block; background: var(--linkhover);}
+
+
+/*-- media starts here --*/
+@media only screen and (max-width: 1023px) and (min-width:768px){
+    .gratitude-wall {padding: 64px 0;}
+    .masonry-main {-webkit-column-count: 2; column-count: 2;}
+    .masonry-block {padding: 51px 40px 40px;}
+    .masonry-block p {font-size: 20px; line-height: 150%; margin-bottom: 16px;}
+}
+
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .masonry-main {-webkit-column-count: 1; column-count:1; width: 100%; flex-wrap: nowrap; justify-content: flex-start; display: flex; padding: 0 0 40px 0;}
+    .masonry-grid {width:100%; height: inherit!important;}
+    .masonry-block {padding:51px 24px 54px; min-width: 342px;}
+    .masonry-block p {font-size: 18px; line-height: 150%; margin-bottom: 20px;}
+    .gratitude-wall {padding: 40px 0;}
+    .gratitude-name {margin-bottom: 1px;}
+
+}
