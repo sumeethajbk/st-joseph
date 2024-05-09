@@ -1,4 +1,4 @@
-.fluid-cta-module{overflow: hidden; clear: both; width: 100%; margin-top: 46px; margin-bottom: 36px;}
+.fluid-cta-module{clear: both; width: 100%; margin-top: 46px; margin-bottom: 36px;}
 .fluid-cta-main {position: relative; color: var(--white);}
 .fluid-cta-thumb {z-index: -1; top: 0; bottom: 0; margin: auto; width: 100%; height:512px; display: flex; align-items: center; position: absolute; flex-wrap: wrap; overflow: hidden;}
 

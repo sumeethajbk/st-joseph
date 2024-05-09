@@ -47,5 +47,10 @@
     .general-default-container {padding: 64px 0;}
 }
 @media only screen and (max-width: 767px) and (min-width: 200px){
-	
+    .single-note {padding: 24px;}
+    .single-note p {font-size: 24px; letter-spacing: -0.48px; line-height: 140%; padding-right: 10px;}
+    
+    .single-quote p {}
+    
+    .default-slider .counter-info {display: none;}
 }
