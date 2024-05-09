@@ -1,0 +1,37 @@
+.community-banner-section{width: 100%; clear: both; position: relative; background-color: var(--lightwhite); z-index: 1;}
+.community-banner-main{padding: 80px 0 240px;}
+
+.community-banner-lt .h4{margin-bottom: 40px; color: var(--link)}
+.community-text-block{background-color: var(--white); width: 513px; padding: 40px; z-index: 1;}
+.community-text-block .category{margin: 0 0 53px 0;}
+.community-text-block h1{font-size: 40px; line-height: 1.25; font-weight: 500; color: var(--linkhover); letter-spacing: -0.8px; margin-bottom: 22px;}
+.community-text-block p{color: var(--linkhover); margin-bottom: 56px;}
+.community-banner-img{top: 0; right: 13px; z-index: -1; width: 514px; height: 513px;}
+.community-banner-list{background-color: var(--white); width: 278px;}
+.community-banner-rt-text{padding: 34px 32px 34px;}
+.community-banner-rt-text p{font-size: 20px; font-family: Oswald; color: var(--linkhover); line-height: 1.5;}
+
+
+
+
+/*-- media css starts here --*/
+@media only screen and (min-width:1200px){
+    .community-text-block{width: 513px; padding: 40px; z-index: 1;}
+    .community-banner-img{top: 0; right: 13px; z-index: -1; width: 514px; height: 513px;}
+    
+
+}
+
+@media only screen and (max-width: 1199px) and (min-width:1024px){
+    .community-text-block{width: 449px; padding: 40px; z-index: 1;}
+    .community-banner-img{top: 0; right: 13px; z-index: -1; width: 449px; height: 449px;}
+    
+
+  }
+
+  @media only screen and (min-width:1024px){
+    .community-banner-lt{width: 75%; margin: 0 3.2% 0 0;}
+    .community-banner-rt{width: calc(100% - 78.2%);}
+
+
+  }
