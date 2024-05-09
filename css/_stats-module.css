@@ -30,7 +30,8 @@ letter-spacing: -1.6px;}
     .stats-list:nth-child(2n+1) {margin-left: 0;}
     
     .stats-module.stats-filter .stats-intro-main {margin: 0 0 62px 0;}
-    
+    .stats-module.stats-filter .stats-list, .stats-module.stats-filter .stats-list:nth-child(4n+1) {margin-top:48px;}
+    .stats-module.stats-filter .stats-row {margin: 14px 0 0 0;}
 
 }
 @media only screen and (max-width: 767px) and (min-width: 200px){
