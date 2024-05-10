@@ -11,6 +11,6 @@
 
 /*-- media starts here --*/
 @media only screen and (max-width: 767px) and (min-width: 200px){
-    .accordion-item .accordion-heading {padding: 15px 50px 17px 22px;}
-    .accordion-item .content {padding: 7px 22px 17px 22px;}
+    .accordion-item .accordion-heading {padding:20px 30px 20px 0;}
+    .accordion-item .accordion-heading::after {top: 0; bottom: 0; margin: auto; display: flex; align-items: center;}
 }

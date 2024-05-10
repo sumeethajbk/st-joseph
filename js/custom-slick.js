@@ -22,12 +22,18 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
     swipeToSlide: true,
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
+       responsive: [{
+      breakpoint: 768,
+      settings: {
+        dots: true,
+      }
+    }, ]
   });
 
 
   /* Stories Slider */
   jQuery('.slider-nav').slick({
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: false,
@@ -37,6 +43,7 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
     draggable: true,
     touchThreshold: 200,
     swipeToSlide: true,
+    speed: 1500,
   });
 
 
@@ -48,11 +55,14 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
   jQuery('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    speed: 1500,
     arrows: true,
     asNavFor: '.slider-nav',
     draggable: true,
     touchThreshold: 200,
     swipeToSlide: true,
+    prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
+    nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
   });
 
   jQuery('.slider-nav .slick-slide:not(.slick-cloned)').eq(0).addClass('slick-current');
@@ -74,6 +84,7 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
       nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
     });
   }
+
 
 
   /* Donors */

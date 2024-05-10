@@ -28,10 +28,10 @@
 @media only screen and (max-width: 1023px) and (min-width: 768px){
 }
 @media only screen and (max-width: 767px) and (min-width: 200px){
-    .fs-lt {padding:24px 20px 35px;} 
+    .fs-lt {padding:24px 20px 39px; text-align: center;} 
     .fs-lt .optional-text {margin: 0 0 23px 0;}
-    .fs-lt .h4 {margin-bottom: 21px;}
+    .fs-lt .h4 {margin-bottom: 25px;}
     .fs-lt p {margin-bottom: 24px;}
     .fs-btns {justify-content: center;}
-    .fs-btns .button {width: 100%; margin:0 0 22px 0;}
+    .fs-btns .button {width: 100%; margin:0 0 30px 0;}
 }

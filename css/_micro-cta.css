@@ -32,5 +32,11 @@
 @media only screen and (max-width: 1023px) and (min-width: 768px){
 }
 @media only screen and (max-width: 767px) and (min-width: 200px){
-    
+    .micro-cta {margin: 95px 0 56px 0;}
+    .micro-cta-lt {padding:22px 24px 32px;}
+    .micro-cta-lt .optional-text {margin: 0 auto 20px auto;}
+    .micro-cta-img {width: 292px; height: 292px;}
+    .micro-cta-btns .button {margin: 0 0 17px 0;}
+    .micro-cta-btns .button.btn-white {width: 100%;}
+    .micro-cta-btns .button:last-child {margin-bottom: 0;}
 }

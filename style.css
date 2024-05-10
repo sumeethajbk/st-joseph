@@ -148,9 +148,10 @@ body .mfp-close:after {display: none;}
 
 /* Default Slick navigations */
 .slick-arrow{top:0; left: 0; right: 0; position: absolute; display: flex!important; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease-in-out; z-index: 2; width: 56px; height:56px;bottom: 0; margin: auto; background: var(--teal); border-radius: 50%; outline: 8px solid rgba(0, 131, 139, 0.20); font-size: 24px; font-weight: 300; line-height: 24px; color: var(--white);}
+.slick-arrow:hover {background: var(--optionaltxt);}
 .slick-arrow.prev-arrow {right: auto; left: 0;}
 .slick-arrow.next-arrow {right: 0; left: auto;}
-.slick-arrow.slick-disabled {pointer-events:none;}
+.slick-arrow.slick-disabled {pointer-events:none; opacity: 0.6}
 
 
 ul.slick-dots {margin:0; display:flex; justify-content:center; flex-wrap:wrap; width: 100%; align-items: center;}
@@ -275,6 +276,7 @@ text-transform: capitalize; line-height: 100%;}
 .greenbg {background: var(--green);}
 .greenbg .bg {background: var(--green);}
 .greenbg .button {color: var(--green);}
+.greenbg h3 span, .greenbg .h3 span {}
 .green .pulse1, .green .pulse2 {background: var(--green);}
 .green svg path{stroke:var(--green);}
 .green .readmore {color: var(--green);}
@@ -420,6 +422,8 @@ text-transform: capitalize; line-height: 100%;}
     
 }
 @media only screen and (max-width: 767px) and (min-width: 200px) {
+    .slick-arrow {top: inherit; bottom: 0;}
+    ul.slick-dots {min-height: 72px; width: calc(100% - 151px); margin: 0 auto; position: absolute; left: 0; right: 0;}
     .white-dots ul.slick-dots li button {background: var(--white);}
     .white-dots ul.slick-dots li.slick-active button {background-color: var(--teal);}
     
