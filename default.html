@@ -20,16 +20,21 @@
 <link rel="stylesheet" type="text/css" href="css/default-page.css" media="all"/>
 </head>
 
-<body class="home">
+<body class="page-template-default">
 <div id="main">
   <header id="main_header" class="main_header">
     <div class="container-lg">
       <div class="header flex flex-vcenter">
         <div class="logo"> <span class="logo-pos normal-logo"> <a href="#"><img src="images/logo.svg" alt="St. Jospeh's Healthcare Foundation Logo" title="St. Jospeh's Healthcare Foundation Logo"></a> </span> <span class="logo-pos fixed-logo"> <a href="#"><img src="images/logo-white.svg" alt="St. Jospeh's Healthcare Foundation Logo" title="St. Jospeh's Healthcare Foundation Logo"></a> </span> </div>
-        <div class="rolling-btn hide-in-desktop"><span>24/7</span>
-          <div class="phone-no"><a href="tel:1-877-247-3659">call 1-877-247-3659</a></div>
+        <div class="rolling-btn hide-in-desktop">
+          <div class="rolling-icon">
+            <figure class="object-fit"><img src="images/asterisk.svg" alt="Support the campaign" title="Support the campaign"></figure>
+          </div>
+          <!-- end of rolling icon -->
+          <div class="support-camp"><a href="#"><span>Support</span> the campaign</a></div>
+          <!-- end of support camp --> 
         </div>
-        <div class="toggle_button flex flex-center"> <a href="javascript:void();"> <span class="line line1"></span> <span class="line line2"></span> <span class="line line3"></span> </a> </div>
+        <div class="toggle_button flex flex-center"> <a href="javascript:void();"> <span class="fa-regular fa-bars"></span> <span class="fa-regular fa-xmark"></span> </a> </div>
         <div class="header_right mobile_menu flex">
           <nav class="navigation">
             <ul class="main_menu">
@@ -57,9 +62,14 @@
           </nav>
           <div class="header-btns"> <a href="#" class="button outline-btn">Contact Us</a> <a href="#" class="button">Donate Now</a> </div>
           <!-- end of header btns -->
-          <div class="rolling-btn hide-in-mobile"><a href="#">
-            <figure class="object-fit"><img src="images/asterisk.svg" alt="Support the campaign" title="Support the campaign"></figure>
-            <span class="support-camp">Support the campaign</span></a> </div>
+          <div class="rolling-btn hide-in-mobile hide-in-tab">
+            <div class="rolling-icon">
+              <figure class="object-fit"><img src="images/asterisk.svg" alt="Support the campaign" title="Support the campaign"></figure>
+            </div>
+            <!-- end of rolling icon -->
+            <div class="support-camp"><a href="#"><span>Support</span> the campaign</a></div>
+            <!-- end of support camp --> 
+          </div>
         </div>
         <!-- end of header right --> 
       </div>
@@ -88,7 +98,192 @@
       </div>
     </section>
     <!-- end of default banner section -->
-    <section class="cta-module">
+    <section class="short-intro-section pos-relative">
+      <div class="short-intro-bg pos-absolute" style="background: var(--white)"></div>
+      <!-- end of short intro bg -->
+      
+      <div class="container">
+        <div class="short-intro-wrap">
+          <div class="short-intro-main flex">
+            <div class="short-intro-lt"> <span class="optional-text">Optional Preheader</span>
+              <h2>A short message <span>introducing</span> to the content below.</h2>
+            </div>
+            <div class="short-intro-rt">
+              <p>At neque neque nunc aliquam. Viverra ornare eget metus pulvinar risus duis molestie nibh felis. Ante nunc blandit ut nam viverra donec aenean lectus. Quis quisque blandit sit viverra nisi potenti facilisi ipsum dictumst. In ac ut porttitor cursus.</p>
+            </div>
+          </div>
+          <!-- end of main -->
+          <div class="short-intro-row icon-type flex"> 
+            <!-- add additional class "row-of-five" to "short-intro-row" if there are five grids -->
+            <div class="short-intro-list purple">
+              <div class="short-intro-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M74.4244 29.3418C74.7913 29.1299 75.059 28.781 75.1687 28.3718C75.2783 27.9626 75.2209 27.5265 75.0091 27.1596L68.6191 16.0921C68.4099 15.7276 68.0656 15.4601 67.6606 15.3477C67.2517 15.2384 66.8162 15.2959 66.4497 15.5074L47.9858 26.1628V4.85531C47.9858 4.43163 47.8175 4.0253 47.5179 3.72571C47.2183 3.42612 46.812 3.25781 46.3883 3.25781H33.6083C33.1846 3.25781 32.7783 3.42612 32.4787 3.72571C32.1791 4.0253 32.0108 4.43163 32.0108 4.85531V26.1596L13.5596 15.5074C13.1927 15.2956 12.7567 15.2382 12.3475 15.3479C11.9382 15.4575 11.5893 15.7252 11.3775 16.0921L4.98746 27.1596C4.77563 27.5265 4.71822 27.9626 4.82787 28.3718C4.93752 28.781 5.20524 29.1299 5.57214 29.3418L24.0233 40.0003L5.57214 50.6524C5.20524 50.8643 4.93752 51.2132 4.82787 51.6224C4.71822 52.0317 4.77563 52.4677 4.98746 52.8346L11.3775 63.9021C11.5893 64.269 11.9382 64.5367 12.3475 64.6464C12.7567 64.756 13.1927 64.6986 13.5596 64.4868L32.0108 53.8315V75.1453C32.0108 75.569 32.1791 75.9753 32.4787 76.2749C32.7783 76.5745 33.1846 76.7428 33.6083 76.7428H46.3883C46.812 76.7428 47.2183 76.5745 47.5179 76.2749C47.8175 75.9753 47.9858 75.569 47.9858 75.1453V53.8315L66.4401 64.4868C66.8066 64.6983 67.2421 64.7558 67.651 64.6465C68.056 64.5341 68.4004 64.2667 68.6095 63.9021L74.9995 52.8346C75.2113 52.4677 75.2687 52.0317 75.1591 51.6224C75.0494 51.2132 74.7817 50.8643 74.4148 50.6524L55.9733 40.0003L74.4244 29.3418Z" stroke="#563E82" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Dolor posuere et et integer phasellus. Amet elementum massa tempor amet adipiscing. Et at quis.</p>
+              <a href="#" class="readmore">Learn More</a> </div>
+            <!-- end if list-->
+            <div class="short-intro-list teal">
+              <div class="short-intro-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M40.0014 7.25098C41.9943 7.28853 43.9043 8.05508 45.3703 9.40565C46.8362 10.7562 47.7565 12.5972 47.9569 14.5803C48.1291 16.2998 47.6118 18.0174 46.5185 19.3557C45.4252 20.694 43.8453 21.5437 42.126 21.7179C41.4448 21.7868 40.7567 21.7208 40.101 21.5236C39.4453 21.3265 38.8348 21.002 38.3046 20.5688C37.7744 20.1356 37.3347 19.6021 37.0107 18.9989C36.6868 18.3957 36.4849 17.7345 36.4166 17.0532C36.3659 16.6072 36.3896 16.1559 36.4869 15.7177" stroke="#00838B" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M32.0147 39.2012C32.0147 41.1853 29.8676 42.7955 27.2222 42.7955C24.5767 42.7955 22.4297 41.198 22.4297 39.2012" stroke="#00838B" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M47.9844 39.2012C47.9844 41.1853 50.1314 42.7955 52.7769 42.7955C55.4223 42.7955 57.5694 41.198 57.5694 39.2012" stroke="#00838B" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M32.5 56.7734C33.3971 57.8742 34.5484 58.7403 35.8548 59.2969C37.1612 59.8535 38.5834 60.084 39.9987 59.9684C41.414 60.084 42.8361 59.8535 44.1425 59.2969C45.4489 58.7403 46.6003 57.8742 47.4973 56.7734" stroke="#00838B" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M76.7456 42.396C76.7455 40.6151 76.1502 38.8854 75.0544 37.4816C73.9586 36.0778 72.425 35.0805 70.6975 34.6481C69.6893 27.1713 66.0419 20.301 60.4134 15.2771C54.7849 10.2532 47.546 7.4066 40.0031 7.25098C32.4602 7.4066 25.2213 10.2532 19.5928 15.2771C13.9643 20.301 10.3169 27.1713 9.30874 34.6481C7.48336 35.1062 5.87838 36.1942 4.77682 37.7201C3.67527 39.246 3.14789 41.1119 3.28771 42.9887C3.42752 44.8655 4.22554 46.6327 5.54103 47.9785C6.85653 49.3244 8.605 50.1625 10.4781 50.3451C12.3737 56.736 16.2595 62.3551 21.5698 66.3845C26.8801 70.4139 33.3379 72.6434 40.0031 72.7485C46.6683 72.6434 53.1261 70.4139 58.4364 66.3845C63.7467 62.3551 67.6325 56.736 69.5281 50.3451C71.5038 50.1538 73.3374 49.2337 74.6717 47.7641C76.006 46.2946 76.7453 44.3809 76.7456 42.396Z" stroke="#00838B" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Aliquam eros eu urna leo aliquet. Praesent nulla aliquam augue nulla et. Phasellus platea amet. </p>
+              <a href="#" class="readmore">Learn More</a> </div>
+            <!-- end if list-->
+            <div class="short-intro-list green">
+              <div class="short-intro-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M67.4648 69.5491V53.1086C71.0908 49.7493 73.6196 45.3747 74.721 40.5564C75.8226 35.7377 75.4453 30.6989 73.6385 26.098C71.8321 21.4971 68.6799 17.5479 64.5941 14.7662C60.5083 11.9844 55.6788 10.4993 50.7358 10.5049C32.0016 10.5049 27.9578 25.9299 21.2792 43.2549C21.1648 43.553 21.1246 43.8747 21.162 44.192C21.1995 44.5092 21.3135 44.8124 21.4943 45.0757C21.675 45.3393 21.9171 45.5546 22.1996 45.7038C22.4822 45.8527 22.7967 45.931 23.1161 45.9313H28.1021V53.8041C28.1021 55.892 28.9315 57.8944 30.4079 59.3708" stroke="#008945" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12.5303 69.4955V53.055C8.90424 49.6958 6.37546 45.3212 5.27408 40.5025C4.17272 35.6838 4.54999 30.6452 6.35661 26.0443C8.16326 21.4434 11.3153 17.4942 15.4011 14.7125C19.4869 11.9307 24.3166 10.4456 29.2595 10.4512C33.5774 10.4512 37.115 11.2706 40.0844 12.7439M40.0844 69.4955V61.623H44.0206C46.1086 61.623 48.1109 60.7933 49.5873 59.3172C51.0637 57.8408 51.8931 55.8382 51.8931 53.7502V45.8778H56.8789C57.1984 45.8771 57.5131 45.7992 57.7956 45.65C58.078 45.5011 58.3202 45.2854 58.501 45.0221C58.6815 44.7589 58.7956 44.4553 58.8333 44.1381C58.8707 43.8208 58.8304 43.4994 58.716 43.201C55.3111 34.3687 52.5912 26.03 48.2604 19.9773" stroke="#008945" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Odio nullam quam dignissim at sed sit tellus massa. Elementum diam purus rhoncus urna neque.</p>
+              <a href="#" class="readmore">Learn More</a> </div>
+            <!-- end if list-->
+            <div class="short-intro-list lilac">
+              <div class="short-intro-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.1143 27.1304C17.8497 24.0961 18.2189 21.0398 19.1986 18.1558C20.1783 15.2718 21.7469 12.623 23.805 10.3776C25.8631 8.13222 28.3656 6.33935 31.1536 5.11283C33.9416 3.8863 36.9542 3.25293 40.0001 3.25293C43.0459 3.25293 46.0585 3.8863 48.8466 5.11283C51.6346 6.33935 54.1371 8.13222 56.1951 10.3776C58.2532 12.623 59.8219 15.2718 60.8015 18.1558C61.7812 21.0398 62.1504 24.0961 61.8858 27.1304L59.0934 59.237C58.6698 64.009 56.4748 68.4494 52.9406 71.6838C49.4064 74.9181 44.7892 76.712 39.9985 76.712C35.2077 76.712 30.5906 74.9181 27.0564 71.6838C23.5222 68.4494 21.3272 64.009 20.9036 59.237L18.1143 27.1304Z" stroke="#B07DB8" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20.0547 49.46L58.4969 62.5946" stroke="#B07DB8" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M31 53.2014L60.7295 40.415" stroke="#B07DB8" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M24.0234 25.6225C24.0234 27.7203 24.4366 29.7977 25.2395 31.7358C26.0423 33.674 27.219 35.4351 28.7024 36.9185C30.1858 38.4019 31.9469 39.5786 33.8851 40.3814C35.8232 41.1843 37.9006 41.5975 39.9984 41.5975C42.0963 41.5975 44.1736 41.1843 46.1118 40.3814C48.05 39.5786 49.8111 38.4019 51.2945 36.9185C52.7779 35.4351 53.9546 33.674 54.7574 31.7358C55.5602 29.7977 55.9734 27.7203 55.9734 25.6225C55.9734 23.5246 55.5602 21.4473 54.7574 19.5091C53.9546 17.5709 52.7779 15.8098 51.2945 14.3264C49.8111 12.843 48.05 11.6663 46.1118 10.8635C44.1736 10.0607 42.0963 9.64746 39.9984 9.64746C37.9006 9.64746 35.8232 10.0607 33.8851 10.8635C31.9469 11.6663 30.1858 12.843 28.7024 14.3264C27.219 15.8098 26.0423 17.5709 25.2395 19.5091C24.4366 21.4473 24.0234 23.5246 24.0234 25.6225Z" stroke="#B07DB8" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M30.4141 24.0251C30.4141 23.1777 30.7507 22.365 31.3499 21.7659C31.949 21.1667 32.7617 20.8301 33.6091 20.8301C34.4564 20.8301 35.2691 21.1667 35.8683 21.7659C36.4674 22.365 36.8041 23.1777 36.8041 24.0251" stroke="#B07DB8" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M43.1953 24.0251C43.1953 23.1777 43.5319 22.365 44.1311 21.7659C44.7303 21.1667 45.5429 20.8301 46.3903 20.8301C47.2377 20.8301 48.0503 21.1667 48.6495 21.7659C49.2487 22.365 49.5853 23.1777 49.5853 24.0251" stroke="#B07DB8" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p>Vestibulum pulvinar vulputate tellus quam sapien. At imperdiet sit volutpat turpis hendrerit semper.</p>
+              <a href="#" class="readmore">Learn More</a> </div>
+            <!-- end if list--> 
+          </div>
+        </div>
+        <!-- end of wrap--> 
+        
+      </div>
+    </section>
+    <!-- end of short intro -->
+    <section class="repeaters-module">
+      <div class="repeater-bg pos-absolute">&nbsp;</div>
+      <div class="container">
+        <div class="repeaters-main flex pos-relative">
+          <div class="repeaters-loop">
+            <div class="repeaters-grid flex">
+              <div class="repeaters-lt">
+                <div class="repeaters-thumb pos-relative">
+                  <figure class="object-fit"><img src="images/repeater-thumb-three@2x.jpg" alt="Repeaters Thumb" title="Repeaters Thumb"/></figure>
+                  <div class="play-btn-main flex flex-center"> <a class="play-btn flex flex-center" href="#" tabindex="0"> <span class="play-btn-wrap"> <i class="fa-sharp fa-light fa-play"></i> </span><!-- end of play btn wrap --> 
+                    
+                    </a> </div>
+                </div>
+                <!-- end of repeaters thumb --> 
+              </div>
+              <!-- end of repeaters lt -->
+              <div class="repeaters-rt">
+                <div class="repeaters-rt-inner">
+                  <div class="h3">Alternating repeater section can show large text.</div>
+                  <p>Mollis arcu viverra platea iaculis nisl. Faucibus sed volutpat nulla nec sed ipsum. Sit nulla faucibus ultrices sit nunc. Amet lectus nulla ac sed fermentum condimentum vestibulum.</p>
+                  <a href="#" class="button">Optional CTA</a> </div>
+                <!-- end of repeaters rt --> 
+              </div>
+            </div>
+            <!-- end of repeaters grid -->
+            <div class="repeaters-full-txt flex">
+              <h2>A pointed <span>message</span> expressing related to the content above and or below shows here arcu <span>viverra</span> platea iaculis nisl faucibus <span>including</span> highlighted words.</h2>
+            </div>
+          </div>
+          <div class="repeaters-loop">
+            <div class="repeaters-grid flex">
+              <div class="repeaters-lt">
+                <div class="repeaters-thumb pos-relative">
+                  <figure class="object-fit"><img src="images/repeater-thumb-four@2x.jpg" alt="Repeaters Thumb" title="Repeaters Thumb"/></figure>
+                  <div class="play-btn-main flex flex-center"> <a class="play-btn flex flex-center" href="#" tabindex="0"> <span class="play-btn-wrap"> <i class="fa-sharp fa-light fa-play"></i> </span><!-- end of play btn wrap --> 
+                    
+                    </a> </div>
+                </div>
+                <!-- end of repeaters thumb --> 
+              </div>
+              <!-- end of repeaters lt -->
+              <div class="repeaters-rt">
+                <div class="repeaters-rt-inner">
+                  <div class="h3">Alternating repeater section can show large text.</div>
+                  <p>Mollis arcu viverra platea iaculis nisl. Faucibus sed volutpat nulla nec sed ipsum. Sit nulla faucibus ultrices sit nunc. Amet lectus nulla ac sed fermentum condimentum vestibulum.</p>
+                  <a href="#" class="button">Optional CTA</a> </div>
+                <!-- end of repeaters rt --> 
+              </div>
+            </div>
+            <!-- end of repeaters grid --> 
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stats-module">
+      <div class="container">
+        <div class="stats-wrap">
+          <h2>Concise but impactful intro about the <span>impact</span> of the foundation appears here with <span>highlighted</span> words.</h2>
+          <div class="bottom-frame">
+            <div class="frame-lt">
+              <p>A short message about how St. Joe’s couldn’t do what we do without <em>you</em>.</p>
+            </div>
+            <div class="frame-mid">
+              <div class="animated-arrow"> <span class="the-arrow right"> <span class="shaft"></span> </span></div>
+              <!-- end of animated arrow --> </div>
+            <div class="frame-rt"><a href="#" class="button">See your impact</a> </div>
+            <!-- end of bottom frame btn --> 
+          </div>
+          <!-- end of bottom frame -->
+          <div class="stats-row stats-type flex"> 
+            <!-- add additional class "row-of-five" to "short-intro-row" if there are five grids -->
+            <div class="stats-list teal">
+              <div class="line pos-absolute">&nbsp;</div>
+              <!-- end of stats line --> 
+              <span class="big"> 123 </span>
+              <div class="stats-cnt">
+                <p>Statistic excerpt appears right here spanning a few lines as needed to fit the content.</p>
+                <a href="#" class="readmore">Learn More</a> </div>
+            </div>
+            <!-- end if list-->
+            <div class="stats-list purple">
+              <div class="line pos-absolute">&nbsp;</div>
+              <!-- end of stats line --> 
+              <span class="big"> 152k </span>
+              <div class="stats-cnt">
+                <p>Statistic excerpt appears right here spanning a few lines as needed to fit the content.</p>
+                <a href="#" class="readmore">Learn More</a> </div>
+            </div>
+            <!-- end if list-->
+            <div class="stats-list mauve">
+              <div class="line pos-absolute">&nbsp;</div>
+              <!-- end of stats line --> 
+              <span class="big"> 4.5k </span>
+              <div class="stats-cnt">
+                <p>Statistic excerpt appears right here spanning a few lines as needed to fit the content.</p>
+                <a href="#" class="readmore">Learn More</a> </div>
+            </div>
+            <!-- end if list-->
+            <div class="stats-list lilac">
+              <div class="line pos-absolute">&nbsp;</div>
+              <!-- end of stats line --> 
+              <span class="big"> 2.3m </span>
+              <div class="stats-cnt">
+                <p>Statistic excerpt appears right here spanning a few lines as needed to fit the content.</p>
+                <a href="#" class="readmore">Learn More</a> </div>
+            </div>
+            <!-- end if list--> 
+          </div>
+        </div>
+        <!-- end of stats inner --> 
+      </div>
+    </section>
+    <!-- end of stats container -->
+    <section class="cta-module donate-cta">
+      <div class="cta-overlay pos-absolute"></div>
+      <!-- end of cta overlay -->
       <div class="container">
         <div class="cta-main greenbg flex">
           <div class="cta-main-text">
@@ -106,7 +301,80 @@
         </div>
       </div>
     </section>
-    <!-- end of cta module -->
+    <section class="meet-our-donors">
+      <div class="meet-donors-bg pos-absolute">&nbsp;</div>
+      <!-- end of meet donors bg -->
+      <div class="container">
+        <div class="meet-donors-main">
+          <h2>A short intro headline about <span>gratitude</span> and <span>thanks</span> appears here with <span>highlighted</span> words within the text.</h2>
+          <div class="bottom-frame">
+            <div class="frame-lt">
+              <p>Their legacy for future generations will be the best possible care for mind, body, and spirit.</p>
+            </div>
+            <div class="frame-mid">
+              <div class="animated-arrow"> <span class="the-arrow right"> <span class="shaft"></span> </span></div>
+              <!-- end of animated arrow --> </div>
+            <div class="frame-rt"><a href="#" class="button">Meet Our Donors</a> </div>
+            <!-- end of bottom frame btn --> 
+          </div>
+          <!-- end of bottom frame -->
+          
+          <div class="meet-donors-wrap">
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-four@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-two@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-three@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-five@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-six@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-four@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-two@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-three@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-five@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb -->
+            <div class="our-donor-thumb">
+              <figure class="object-fit"> <img src="images/donor-thumb-six@2x.png" alt="Foundation Thumb" title="Foundation Thumb"/></figure>
+            </div>
+            <!-- end of our donor thumb --> 
+          </div>
+          <!--end of meet donors wrap --> 
+        </div>
+        <!-- end of meet donors main --> 
+      </div>
+    </section>
+    <!-- end of meet our donors -->
     <section class="gratitude-wall">
       <div class="container">
         <div class="heading">
@@ -121,7 +389,7 @@
         <!-- end of heading -->
         <div class="masonry-main">
           <div class="masonry-block">
-              <div class="masonry-bg pos-absolute" style="background: var(--elevated);"></div>
+            <div class="masonry-bg pos-absolute" style="background: var(--elevated);"></div>
             <p>“Even in ‘normal’ times the work
               you do is often difficult. It’s tough
               to see your tired faces but you
@@ -137,7 +405,7 @@
           <!-- end of masonry block -->
           
           <div class="masonry-block">
-              <div class="masonry-bg pos-absolute" style="background: var(--elevateddark);"></div>
+            <div class="masonry-bg pos-absolute" style="background: var(--elevateddark);"></div>
             <p>“The care that I have received in the past as well as the care that my late parents had received has always been wonderful. The people who work there are truly angels.”</p>
             <div class="gratitude-by">
               <div class="grat-line">&nbsp;</div>
@@ -148,7 +416,7 @@
           </div>
           <!-- end of masonry block -->
           <div class="masonry-block">
-              <div class="masonry-bg pos-absolute" style="background: var(--lilictint);"></div>
+            <div class="masonry-bg pos-absolute" style="background: var(--lilictint);"></div>
             <p>“Staff are wonderfully
               human- kind, concerned,
               respectful, caring and compassionate.”</p>
@@ -161,7 +429,7 @@
           </div>
           <!-- end of masonry block -->
           <div class="masonry-block">
-              <div class="masonry-bg pos-absolute" style="background: var(--lilicdark);"></div>
+            <div class="masonry-bg pos-absolute" style="background: var(--lilicdark);"></div>
             <p>“Some quotes are a bit longer than others andd sem sit dictum arcu. Mattis pretium scelerisque blandit condimentum. Suscipit sit at morbi nec turpis eget pharetra. At amet eget cursus tristique accumsan habitant vulputate purus amet. Viverra sit tincidunt mattis sit ut diam.</p>
             <div class="gratitude-by">
               <div class="grat-line">&nbsp;</div>
@@ -172,7 +440,7 @@
           </div>
           <!-- end of masonry block -->
           <div class="masonry-block">
-              <div class="masonry-bg pos-absolute" style="background: var(--goldtint);"></div>
+            <div class="masonry-bg pos-absolute" style="background: var(--goldtint);"></div>
             <p>“Some quotes are a bit longer than others andd sem sit dictum arcu. Mattis pretium scelerisque blandit condimentum. Suscipit sit at morbi nec turpis eget pharetra. At amet eget cursus tristique accumsan habitant vulputate purus amet. Viverra sit tincidunt mattis sit ut diam.</p>
             <div class="gratitude-by">
               <div class="grat-line">&nbsp;</div>
@@ -183,7 +451,7 @@
           </div>
           <!-- end of masonry block -->
           <div class="masonry-block">
-              <div class="masonry-bg pos-absolute" style="background: var(--gold);"></div>
+            <div class="masonry-bg pos-absolute" style="background: var(--gold);"></div>
             <p>“Staff are wonderfully
               human- kind, concerned,
               respectful, caring and compassionate.”</p>
@@ -200,14 +468,14 @@
         <div class="hide-in-desktop hide-in-tab heading-btn btn-full"> <a href="#" class="button outline-btn-white">View all thanks</a> </div>
       </div>
     </section>
-    <!-- end of gratitude wall-->
-    
-    <section class="cta-module">
+    <section class="cta-module donate-cta">
+      <div class="cta-overlay pos-absolute"></div>
+      <!-- end of cta overlay -->
       <div class="container">
-        <div class="cta-main flex purplebg" style="background-color: var(--purple)">
+        <div class="cta-main purplebg flex">
           <div class="cta-main-text">
             <div class="cta-txt"> <span class="optional-text">SUPPORT ST. JOE’S</span>
-              <div class="h3">Green is another color option for large panels.</div>
+              <div class="h3">Your donations help so much.</div>
               <p>Mollis arcu viverra platea iaculis nisl. Faucibus sed volutpat nulla nec sed ipsum. Sit nulla faucibus ultrices sit nunc.</p>
               <div class="cta-btns flex flex-vcenter"> <a href="#" class="button btn-white">Donate Now</a> <a href="#" class="readmore">Secondary CTA</a> </div>
             </div>
@@ -220,35 +488,128 @@
         </div>
       </div>
     </section>
-    <!-- end of cta module -->
-    
+      <section class="subhead-module">
+      <div class="container">
+          <h2>A pointed message <span>related</span> to the content above and or below shows here with <span>highlighted</span> words.</h2>
+                                  <div class="bg pos-absolute"></div>
+
+          <div class="subhead-wrap flex">
+
+          <div class="subhead-grid">
+              <div class="subhead-thumb pos-relative">
+              <figure class="object-fit"><a href="#"><img src="images/subhead-thumb-one@2x.jpg" alt="Post Thumb" title="Post Thumb"/></a></figure>
+              </div><!-- end of subhead thumb -->
+              <span class="optional-text">Optional Preheader</span>
+              <div class="h3"><a href="#">Section subhead</a></div>
+              <p>Mask rectangle team move scrolling. Italic content align hand component frame underline list polygon select. Union select prototype fill component strikethrough italic strikethrough edit. Rotate shadow team component move underline flows.</p>
+              <a href="#" class="readmore">Learn More</a>
+              </div><!-- end of subhead grid -->
+         
+          <div class="subhead-grid">
+              <div class="subhead-thumb pos-relative">
+              <figure class="object-fit"><a href="#"><img src="images/subhead-thumb-two@2x.jpg" alt="Post Thumb" title="Post Thumb"/></a></figure>
+              </div><!-- end of subhead thumb -->
+              <span class="optional-text">Optional Preheader</span>
+              <div class="h3"><a href="#">Section subhead</a></div>
+              <p>Edit draft arrow clip clip arrange. Union library resizing shadow content auto prototype variant community background. Duplicate arrange outline rectangle share. Horizontal arrow thumbnail ellipse duplicate content create. Subtract layout auto star .</p>
+              <a href="#" class="readmore">Learn More</a>
+              </div><!-- end of subhead grid -->
+          </div><!-- end of subhead wrap -->
+          <div class="bottom-frame">
+            <div class="frame-lt">
+              <p>A short message appears here as a way to push visitors to to the link to the right</p>
+            </div>
+            <div class="frame-mid">
+              <div class="animated-arrow"> <span class="the-arrow right"> <span class="shaft"></span> </span></div>
+              <!-- end of animated arrow --> </div>
+            <div class="frame-rt"><a href="#" class="button">Optional CTA</a> </div>
+            <!-- end of bottom frame btn --> 
+          </div>
+          <!-- end of bottom frame -->
+          </div>
+      </section><!-- end of subhead module -->
+    <section class="cta-module volunteer-cta">
+      <div class="cta-overlay pos-absolute"></div>
+      <!-- end of cta overlay -->
+      <div class="container">
+        <div class="cta-main mauvebg flex">
+          <div class="cta-main-text">
+            <div class="cta-txt"> <span class="optional-text">SUPPORT ST. JOE’S</span>
+              <div class="h3">Large call to action here likely on two lines.</div>
+              <p>Mollis arcu viverra platea iaculis nisl. Faucibus sed volutpat nulla nec sed ipsum. Sit nulla faucibus ultrices sit nunc.</p>
+              <div class="cta-btns flex flex-vcenter"> <a href="#" class="button btn-white">Become a Volunteer</a> <a href="#" class="readmore">Secondary CTA</a> </div>
+            </div>
+          </div>
+          <div class="cta-image">
+            <div class="cta-thumb">
+              <figure class="object-fit"> <img src="images/cta-volunteer-thumb@2x.jpg" alt="CTA Thumb" title="CTA Thumb"/> </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="general-default-container">
       <div class="container">
         <div class="general-default-inner">
           <div class="container-sm">
-              <div class="default-slider">
-                  <span class="counter-info"></span>
-              <div class="def-slider">
-                  <div class="default-slide">
-                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
-                  </div><!-- end of default slide -->
-                  <div class="default-slide">
-                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
-                  </div><!-- end of default slide -->
-                  <div class="default-slide">
-                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
-                  </div><!-- end of default slide -->
-                  <div class="default-slide">
-                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
-                  </div><!-- end of default slide -->
-                  <div class="default-slide">
-                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
-                  </div><!-- end of default slide -->
+            <h3>Large subhead example</h3>
+            <p>Ut cras diam nec tincidunt id libero turpis. Turpis consectetur nec lacus, in. Aliquet aliquam hac in egestas arcu id auctor. Urna, mattis et amet morbi turpis tellus sapien auctor. Sem neque tortor in semper. Feugiat placerat et sit auctor. Faucibus lectus mollis dignissim cursus elementum ut arcu integer. Egestas et at vulputate molestie feugiat. Vitae sed nec, proin amet. Semper lobortis interdum ullamcorper dui urna eu.</p>
+            <section class="micro-cta pos-relative">
+              <div class="container">
+                <div class="bg"></div>
+                <div class="micro-cta-wrap flex">
+                  <div class="micro-cta-lt"> <span class="optional-text">MICRO CTA MODULE</span>
+                    <div class="h4">A concise but persuasive headline shows here driving conversions.</div>
+                    <div class="micro-cta-btns flex flex-vcenter"> <a href="#" class="button btn-white">Primary CTA</a> <a href="#" class="button trans-btn">Secondary CTA</a> </div>
                   </div>
-              </div><!-- end of default slider -->
-              
+                  <!-- end of micro-cta lt -->
+                  <div class="micro-cta-rt">
+                    <div class="micro-cta-img">
+                      <figure class="object-fit"> <img src="images/micro-cta@2x.png" alt="Micro CTA" title="Micro CTA"/> </figure>
+                    </div>
+                  </div>
+                  <!-- end of micro-cta rt --> 
+                </div>
+                <!-- end of micro-cta wrap --> 
+              </div>
+            </section>
+            <!-- end of financial statements -->
+            <h4>Medium subhead example</h4>
+            <p>Mollis arcu viverra platea iaculis nisl. Faucibus sed volutpat nulla nec sed ipsum. Sit nulla faucibus ultrices sit nunc. Amet lectus nulla ac sed fermentum condimentum vestibulum. Amet fermentum integer tristique quam nulla duis volutpat etiam risus. Augue lectus congue tincidunt.</p>
+            <ul>
+              <li>Aenean tortor ultrices id sodales eleifend consectetur in magna at</li>
+              <li>Tincidunt est urna sollicitudin risus lectus lobortis nunc mollis</li>
+              <li>Cursus eu imperdiet egestas ligula proin sit vitae blandit</li>
+            </ul>
+            <div class="default-slider"> <span class="counter-info"></span>
+              <div class="def-slider">
+                <div class="default-slide">
+                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
+                </div>
+                <!-- end of default slide -->
+                <div class="default-slide">
+                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
+                </div>
+                <!-- end of default slide -->
+                <div class="default-slide">
+                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
+                </div>
+                <!-- end of default slide -->
+                <div class="default-slide">
+                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
+                </div>
+                <!-- end of default slide -->
+                <div class="default-slide">
+                  <figure class="object-fit"> <img src="images/default-slider@2x.jpg" alt="Default Slider" title="Default Slider"/></figure>
+                </div>
+                <!-- end of default slide --> 
+              </div>
+            </div>
+            <!-- end of default slider -->
+            
             <h4>Short subhead if necessary</h4>
             <p>Diam ut hac amet fringilla tortor massa. Scelerisque leo dui fringilla et non gravida consequat amet a. Cras dictumst sit etiam augue pellentesque. Sem sit mauris tortor magna. Diam luctus quam sit in montes. Nibh egestas odio egestas turpis arcu. Venenatis viverra mauris scelerisque pellentesque sit in. Suspendisse sagittis convallis felis a quam donec et in. At augue pellentesque adipiscing ornare adipiscing mauris amet eu interdum. Sit tempus sollicitudin vel eleifend nulla.</p>
+           
             <h4>Medium subhead example</h4>
             <p>Mollis arcu viverra platea iaculis nisl. Faucibus sed volutpat nulla nec sed ipsum. Sit nulla faucibus ultrices sit nunc. Amet lectus nulla ac sed fermentum condimentum vestibulum. Amet fermentum integer tristique quam nulla duis volutpat etiam risus. Augue lectus congue tincidunt.</p>
             <ol>
@@ -273,7 +634,9 @@
                 
                 <!-- end of fluid cta thumb -->
                 <div class="fluid-cta-txt">
-                  <div class="fluid-cta-inner-txt"> <!-- add inline background color for fluid-cta-inner-txt div for color option --> 
+                  <div class="fluid-cta-inner-txt pos-relative">
+                    <div class="bg pos-absolute"></div>
+                    <!-- add inline background color for color option --> 
                     <span class="optional-text">Optional Preheader</span>
                     <h3> This is an optional fluid <span>call to action</span> for use with big messages and <span>special</span> initiatives. </h3>
                     <div class="fluid-cta-btns"> <a href="#" class="button btn-white">Optional Primary CTA</a> <a href="#" class="readmore">Secondary CTA</a> </div>
@@ -293,30 +656,28 @@
               
             </section>
             <!-- end of fluid cta -->
-              <h3>Large subhead example</h3>
+            <h3>Large subhead example</h3>
             <p>Ut cras diam nec tincidunt id libero turpis. Turpis consectetur nec lacus, in. Aliquet aliquam hac in egestas arcu id auctor. Urna, mattis et amet morbi turpis tellus sapien auctor. Sem neque tortor in semper. Feugiat placerat et sit auctor. Faucibus lectus mollis dignissim cursus elementum ut arcu integer. Egestas et at vulputate molestie feugiat. Vitae sed nec, proin amet. Semper lobortis interdum ullamcorper dui urna eu.</p>
-              <section class="single-note">
+               <section class="single-note">
               <div class="container">
+                <div class="bg"></div>
                 <div class="single-note-wrap">
                   <p>Amet vitae egestas tellus eu enim, nibh condim entum in ut mauris arcu, tempus <span>euismod</span> aliquet dictum sollicitudin congue fringilla diam nisi volutpat diam <span>pharetra</span> quis lorem ut viverra condimentum eu eget sed.</p>
-                  <a href="#" class="readmore">supporting link</a>
-                </div>
+                  <a href="#" class="readmore">supporting link</a> </div>
                 <!-- end of note quote wrap --> 
               </div>
             </section>
             <!-- end of single quote -->
-              
-              <h4>Medium subhead example</h4>
+            <h4>Medium subhead example</h4>
             <p>Mollis arcu viverra platea iaculis nisl. Faucibus sed volutpat nulla nec sed ipsum. Sit nulla faucibus ultrices sit nunc. Amet lectus nulla ac sed fermentum condimentum vestibulum. Amet fermentum integer tristique quam nulla duis volutpat etiam risus. Augue lectus congue tincidunt.</p>
             <ol>
               <li>Aenean tortor ultrices id sodales eleifend consectetur in magna at</li>
               <li>Tincidunt est urna sollicitudin risus lectus lobortis nunc mollis</li>
               <li>Cursus eu imperdiet egestas ligula proin sit vitae blandit</li>
             </ol>
-              
-              
             <section class="single-quote">
               <div class="container">
+                <div class="bg"></div>
                 <div class="single-quote-wrap">
                   <p>“Sed porttitor sollicitudin enim sed quisque tellus enim dui etiam. Interdum vel quis consectetur aliquam neque commodo quis pellentesque blandit. Elementum sit pellentesque commodo sollicitudin leo in nibh.”</p>
                   <div class="quote-by">

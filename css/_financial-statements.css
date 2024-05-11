@@ -9,9 +9,9 @@
 .fs-btns .readmore{color: var(--white);}
 .fs-btns .readmore:after {color: var(--white);}
 
-.fs-rt{width:316px; margin-left: 6.222222222222222%; margin-top: auto;}
+.fs-rt{width:208px; margin-left: 6.222222222222222%; margin-top: auto; margin-right: 54px;}
 .fs-bg {width: 584px; height: 212px; right: 0; bottom: 0; display: block;}
-.fs-img {width: 316px; position: relative; z-index: 1; bottom: -1px;}
+.fs-img {width:208px; position: relative; z-index: 1; bottom: -1px;}
 
 
 
@@ -28,10 +28,10 @@
 @media only screen and (max-width: 1023px) and (min-width: 768px){
 }
 @media only screen and (max-width: 767px) and (min-width: 200px){
-    .fs-lt {padding:24px 20px 35px;} 
+    .fs-lt {padding:24px 20px 39px; text-align: center;} 
     .fs-lt .optional-text {margin: 0 0 23px 0;}
-    .fs-lt .h4 {margin-bottom: 21px;}
+    .fs-lt .h4 {margin-bottom: 25px;}
     .fs-lt p {margin-bottom: 24px;}
     .fs-btns {justify-content: center;}
-    .fs-btns .button {width: 100%; margin:0 0 22px 0;}
+    .fs-btns .button {width: 100%; margin:0 0 30px 0;}
 }
