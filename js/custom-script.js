@@ -10,8 +10,7 @@ jQuery(document).ready(function () {
     }
   });
     
-    /* Tabs */
-    jQuery( "#tabs" ).tabs();
+
 
 
   /* Menu */

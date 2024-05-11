@@ -1,14 +1,14 @@
 jQuery(document).ready(function () {
 
   /* Default Slider */
-var $status = jQuery('.counter-info');
-var $slickElement = jQuery('.def-slider');
+  var $status = jQuery('.counter-info');
+  var $slickElement = jQuery('.def-slider');
 
-$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+  $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
     var i = (currentSlide ? currentSlide : 0) + 1;
-    $status.html( '<span class="current_slide">' + i + '</span> / <span class="total_slides"> ' + slick.slideCount + '</span>');
-});
+    $status.html('<span class="current_slide">' + i + '</span> / <span class="total_slides"> ' + slick.slideCount + '</span>');
+  });
 
   jQuery('.def-slider').slick({
     slidesToShow: 1,
@@ -22,7 +22,7 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
     swipeToSlide: true,
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
-       responsive: [{
+    responsive: [{
       breakpoint: 768,
       settings: {
         dots: true,
@@ -43,14 +43,26 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
     draggable: true,
     touchThreshold: 200,
     swipeToSlide: true,
-    speed: 1500,
+    speed: 1500,    
+    prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
+    nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+      fade:true,
+      }
+    },
+                {
+      breakpoint: 768,
+      settings: {
+        dots: true,
+        arrows: true,
+        variableWidth: false,
+      }
+    },]
   });
 
 
-  jQuery('.slider-nav').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-    jQuery('.slider-nav .slick-slide').removeClass('slick-current');
-    jQuery('.slider-nav .slick-slide:not(.slick-cloned)').eq(currentSlide).addClass('slick-current');
-  });
 
   jQuery('.slider-for').slick({
     slidesToShow: 1,
@@ -63,9 +75,15 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
     swipeToSlide: true,
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+      }
+    }, ]
   });
 
-  jQuery('.slider-nav .slick-slide:not(.slick-cloned)').eq(0).addClass('slick-current');
+ 
   /* End of Stories Slider */
 
   /* Patient Stories */
@@ -84,7 +102,6 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
       nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
     });
   }
-
 
 
   /* Donors */

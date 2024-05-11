@@ -9,6 +9,8 @@
 @import url("../css/_short-intro-section.css");
 @import url("../css/_stats-module.css");
 @import url("../css/_meet-our-donors.css");
+@import url("../css/_stories-slider.css");
+
 
 .cta-module.donate-cta .cta-overlay {background: var(--white);}
 

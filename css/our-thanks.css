@@ -5,6 +5,8 @@
 @import url("../css/_stories-slider.css");
 @import url("../css/_gratitude-wall.css");
 
+.stories-slider .bg {height: calc(100% - 816px); top: inherit; bottom: 0;}
+
 /* Testimonial Form */
 .testimonial-form {clear: both; width: 100%; position: relative; padding: 80px 0 0; background: var(--elevated);}
 .testimonial-lt {width: 400px; margin-right: 6.25%; display: flex; flex-flow: row wrap; justify-content: flex-start;}
@@ -84,7 +86,7 @@ width: 18.984375%;}
 @media only screen and (max-width: 1023px) and (min-width:200px){
     .testimonial-lt .bubble-img {width: 200px; border: 20px solid rgba(0, 156, 166, 0.10); border-radius: 50%;}
     .testimonial-lt .bubble-img img {border-radius: 50%;}
-        .testimonial-lt .bubble p {font-size: 24px; line-height: 125%;letter-spacing: -0.48px;}
+    .testimonial-lt .bubble p {font-size: 24px; line-height: 125%;letter-spacing: -0.48px;}
 
 }
 
@@ -101,6 +103,8 @@ width: 18.984375%;}
     .testimonial-lt .bubble::after {bottom: 46px; left: -69px; transform: rotate(90deg) scale(-1,1);}
     .testimonial-lt .bubble-img {margin-bottom: auto;}
     .testimonial-rt {width: 100%; margin: 0;}
+    
+    .stories-slider .bg {height: 27%;}
     
     
 }
@@ -122,6 +126,8 @@ width: 18.984375%;}
     .testimonial-lt .bubble p {line-height: 150%;}
     .testimonial-lt .bubble-img {margin: 0 auto;}
     .testimonial-rt {width: 100%;}
+    
+    .stories-slider .bg {height: 44.6%;}
 }
 @media only screen and (max-width: 389px) {
 }
