@@ -120,5 +120,36 @@ jQuery(document).ready(function () {
     autoplaySpeed: 1000,
   });
 
+    
+    /* Timeline Slider */
+  jQuery('.timeline-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    variableWidth: true,
+    draggable: true,
+    touchThreshold: 200,
+    swipeToSlide: true,
+    speed: 1000,  
+      infinite: true,
+    prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
+    nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+      fade:true,
+      }
+    },
+                {
+      breakpoint: 768,
+      settings: {
+        dots: true,
+        arrows: true,
+        variableWidth: false,
+      }
+    },]
+  });
 
 });

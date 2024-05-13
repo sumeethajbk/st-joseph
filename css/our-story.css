@@ -1,0 +1,72 @@
+@import url("../css/_hero-banner.css");
+@import url("../css/_signup-module.css");
+@import url("../css/_cta-module.css");
+@import url("../css/_repeaters-module.css");
+@import url("../css/_short-intro-section.css");
+@import url("../css/_meet-our-donors.css");
+@import url("../css/_stories-slider.css");
+@import url("../css/_repeaters-single.css");
+
+.default-banner-section .object-fit img {object-position: 50% 0;}
+.repeater-bg {background: var(--white);}
+
+
+.history {position: relative; width: 100%; clear: both; overflow: hidden; background: var(--teal); color: var(--white);}
+.history-lt {width: 50%; flex-grow: 1;}
+.history-rt {width: 50%;}
+
+/* Timeline Slider */
+.timeline-slider .slick-track {display: flex;}
+.timeline-slider .slick-list {overflow: visible;}
+.timeline-thumb {width:288px; margin: 0 40px 0 0; transition: all 0.95s ease-in-out; }
+.timeline-thumb-nav {position: relative; width: 100%; clear: both; padding-left: 44px; cursor: pointer;}
+.timeline-thumb-nav:before {content: ""; width: 16px; height: 16px; display: block; position: absolute; left: 8px; background: var(--white); outline: 8px solid rgba(255, 255, 255, 0.20); border-radius: 50%; top: 8px;}
+.timeline-thumb-nav:after {content: ""; position: absolute; background: var(--white); width: 1px; height: 1000%; display: block; top: 8px; left: 16px;}
+.timeline-thumb-nav .h6 {font-size: 20px; font-family: 'Oswald', sans-serif; font-weight: 500; line-height: 125%; text-transform: uppercase;  color: var(--white); margin: 0 0 32px 0; padding-top: 2px;}
+
+.timeline-thumb-nav p {font-size: 14px; line-height: 150%; font-weight: 400; padding: 0 0 33px 0;}
+.timeline-thumb.slick-current {transform: translateY(-300px)}
+
+
+.cta-module.volunteer-cta {padding:0 0 56px 0;}
+.cta-module.volunteer-cta .cta-overlay {top: inherit; bottom: 0; height: calc(100% - 51.5%); background: var(--mauve-tint);}
+.cta-module.career-cta .cta-overlay {height: 100%; background: var(--purple-tint);}
+
+.meet-donors-main::after {display: none;}
+
+
+.our-story {width: 100%; padding:81px 0 68px 0; clear: both; position: relative;}
+.our-story h2 {margin-bottom: 63px;}
+.our-story-wrap {clear: both; width: 100%;}
+.our-story-intro {position: relative; clear: both; width: 100%;}
+.our-story-mem .bg {background: var(--purple-tint); top: inherit; height:75.2%;}
+.our-story-main {display: flex; flex-wrap: wrap; width: 100%; font-size: 0; margin: 8px 0 0 0;}
+.our-story-grid {display: inline-block; width:21.71875%; vertical-align: top; margin: 4.375% 0 0 4.375%;}
+.our-story-grid:nth-child(4n+1) {margin-left: 0;}
+.our-story-grid .our-story-thumb{margin:0 0 25px 0; clear: both; width: 100%; position: relative;}
+.our-story-grid .our-story-thumb:after {background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display:block;}
+
+.our-story-grid .h4 {font-family: 'Oswald', sans-serif; color: var(--purple); font-weight: 200; text-transform: uppercase; line-height: 100%; letter-spacing: -0.56px; margin-bottom: 15px; font-size: 28px;}
+.our-story-grid .h4 strong {font-weight: 400;}
+.our-story-grid p {font-size: 16px; font-weight: 400; line-height: 175%; color: var(--linkhover); font-family: 'Oswald', sans-serif; margin-bottom: 15px;}
+.our-story-grid .readmore {color: var(--purple);}
+
+
+
+
+/*-- media css starts here --*/
+@media only screen and (min-width:1024px){
+.meet-donors-main {padding: 80px 0 72px 0;}
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .our-story {padding: 64px 0;}
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+     .our-story {padding: 40px 0;}
+    .our-story h2 {margin-bottom: 39px;}
+
+    .our-story-grid {width: 100%; margin:22px 0 0 0;}
+    .our-story-grid .h4 {font-size: 32px; line-height: 100%; letter-spacing: -0.64px;}
+    .our-story-bg {height: 89.1%;}
+    
+}
