@@ -36,11 +36,14 @@
 
 
 .our-story {width: 100%; padding:81px 0 68px 0; clear: both; position: relative;}
-.our-story h2 {margin-bottom: 63px;}
+.our-story-lt {width: 47.65625%; flex-grow: 1;}
+.our-story-lt h2 {font-size: 40px; font-weight: 500; line-height: 125%; letter-spacing: -0.8px;}
+.our-story-rt {width: 47.65625%; margin-left: 4.6875%;}
+.our-story-rt .our-story-thumb {position: relative;}
 .our-story-wrap {clear: both; width: 100%;}
-.our-story-intro {position: relative; clear: both; width: 100%;}
-.our-story-mem .bg {background: var(--purple-tint); top: inherit; height:75.2%;}
-.our-story-main {display: flex; flex-wrap: wrap; width: 100%; font-size: 0; margin: 8px 0 0 0;}
+.our-story-intro {position: relative; clear: both; width: 100%; align-items: center;}
+.our-story-mem .bg {background: var(--purple-tint); top: inherit; height:78.2%; bottom: 0;}
+.our-story-main {display: flex; flex-wrap: wrap; width: 100%; font-size: 0;}
 .our-story-grid {display: inline-block; width:21.71875%; vertical-align: top; margin: 4.375% 0 0 4.375%;}
 .our-story-grid:nth-child(4n+1) {margin-left: 0;}
 .our-story-grid .our-story-thumb{margin:0 0 25px 0; clear: both; width: 100%; position: relative;}
