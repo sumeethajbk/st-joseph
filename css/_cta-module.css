@@ -32,6 +32,8 @@
 .cta-module.volunteer-cta .cta-overlay {height: calc(100% - 48.7%);}
 .cta-module.volunteer-cta .cta-main {flex-direction: row-reverse;}
 
+.cta-module.career-cta {padding: 40px 0;}
+
 /*-- media css starts here --*/
 @media only screen and (max-width:1280px) and (min-width: 1024px){
     .cta-main-text {padding: 64px 48px;}

@@ -31,6 +31,12 @@
 .stories-thumb.slick-current .stories-thumb-nav p {display:block;}
 .stories-thumb.slick-current .h6 {margin: 0 0 7px 0;}
 
+
+.mauve.stories-slider .bg {background: var(--mauve-tint);}
+.mauve .stories-thumb-nav .h6, .mauve h2 span, .mauve .stories-slide .play-btn-txt {color: var(--mauve);}
+.mauve .slick-arrow, .mauve .stories-slide .play-btn-wrap, .mauve .stories-thumb-nav:after,  .mauve .stories-thumb-nav:before {background: var(--mauve);}
+.mauve .stories-thumb-nav:before, .mauve .slider-for .slick-arrow, .mauve .stories-slide .play-btn-wrap  {outline-color: rgba(197, 59, 110, 0.20);}
+
 /*-- media css starts here --*/
 @media only screen and (max-width:1280px) and (min-width: 1024px){
     .stories-thumb {width: 250px;}

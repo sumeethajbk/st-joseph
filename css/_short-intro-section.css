@@ -13,7 +13,7 @@
 .short-intro-list p {color: var(--linkhover); line-height: 150%; letter-spacing: -0.4px; font-size: 20px; font-family: 'Oswald', sans-serif; margin-bottom: 15px;}
 .short-intro-icon{display: block; margin-bottom: 20px; width: 80px; height: 80px;}
 
-.row-of-five .short-intro-list {width: 16.484375%;}
+.row-of-five .short-intro-list, .row-of-five .short-intro-list:nth-child(4n+1) {width: 16.484375%; margin: 4.375% 0 0 4.375%;}
 .row-of-five .short-intro-list:nth-child(5n+1) {margin-left: 0;}
 
 

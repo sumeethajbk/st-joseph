@@ -2,7 +2,7 @@
 .repeater-bg {width: 100%; height:calc(100% - 320px); background: var(--elevated); display: block; left: 0; bottom: 0; top: 0; margin: auto;}
 .repeaters-loop {margin-top: 112px; clear: both; width: 100%;}
 .repeaters-loop:first-child {margin: 0;}
-.repeaters-grid {justify-content: space-between; min-height: 600px; position: relative;}
+.repeaters-grid {justify-content: space-between; min-height: 600px; position: relative; z-index: 2;}
 .repeaters-grid .repeaters-lt {width: 46.875%; margin-right: 6.25%;}
 .repeaters-grid .repeaters-lt .h3 {margin-bottom: 24px;}
 .repeaters-grid .repeaters-rt {width: 46.875%; flex-grow: 1; padding: 20px 0 120px 0; display: flex; position: relative; margin-top: auto;}
@@ -14,7 +14,7 @@
 .repeaters-loop:nth-child(even) .repeaters-grid .repeaters-lt {width: 46.875%; margin-left: 6.25%; margin-right: 0;}
 .repeaters-loop:nth-child(even) .repeaters-grid .repeaters-rt {margin-bottom: auto; padding: 122px 0 20px 0; margin-top:inherit;}
 .repeaters-loop:nth-child(even) .repeaters-grid .repeaters-rt:after {top: 0; bottom: inherit;}
-.repeaters-full-txt {width: 100%; clear: both; margin-top: 113px; margin-bottom: -2px; z-index: 1;}
+.repeaters-full-txt {width: 100%; clear: both; margin-top: 113px; margin-bottom: -2px; z-index: 1; position: relative;}
 .repeaters-full-txt:before {content: ""; background:var(--optionaltxt) ; position: absolute; top: 0; bottom: 0; margin: auto; display: block; width: 1151px; height: 1151px; opacity: 0.05; border-radius: 50%; left: 0; right: 0; z-index: -1;}
 .repeaters-full-txt h2 {margin: 0;}
 
