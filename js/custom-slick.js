@@ -123,18 +123,20 @@ jQuery(document).ready(function () {
 
   /* Timeline Slider */
   jQuery('.timeline-slider').slick({
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
+    asNavFor: '.timeline-for',
     dots: false,
-    arrows: false,
+    arrows: true,
     focusOnSelect: true,
     variableWidth: true,
     draggable: true,
     touchThreshold: 200,
     swipeToSlide: true,
     speed: 1000,
-    infinite: true,
-    loop: true,
+    cssEase: "linear",
+      centerMode:true,
+      centerPadding:0,
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
     responsive: [{
@@ -153,5 +155,29 @@ jQuery(document).ready(function () {
       },
     ]
   });
+
+
+  jQuery('.timeline-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 1500,
+    arrows: false,
+    asNavFor: '.timeline-slider',
+    draggable: true,
+    touchThreshold: 200,
+    swipeToSlide: true,
+    fade: true,
+    prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
+    nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+      }
+    }, ]
+  });
+
+
+  /* End of Stories Slider */
 
 });

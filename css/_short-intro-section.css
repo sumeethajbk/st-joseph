@@ -7,7 +7,7 @@
 .short-intro-lt h2 {font-size: 40px; line-height: 125%; letter-spacing: -0.8px;}
 
 .short-intro-rt {font-size: 18px; line-height: 150%; width: calc(100% - 53.125%); padding: 18px 0 0 0; flex-grow: 1;}
-.short-intro-row {justify-content: center; padding: 5px 0 0 0;}
+.short-intro-row {padding: 5px 0 0 0;}
 .short-intro-list {width: 21.71875%; margin: 4.375% 0 0 4.375%; display: inline-block; vertical-align: top;}
 .short-intro-list:nth-child(4n+1) {margin-left: 0;}
 .short-intro-list p {color: var(--linkhover); line-height: 150%; letter-spacing: -0.4px; font-size: 20px; font-family: 'Oswald', sans-serif; margin-bottom: 15px;}
@@ -29,8 +29,8 @@
     .short-intro-lt {width: 100%; margin: 0;}
     
     .short-intro-rt {width: 100%; padding: 13px 0 0 0;}
-    .short-intro-list, .short-intro-list:nth-child(4n+1) {width: 45.93023255813954%; margin: 7.55813953488372% 0 0 8.13953488372093%;}
-    .short-intro-list:nth-child(2n+1) {margin-left: 0;}
+    .short-intro-list, .short-intro-list:nth-child(4n+1), .row-of-five .short-intro-list, .row-of-five .short-intro-list:nth-child(4n+1) {width: 45.93023255813954%; margin: 7.55813953488372% 0 0 8.13953488372093%;}
+    .short-intro-list:nth-child(2n+1), .row-of-five .short-intro-list:nth-child(2n+1) {margin-left: 0;}
     
 
 }
@@ -41,5 +41,5 @@
     
     .short-intro-row {padding: 20px 0 0 0;}
     .short-intro-rt {width: 100%; padding: 13px 0 0 0;}
-    .short-intro-list {width: 100%; margin: 44px 0 0 0;}
+    .short-intro-list, .row-of-five .short-intro-list, .row-of-five .short-intro-list:nth-child(4n+1) {width: 100%; margin: 44px 0 0 0;}
 }

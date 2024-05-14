@@ -35,7 +35,10 @@
 .mauve.stories-slider .bg {background: var(--mauve-tint);}
 .mauve .stories-thumb-nav .h6, .mauve h2 span, .mauve .stories-slide .play-btn-txt {color: var(--mauve);}
 .mauve .slick-arrow, .mauve .stories-slide .play-btn-wrap, .mauve .stories-thumb-nav:after,  .mauve .stories-thumb-nav:before {background: var(--mauve);}
-.mauve .stories-thumb-nav:before, .mauve .slider-for .slick-arrow, .mauve .stories-slide .play-btn-wrap  {outline-color: rgba(197, 59, 110, 0.20);}
+.mauve .stories-thumb-nav:before, .mauve .stories-slider-wrap .slick-arrow, .mauve .stories-slider-wrap .play-btn-wrap  {outline-color: rgba(197, 59, 110, 0.20);}
+.mauve .stories-slider-wrap ul.slick-dots li button {background-color:rgba(197, 59, 110, 0.20);}
+.mauve .stories-slider-wrap ul.slick-dots li.slick-active {border-color: rgba(197, 59, 110, 0.20);}
+.mauve .stories-slider-wrap ul.slick-dots li.slick-active button {background: var(--mauve);}
 
 /*-- media css starts here --*/
 @media only screen and (max-width:1280px) and (min-width: 1024px){
