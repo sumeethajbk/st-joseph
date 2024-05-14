@@ -1,0 +1,90 @@
+
+
+.browse-tab-section{padding: 40px 0;}
+.browse-tab-heading{margin-bottom: 56px; align-items: center; gap: 32px}
+.browse-tab-heading h2{width: 50%; font-size: 40px; width: 624px; margin-bottom: 0;}
+.browse-tab-heading .browse-search{width: calc(100% - 656px); border: 2px solid var(--tealborder); border-radius: 32px; position: relative; z-index: 1; clear: both; }
+.browse-search-field input{padding: 20px 20px 20px 50px; background-color: transparent; font-weight: 500; font-size: 16px; color: var(--linkhover);}
+.browse-search-button{position: absolute; display: block; top: 50%; left: 15px; right: auto; width: 24px; height: 30px; transform: translateY(-50%);}
+.browse-search-button button{width: 100%; height: 100%; padding: 0; border-radius: 6px; background: transparent; color: var(--teal); font-size: 24px; line-height: 32px; outline: none;}
+.browse-search-button button:hover{outline: none;}
+
+.browse-search-field input::-webkit-input-placeholder{color: var(--linkhover); font-family: "Poppins";}
+.browse-search-field input:-moz-placeholder{color: var(--linkhover); font-family: "Poppins"; opacity: 0.5;}
+.browse-search-field input::-moz-placeholder{color: var(--linkhover); font-family: "Poppins"; opacity: 0.5;}
+
+
+.browse-lists {clear: both; font-size: 0; width: 100%; position: relative;}
+.browse-grid {display: inline-block; width:22.65625%; vertical-align: top; margin: 39px 0 0 3.125%;}
+.browse-grid:nth-child(4n+1) {margin-left: 0;}
+.browse-grid .browse-thumb {margin: 0 0 23px 0; clear: both; width: 100%; position: relative;}
+.browse-grid .browse-thumb:after {background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display:block;}
+.browse-grid .browse-cnt {clear: both; width: 100%;}
+.browse-grid .browse-cnt p {font-size: 20px; font-weight: 500; line-height: 150%; color: var(--linkhover);}
+
+#mainContent .ui-tabs .ui-tabs-nav li{min-width: inherit; max-width: inherit; width: calc(20% - 18px); margin-right: 22px; } 
+
+
+
+.btn-center { position: relative; z-index: 1; width: 100%; text-align: center; margin-top: 55px;}
+.btn-center .more-events { padding: 0 16px; background-color: #fff; position: relative; z-index: 1; display: inline-block; }
+.btn-center .more-events .button{background-color: var(--lightwhite); color: var(--teal)}
+.btn-center::before { position: absolute; display: block; content: ""; width: 100%; left: 0; right: auto; top: 50%; transform: translateY(-50%); background-color: var(--optionaltxt); background-position: center center; background-size: 8px 2px; background-repeat: repeat-x; height: 2px; z-index: -1; opacity: 0.5; }
+
+
+@media only screen and (max-width: 1023px) and (min-width:768px){
+    .browse-tab-section { padding: 20px 0 40px;}
+    .browse-tab-heading{display: block; margin-bottom: 44px;}
+    .browse-tab-heading h2{width: 100%; margin-bottom: 30px;}
+    .browse-search-field input { padding: 13px 20px 13px 50px;}
+    .browse-tab-heading .browse-search{width: 30%; right: 40px; position: absolute; left: auto;}
+
+    #mainContent .ui-tabs .ui-tabs-nav {  margin-top: -15px; margin-bottom: 30px; flex-wrap: wrap; width: 70%; gap: 10px 0;}
+    #mainContent .ui-tabs .ui-tabs-nav li {width: 56px; height: 56px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-right: 12px;}
+    #mainContent .ui-tabs .ui-tabs-nav .ui-tabs-anchor {font-size: 0; line-height: 0; padding: 5px;}
+    #mainContent .ui-tabs .ui-tabs-nav li.ui-tabs-active{ width: auto; height: auto;}
+    #mainContent .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{font-size: 16px; line-height: 125%; padding: 14px 20px;}
+    #mainContent .ui-tabs .ui-tabs-nav .ui-tabs-anchor span.icon-wrap {margin-left: 0;}
+    #mainContent .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor span.icon-wrap{margin-left: 8px;}
+
+    .browse-grid {padding: 0 0 40px 0; width: calc(33.3% - 15px); margin: 10px 0 0 0; }
+    .browse-lists{gap: 0 22px;}
+
+
+    .btn-center{margin-top: 0;}
+
+
+}
+@media only screen and (max-width: 767px) and (min-width:200px){
+.browse-tab-heading h2 {font-size: 32px;}
+    .browse-search-field input { padding: 13px 20px 13px 50px;}
+    .browse-tab-heading .browse-search { width: 100%;}
+    .browse-tab-heading { margin-bottom: 36px; gap: 38px; }
+
+    .browse-grid {width: 342px; margin: 0;}
+    .browse-grid .browse-cnt {margin-bottom: 30px;}
+    /* .browse-lists {padding: 0 0 65px 0;} */
+    .browse-lists ul.slick-dots {min-height: 72px; width: calc(100% - 151px); margin: 0 auto; position: absolute; left: 0; right: 0;}
+    .browse-lists .slick-arrow {top: inherit; bottom: 0;}
+
+    .btn-center{margin-top: 12px;}
+    .repeaters-single { padding: 25px 0 64px; }
+    .repeater-single-bg {display: none;}
+
+    .ui-tab-mobile{margin-bottom: 40px; background: var(--elevated); border-radius: 32px;}
+    .ui-tab-btn { background: var(--elevated); border-color: transparent; border-radius: 32px; padding: 20px 50px 20px 58px; color: var(--linkhover); font-size: 16px; line-height: 1.25; position: relative; cursor: pointer; transition: all 0.5s ease;}
+    .ui-tab-icon { position: absolute; left: 23px; right: auto; font-size: 24px; font-weight: 300; line-height: 24px; color: var(--optionaltxt); top: 50%; transform: translateY(-50%); }
+    .ui-tab-txt {display: block; font-size: 16px; line-height: 1.25; color: var(--linkhover); font-weight: 500;}
+    .ui-tab-btn.active{border-radius: 32px 32px 0 0; }
+    .ui-tab-btn:before{ content: "\f078"; position: absolute; left: auto; right: 24px; font-family: "Font Awesome 6 Pro"; font-size: 24px; color: var(--teal); top: 50%; transform: translateY(-51%); font-weight: 300; transition: all 0.5s ease-in; -moz-transition: all 0.5s ease-in-out;}
+    .ui-tab-btn.active::before{content: "\f077";}
+
+    #mainContent .ui-tabs .ui-tabs-nav {display: none; background: none;border-color: transparent; border-radius: 0; padding-bottom: 14px; }
+    #mainContent .ui-tabs .ui-tabs-nav  li{display: block; width: 100%; border: 0; margin-right: 0;}
+    #mainContent .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {justify-content: inherit; padding: 16px 20px 16px 57px}
+    #mainContent .ui-tabs .ui-tabs-nav .ui-tabs-anchor {font-size: 16px; width: 100%; height: 100%; justify-content: inherit; padding: 16px 20px 16px 57px} 
+    #mainContent .ui-tabs .ui-tabs-nav li:first-child .ui-tabs-anchor{padding: 8px 20px 16px 57px;}
+    #mainContent .ui-tabs .ui-tabs-nav li.ui-tabs-active span.icon-wrap { margin-left: 0; }
+    #mainContent .ui-tabs .ui-tabs-nav .ui-tabs-anchor span.icon-wrap{position: absolute; left: 23px; right: auto; margin-left: 0;}
+    #mainContent .ui-tabs .ui-tabs-nav li.ui-tabs-active {display: none;}
+  }
