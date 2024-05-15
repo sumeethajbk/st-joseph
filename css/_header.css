@@ -55,11 +55,27 @@
     ul.main_menu > li > a:hover {color: var(--teal)!important;}
 
 
-    ul.main_menu > li > ul{display: none; margin: 0; padding:30px 0 14px; min-width: 704px; top: 100%; background-color: var(--elevated); position: absolute; left: 50%; text-align: left; transform: translateX(-50%);}
-    ul.main_menu > li ul:before {top:-16px; left:0; right: 0; margin: auto; border: solid transparent; content: ""; height: 0;	width: 50px; position: absolute; pointer-events: none;	border-color: rgba(255, 255, 255, 0); border-bottom-color: var(--crimson-glory); border-width:8px;}
-    ul.main_menu > li:hover > ul{display: flex; flex-wrap: wrap;}
-    ul.main_menu li ul li{margin:0 0 16px; padding:0 32px; display: block;}
-    ul.main_menu li ul li a{font-size:16px; line-height: 100%; color:var(--linkhover); display: block; font-weight: 600;}
+    ul.main_menu > li.flex-menu > ul{margin: 0; max-width: 704px; top: calc(100% + 33px); background-color: var(--elevated); position: absolute; left: 50%; text-align: left; transform: translateX(-50%); width: 100vw; display: flex; flex-wrap: wrap; opacity: 0; visibility: hidden;}
+    ul.main_menu > li.flex-menu > ul > li{margin:0; padding:39px 40px 40px 40px; width: 352px;}
+    ul.main_menu > li.flex-menu > ul > li:last-child {background: var(--optionaltxt);}
+    
+    
+    ul.main_menu > li > ul:before {top:-6px; left:0; right: 0; margin: auto; content: ""; height: 12px; width: 64px; position: absolute; pointer-events: none;	background-color: var(--linkhover); border-radius:8px; z-index: 1;}
+    ul.main_menu > li > ul:after {content: " "; position: absolute; top: 0; left: 0;  width: 100%; height: 50px; margin-top: -50px; background-color: transparent;
+    right: 0;}
+    
+    ul.main_menu > li:hover > ul{opacity: 1; visibility: visible;}  
+    ul.main_menu > li ul li {margin: 0;}
+    ul.main_menu > li ul li.no-link > a {font-size: 24px; font-weight: 500; line-height: 125%; letter-spacing: -0.48px; color: var(--teal); pointer-events: none;
+    cursor: initial; text-transform: none; padding: 0 0 13px 0;}
+    ul.main_menu > li ul li a{font-size:16px; line-height: 100%; color:var(--linkhover); display: block; font-weight: 600; padding:16px 0 15px; letter-spacing: -0.32px; text-transform: capitalize;}
+    
+    
+    /* Level 2 */
+    ul.main_menu > li ul ul {margin: 0;}
+    ul.main_menu > li ul ul li {padding: 0; border-top:1px solid rgba(0, 156, 166, 0.25);}
+    ul.main_menu > li ul ul li:first-child {border-top: 0 none;}    
+    
     ul.main_menu li ul li.current-page-ancestor a, ul.main_menu li ul li.current_page_item a, ul.main_menu li ul li a:hover, ul.main_menu li ul li a.active{color: var(--teal);}
 
 
