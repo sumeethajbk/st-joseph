@@ -1,0 +1,14 @@
+.funds-section{position: relative; clear: both; width: 100%; background-color: var(--elevated);}
+.funds-main{padding: 40px 0 80px;}
+
+.funds-heading{}
+.funds-heading h4{font-size: 40px; line-height: 1.25;}
+.fund-lt{flex: 0 0  77%; margin-right: 25px; margin-bottom: 56px;}
+.fund-rt{flex: 0 0 calc(100% - 79%);}
+.fund-lt h4{margin-bottom: 0;}
+
+.funds-row{gap: 80px;}
+.funds-list{flex: 0 0 calc(25% - 62px);}
+.funds-list h5{font-size: 22px;}
+.funds-list .readmore{color: var(--teal);}
+.funds-thumb{margin-bottom: 32px;}
