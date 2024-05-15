@@ -57,8 +57,10 @@
 
     ul.main_menu > li.flex-menu > ul{margin: 0; max-width: 704px; top: calc(100% + 33px); background-color: var(--elevated); position: absolute; left: 50%; text-align: left; transform: translateX(-50%); width: 100vw; display: flex; flex-wrap: wrap; opacity: 0; visibility: hidden;}
     ul.main_menu > li.flex-menu > ul > li{margin:0; padding:39px 40px 40px 40px; width: 352px;}
-    ul.main_menu > li.flex-menu > ul > li:last-child {background: var(--optionaltxt);}
-    
+    ul.main_menu > li.flex-menu > ul > li:last-child {background: var(--optionaltxt); display: flex; flex-wrap: wrap; flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+    ul.main_menu > li.flex-menu > ul > li:last-child img {width: 64px; height: 64px; margin: 0 0 24px 0; display: block;}
+    ul.main_menu > li.flex-menu > ul > li:last-child span {font-size: 24px; font-style: normal; font-weight: 500; line-height: 125%; letter-spacing: -0.48px; color: var(--linkhover); display: block; margin: 0 0 11px 0;}
+    ul.main_menu > li.flex-menu > ul > li:last-child span span {color: var(--white); display: inline-block; margin: 0;}
     
     ul.main_menu > li > ul:before {top:-6px; left:0; right: 0; margin: auto; content: ""; height: 12px; width: 64px; position: absolute; pointer-events: none;	background-color: var(--linkhover); border-radius:8px; z-index: 1;}
     ul.main_menu > li > ul:after {content: " "; position: absolute; top: 0; left: 0;  width: 100%; height: 50px; margin-top: -50px; background-color: transparent;
@@ -68,13 +70,25 @@
     ul.main_menu > li ul li {margin: 0;}
     ul.main_menu > li ul li.no-link > a {font-size: 24px; font-weight: 500; line-height: 125%; letter-spacing: -0.48px; color: var(--teal); pointer-events: none;
     cursor: initial; text-transform: none; padding: 0 0 13px 0;}
+    ul.main_menu > li ul li.no-link-txt > a {display: none;}
     ul.main_menu > li ul li a{font-size:16px; line-height: 100%; color:var(--linkhover); display: block; font-weight: 600; padding:16px 0 15px; letter-spacing: -0.32px; text-transform: capitalize;}
+    ul.main_menu > li ul li.menu-btn {border: 0 none;}
+    ul.main_menu > li ul li.menu-btn a, ul.main_menu > li ul li .button {color: var(--white); margin-top: 12px; font-size: 18px;  letter-spacing: -0.36px;
+text-transform: capitalize; padding: 14px 16px 16px 16px;}
+    ul.main_menu > li ul li.menu-btn a:hover, ul.main_menu > li ul li .button:hover {color: var(--white);}
+    
     
     
     /* Level 2 */
     ul.main_menu > li ul ul {margin: 0;}
     ul.main_menu > li ul ul li {padding: 0; border-top:1px solid rgba(0, 156, 166, 0.25);}
-    ul.main_menu > li ul ul li:first-child {border-top: 0 none;}    
+    ul.main_menu > li ul ul li:first-child {border-top: 0 none;}   
+    
+    /* Level 3 */
+    ul.main_menu > li ul ul ul {margin: 0 0 0 16px; display: none;}
+    ul.main_menu > li ul ul ul li {border: 0 none;}
+    ul.main_menu > li ul ul ul li a {font-size: 14px; font-weight: 400; line-height: 100%; letter-spacing: -0.28px; text-transform: capitalize; padding-top: 1px; color: var(--slate);}
+    ul.main_menu > li ul ul ul li a:hover {color: var(--teal);}
     
     ul.main_menu li ul li.current-page-ancestor a, ul.main_menu li ul li.current_page_item a, ul.main_menu li ul li a:hover, ul.main_menu li ul li a.active{color: var(--teal);}
 
