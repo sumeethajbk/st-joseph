@@ -14,6 +14,15 @@ jQuery(document).ready(function () {
 
 
   /* Menu */
+ jQuery("ul.main_menu ul.sub-menu > li.menu-item-has-children > a").on("click", function (event) {
+    event.preventDefault();
+    jQuery(this).toggleClass("active");
+    jQuery(this).parent().siblings('li').find("a").removeClass("active");
+    jQuery(this).siblings("ul").slideToggle();
+    jQuery(this).parent().siblings('li').find("ul.sub-menu").slideUp();
+  });
+    
+    
   if (jQuery(window).width() <= 1023) {
     jQuery('.toggle_button').on("click", function (event) {
       event.preventDefault();
