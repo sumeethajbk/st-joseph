@@ -9,6 +9,6 @@
 
 .funds-row{gap: 80px;}
 .funds-list{flex: 0 0 calc(25% - 62px);}
-.funds-list h5{font-size: 22px;}
+.funds-list h5{font-size: 22px; font-weight: 600;}
 .funds-list .readmore{color: var(--teal);}
 .funds-thumb{margin-bottom: 32px;}
