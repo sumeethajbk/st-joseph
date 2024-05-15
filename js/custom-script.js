@@ -73,7 +73,7 @@ jQuery(document).ready(function () {
 
 
   /* Bottom Video Slide*/
-  jQuery('.video-thumbnail .play-btn').on('click', function (e) {
+  jQuery('.play-btn').on('click', function (e) {
     e.preventDefault();
     jQuery('body').addClass('pull_bottom');
     jQuery('.overlay_main_sec').addClass('active');
