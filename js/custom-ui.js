@@ -6,6 +6,7 @@ const ui_icon = jQuery(".ui-tab-icon");
         jQuery(this).toggleClass("active");
         jQuery(this).siblings(".ui-tabs-nav").slideToggle("slow");
     });
+    if (jQuery(window).width() <=767) { 
     jQuery("ul.ui-tabs-nav li a").on("click", function(e){
         e.preventDefault();
         jQuery(".ui-tab-btn").removeClass("active");
@@ -15,5 +16,6 @@ const ui_icon = jQuery(".ui-tab-icon");
         console.log(tab_icon)
         ui_icon.html(tab_icon);
         jQuery("ul.ui-tabs-nav").slideUp("slow");
-    });
+
+    }); }
 });
