@@ -61,7 +61,7 @@
     .browse-tab-heading .browse-search { width: 100%;}
     .browse-tab-heading { margin-bottom: 36px; gap: 38px; }
 
-    .browse-grid {width: 342px; margin: 0;}
+    .browse-grid {width: 100%; margin: 0;}
     .browse-grid .browse-cnt {margin-bottom: 30px;}
     /* .browse-lists {padding: 0 0 65px 0;} */
     .browse-lists ul.slick-dots {min-height: 72px; width: calc(100% - 151px); margin: 0 auto; position: absolute; left: 0; right: 0;}
