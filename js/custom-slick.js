@@ -142,17 +142,10 @@ jQuery(document).ready(function () {
     responsive: [{
         breakpoint: 1024,
         settings: {
-          fade: true,
+           centerMode:false,
         }
       },
-      {
-        breakpoint: 768,
-        settings: {
-          dots: true,
-          arrows: true,
-          variableWidth: false,
-        }
-      },
+      
     ]
   });
 

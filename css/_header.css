@@ -52,15 +52,15 @@
     ul.main_menu > li.current-page-ancestor > a, 
     ul.main_menu > li.menu-item-has-children > a:hover, 
     ul.main_menu .current_page_item > a, 
-    ul.main_menu > li > a:hover {color: var(--link);}
+    ul.main_menu > li > a:hover {color: var(--teal)!important;}
 
 
-    ul.main_menu > li > ul{display: none; margin: 0; padding:30px 0 14px; min-width: 326px; top: 100%; background-color: var(--clc-blue); position: absolute; left: 50%; text-align: left; transform: translateX(-50%);}
+    ul.main_menu > li > ul{display: none; margin: 0; padding:30px 0 14px; min-width: 704px; top: 100%; background-color: var(--elevated); position: absolute; left: 50%; text-align: left; transform: translateX(-50%);}
     ul.main_menu > li ul:before {top:-16px; left:0; right: 0; margin: auto; border: solid transparent; content: ""; height: 0;	width: 50px; position: absolute; pointer-events: none;	border-color: rgba(255, 255, 255, 0); border-bottom-color: var(--crimson-glory); border-width:8px;}
-    ul.main_menu > li:hover > ul{display: block;}
+    ul.main_menu > li:hover > ul{display: flex; flex-wrap: wrap;}
     ul.main_menu li ul li{margin:0 0 16px; padding:0 32px; display: block;}
-    ul.main_menu li ul li a{font-size: 1rem; line-height:1.5; color:var(--clc-blue-txt); display: block; font-weight: 800;}
-    ul.main_menu li ul li.current-page-ancestor a, ul.main_menu li ul li.current_page_item a, ul.main_menu li ul li a:hover, ul.main_menu li ul li a.active{color: var(--crimson-glory);}
+    ul.main_menu li ul li a{font-size:16px; line-height: 100%; color:var(--linkhover); display: block; font-weight: 600;}
+    ul.main_menu li ul li.current-page-ancestor a, ul.main_menu li ul li.current_page_item a, ul.main_menu li ul li a:hover, ul.main_menu li ul li a.active{color: var(--teal);}
 
 
     nav.navigation {width:auto; display:inline-block; margin-top: 10px; position: relative; vertical-align: top;}
