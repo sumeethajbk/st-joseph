@@ -9,6 +9,7 @@
 .default-banner-main .default-banner-text p {font-size: 1.125rem; margin-bottom:32px; line-height: 1.44; color:var(--white); font-weight: 400;}
 .default-banner-main .default-banner-text .button {margin: 0 20px 0 0;}
 .default-banner-main .default-banner-text .button.btn-white {color: var(--linkhover);}
+.default-banner-main .default-banner-text .button.btn-white:hover {background: var(--white); outline: 6px solid var(--tealborder);}
 .default-banner-main .default-banner-text .button:last-child {margin-right: 0;}
 .default-banner-main .default-banner-text .readmore {color: var(--white); padding-bottom: 1px; padding-right: 25px;}
 
