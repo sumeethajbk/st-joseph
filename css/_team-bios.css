@@ -1,0 +1,61 @@
+
+/* Group Team Bios */
+.group-team-bios {clear: both; width: 100%; position: relative; background: var(--elevated); padding: 80px 0;}
+.group-team-bios h3 {margin-bottom: 0; letter-spacing: -0.8px;}
+.gt-bios-grid {position: relative; display: flex; flex-direction: column; height: inherit; overflow: hidden; text-decoration: none; width:30.833332812499997%; margin:3.75% 0 0 3.75%; min-height: 493px; max-height: 493px;}
+.gt-bios-grid:nth-child(3n+1) {margin-left: 0;}
+
+.gt-bios-grid:after {position: absolute; left:0; top: 0; width: 100%; height: 100%; display: block; background-color: rgba(157, 151, 154, 0.2); content: "";}
+.gt-bios-grid .gt-bios-overlay {position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; transform: translateY(100%); transition: .5s ease-in-out;}
+
+.gt-bios-grid .gt-bios-header { position: relative; display: flex; align-items: center; padding:24px 24px 23px 24px; transform: translateY(-100%); transition: .5s ease-in-out; flex-wrap: wrap;}
+.gt-bios-grid .gt-bios-header:after {background-image: linear-gradient(to bottom, rgba(0, 131, 139, 0), #00838b); content: ""; display: block; width: 100%; height: 100%; left: 0; bottom: 0; position: absolute; z-index: -1;}
+.gt-bios-grid .gt-bios-header:before {content: ""; background:var(--teal); height: 1000%; bottom: -1000%; position: absolute; left: 0; display: block; width: 100%; z-index: -1;}
+.gt-bios-grid .gt-bios-header .h5 {color: var(--white); width: 100%; font-size: 22px; font-weight: 600; line-height: 150%; margin-bottom: 2px;}
+
+.gt-bios-grid .gt-bios-pos {display: block; width: 100%; font-size: 16px; line-height: 150%; color:var(--white); opacity: 0.8;}
+.gt-bios-links {margin:20px 0 11px 0;}
+.gt-bios-links li:before {display: none;}
+.gt-bios-links li {font-weight: 600; line-height: 100%; letter-spacing: -0.32px; font-size: 16px; margin-bottom: 12px; display: block; width: 100%;}
+.gt-bios-links li i {position: absolute; left: 0; color: var(--linkhover);}
+.gt-bios-links li a {color: var(--white); padding-left:26px;}
+.gt-bios-links li a:hover {color: var(--linkhover);}
+.gt-bios-grid .gt-bios-desc {position: relative; z-index: 1; padding:0 24px 25px 24px; margin: 0; display: block; color:var(--white); font-size: 14px; line-height: 150%; transition: .5s ease-in-out; margin-top: -23px;}  
+.gt-bios-wrap {clear: both; width: 100%; padding: 0 0 15px 0;}
+
+
+
+
+@media only screen and (min-width:1024px){
+    .gt-bios-grid:hover .gt-bios-header {transform: translateY(0);}
+    .gt-bios-grid:hover .gt-bios-overlay {transform: translateY(0);}
+
+}
+@media only screen and (max-width: 1023px) and (min-width:200px){
+     .bios-toggle {width: 54px; height: 54px; background: rgba(255, 255, 255, 0.20); border-radius: 50%; right:20px; bottom:20px;  cursor: pointer; color: var(--teal); display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 6.667px;}
+    .bios-toggle .toggle-inner {width: 100%; height: 100%; background: var(--white); border-radius: 50%; font-size: 20px; line-height: 20px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;}
+    .gt-bios-grid .gt-bios-header {padding: 24px 84px 23px 24px;}
+    .gt-bios-grid.active .bios-toggle {transform: rotate(180deg);}
+    .gt-bios-grid.active .gt-bios-header {transform: translateY(0);}
+    .gt-bios-grid.active .gt-bios-overlay {transform: translateY(0);}
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+   
+    
+    .group-team-bios {padding: 64px 0;}
+    .group-team-bios h3 {margin-bottom: 16px;}
+    .gt-bios-grid, .gt-bios-grid:nth-child(3n+1) {width: 47.674418604651166%; margin: 4.651162790697675% 0 0 4.651162790697675%; min-height: 410px; max-height: 410px;}
+    .gt-bios-grid:nth-child(2n+1) {margin-left: 0;}
+    .gt-bios-grid .gt-bios-header .h5 {margin-bottom: -1px;}
+    
+    
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+   
+    .group-team-bios {padding: 40px 0; border-bottom: 1px solid var(--white);}
+    .group-team-bios h3 {font-size: 32px; letter-spacing:-0.64px; margin-bottom: 24px;}
+    .gt-bios-grid {width: 100%; margin: 24px 0 0 0; min-height: 428px; max-height: 428px;}
+    .gt-bios-grid .gt-bios-header .h5 {margin-bottom: -1px;}
+    .gt-bios-wrap {padding: 0 0 21px 0;}
+}

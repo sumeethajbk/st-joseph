@@ -68,6 +68,12 @@
 .meet-our-donors {padding: 0;}
 .meet-donors-main::after {display: none;}
 
+/* Default Thumb */
+.default-thumb {margin:64px 0 28px 0; position: relative;}
+.default-thumb figure figcaption {font-size: 14px; font-style: normal; font-weight: 400; line-height: 150%; width:100%; padding:24px; color: var(--linkhover); background:var(--elevated);}
+.default-thumb figure span {position: relative; width: 100%; height: 100%; display: block;}
+.default-thumb figure span:after {background-color: rgba(157, 151, 154, 0.2); content: ""; position: absolute; left: 0; top:0; display: block; width: 100%; height: 100%;}
+
 /*-- media css starts here --*/
 @media only screen and (min-width:1024px){
 	.gratitude-wall {padding: 80px 0 40px 0;}

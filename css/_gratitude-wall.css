@@ -1,4 +1,4 @@
-.gratitude-wall {clear: both; width: 100%; padding: 80px 0;}
+.gratitude-wall {clear: both; width: 100%; padding: 80px 0; position: relative;}
 .masonry-main {-webkit-column-count: 3; column-count: 3; -webkit-column-gap: 0; column-gap: 0; white-space: normal;}
 .masonry-block {padding:51px 40px 44px; background: var(--optionaltxt); color: var(--linkhover); break-inside: avoid; display: flex; flex-direction: column;
   align-items: flex-start; position: relative; z-index: 1;}
