@@ -11,24 +11,57 @@
 .impact-short-main{padding: 80px 0; margin: 0 auto; text-align: center; max-width: 960px;}
 .impact-short-main h2{margin-bottom: 24px; font-size: 40px;}
 .impact-short-main h2 span{color: var(--teal);}
-.impact-short-main p{font-size: 21px; line-height: 33px;}
-
+.impact-short-main p{font-size: 21px; line-height: 33px; color: var(--foreground);}
 
 .repeater-bg{background: none;}
-
-
-
-
 .micro-cta .bg { background: var(--mauve); }
-
 
 .fluid-cta-txt .bg { background: var(--mauve);}
 .pulse1, .pulse2{background-color: var(--mauve);}
 
+.story-btn .button{border-radius: 32px; display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--white);}
+.story-btn .button:after{right: 0px; content: "\f061"; font-family: "Font Awesome 6 Pro"; font-weight: 400; transition: all .3s ease-in-out; position: relative; display: flex; align-items: center; flex-wrap: wrap; font-size: 18px; line-height: 100%; top: 2px; bottom: 0;}
 
+.repeaters-main::after { content: ""; height: 1px; width: 100%; display: block; background: rgba(0, 156, 166, 0.25); position: absolute; bottom: -80px; left: 0; }
+.masonry-main{position: relative;}
+.masonry-main::after { content: ""; height: 1px; width: 100%; display: block; background: rgba(0, 156, 166, 0.25); position: absolute; bottom: -80px; left: 0; }
 
 @media only screen and (min-width: 1024px){
-    #mainContent .ui-tabs .ui-tabs-nav li {width: calc(25% - 16px);}
-
-
+  #mainContent .ui-tabs .ui-tab-mobile{gap: 20px; align-items: center;}
+  #mainContent .ui-tabs .ui-tab-mobile .ui-tabs-nav {flex: 0 0 73%;}
+  #mainContent .ui-tabs .ui-tabs-nav li {flex: 0 0 calc(33.33% - 16px);}
+  .story-btn{flex: 0 0 calc(100% - 75%);}
+  .story-btn .button{min-width: 300px; padding: 19px 16px 19px 16px; border-radius: 32px;}
+  .gratitude-wall {
+    padding: 80px 0 80px 0;
   }
+  .browse-tab-section{padding: 80px 0 40px;}
+  }
+
+  
+@media only screen and (max-width: 1320px) and (min-width: 1024px) {
+  #mainContent .ui-tabs .ui-tab-mobile{gap: 20px;}
+  #mainContent .ui-tabs .ui-tab-mobile .ui-tabs-nav {flex: 0 0 66%;}
+  .story-btn{flex: 0 0 calc(100% - 70%);}
+
+
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .browse-grid {width: calc(50% - 11px);}
+  .story-btn{margin-bottom: 20px;}
+  .browse-tab-section{padding: 80px 0 40px;}
+  }
+@media only screen and (max-width: 767px) and (min-width: 200px) {
+  .impact-short-main{padding: 40px 0 47px;}
+  .impact-short-main h2{font-size: 32px;}
+  .impact-short-main p{font-size: 22px;}
+  .impact-short-section hr{margin: 0;}
+
+  .story-btn{margin-bottom: 40px;}
+  .masonry-main::after {bottom: -95px;}
+  .browse-tab-section{padding: 47px 0 40px;}
+  .repeaters-main::after {bottom: -48px;}
+  }
+
+ 

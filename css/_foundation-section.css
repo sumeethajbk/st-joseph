@@ -3,31 +3,52 @@
 .foundation-main{padding: 80px 0 40px;}
 
 .foundation-row{ gap: 41px; padding: 64px 0; }
-.foundation-list {flex: 0 0 calc(33.33% - 28px);}
-.foundation-thumb { flex: 50%; }
-.foundation-txt{flex: 50%; background-color: var(--white); padding: 24px 20px 22px;}
+.foundation-txt{ background-color: var(--white); padding: 24px 20px 22px; flex-grow: 1;}
 .foundation-txt span{margin-bottom: 10px;}
 .foundation-txt .h6{margin-bottom: 21px; font-size: 18px; font-weight: 600;}
 .foundation-txt p{margin-bottom: 20px; font-size: 14px; font-family: Poppins; line-height: 1.5;}
+.foundation-list{background-color: var(--white); align-items: center;}
 
 .foundation-btn li{ border: 2px solid rgba(0, 156, 166, 0.20);  border-radius: 32px;}
 .foundation-btn li::before{display: none;}
 .foundation-btn li .btn-anchor{padding: 14px 20px; justify-content: space-between; display: flex; align-items: center; color: var(--linkhover);}
 .foundation-btn li .btn-anchor span{color: var(--teal)}
+
+
 @media only screen and (min-width: 1024px){
     .foundation-heading-lt{width: 600px; margin-right: 80px;}
     .foundation-heading-rt{width: calc(100% - 680px);}
     
+    .foundation-list {flex: 0 0 calc(33.33% - 28px);}
+    .foundation-thumb { flex: 50%; }
+    .foundation-txt{flex: 50%;}
     .foundation-btn{gap: 40px; margin-left: 0;}
     .foundation-btn li{width: calc(17.5% - 44px);}
 
 
 
 }
-@media only screen and (max-width: 1023px) and (min-width:768px){
-    .foundation-heading-lt h3{margin-bottom: 32px;}
-    .foundation-row{display: block;}
-    .foundation-list{margin-bottom: 24pxs;}
+@media only screen and (max-width: 1023px) and (min-width:200px){
+    .foundation-list{margin-bottom: 24px;}
+    
     
 }
 
+@media only screen and (max-width: 1023px) and (min-width:768px){
+    .foundation-heading-lt h3{margin-bottom: 32px;}
+    .foundation-row{display: block; padding: 48px 0;}
+    .foundation-list:last-child{margin-bottom: 0;}
+    .foundation-thumb{flex: 0 0 176px;}
+    .foundation-btn{gap: 24px; margin-left: 0;}
+    .foundation-btn li{width: calc(33.33% - 16px);}
+    
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .foundation-row{gap: 0; padding: 40px 0;}
+    .foundation-txt .h6 {margin-bottom: 14px;}
+    .foundation-txt p{margin-bottom: 10px;}
+    .foundation-btn{gap: 20px; margin-left: 0;}
+    .foundation-btn li{width: calc(50% - 10px);}
+    .foundation-list:last-child{margin-bottom: 0;}
+
+}   
