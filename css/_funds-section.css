@@ -1,9 +1,9 @@
 .funds-section{position: relative; clear: both; width: 100%; background-color: var(--elevated);}
 .funds-main{padding: 40px 0 80px;}
 
-.funds-heading{}
+.funds-heading{align-items: center; margin-bottom: 56px;}
 .funds-heading h4{font-size: 40px; line-height: 1.25;}
-.fund-lt{flex: 0 0  77%; margin-right: 25px; margin-bottom: 56px;}
+.fund-lt{flex: 0 0  77%; margin-right: 25px;}
 .fund-rt{flex: 0 0 calc(100% - 79%);}
 .fund-lt h4{margin-bottom: 0;}
 
@@ -12,3 +12,35 @@
 .funds-list h5{font-size: 22px; font-weight: 600;}
 .funds-list .readmore{color: var(--teal);}
 .funds-thumb{margin-bottom: 32px;}
+
+@media only screen and (min-width: 1024px){
+
+
+}
+
+@media only screen and (max-width: 1199px) and (min-width:1024px){
+    .fund-lt{margin-right: 18px;}
+
+}
+
+@media only screen and (max-width: 1023px) and (min-width:768px){
+    .funds-heading{margin-bottom: 56px;}
+    .fund-lt { flex: 0 0 74%; margin-right: 13px; margin-bottom: 0;}
+    .fund-rt { flex: 0 0 calc(100% - 76%); }
+    .funds-list { flex: 0 0 calc(50% - 40px); }
+}
+
+
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .funds-main{padding: 40px 0 40px;}
+    .funds-heading{display: block; margin-bottom: 40px;}
+    .fund-lt{margin-right: 0;}
+    .fund-lt h4{font-size: 32px;}
+    .funds-row{display: block;}
+    .funds-list{width: 100%; margin-bottom: 32px;}
+    .funds-list:last-child{margin-bottom: 0;}
+    .funds-list h5{margin-bottom: 10px;}
+    .funds-list p{margin-bottom: 18px;}
+
+
+}
