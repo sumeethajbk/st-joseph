@@ -14,40 +14,43 @@ jQuery(document).ready(function () {
 
 
   /* Menu */
+     if (jQuery(window).width() >= 1024) {
+ jQuery("ul.main_menu ul.sub-menu > li.menu-item-has-children > a").on("click", function (event) {
+    event.preventDefault();
+    jQuery(this).toggleClass("active");
+    jQuery(this).parent().siblings('li').find("a").removeClass("active");
+    jQuery(this).siblings("ul").slideToggle();
+    jQuery(this).parent().siblings('li').find("ul.sub-menu").slideUp();
+  });
+     }
+    
+  /* Menu */
+
   if (jQuery(window).width() <= 1023) {
-    jQuery('.toggle_button').on("click", function (event) {
+    jQuery(".toggle_button").on("click", function (event) {
       event.preventDefault();
       jQuery(this).toggleClass("active");
       jQuery(".mobile_menu").toggleClass("navOpen");
       jQuery(".main_header").toggleClass("menu-open");
+      jQuery("html").toggleClass("no-scroll");
     });
-
     jQuery("ul.main_menu > li.menu-item-has-children > a").on("click", function (event) {
       event.preventDefault();
       jQuery('ul.main_menu > li.menu-item-has-children > a').not(jQuery(this)).removeClass('active');
       jQuery(this).toggleClass("active");
-      jQuery(this).siblings('ul.sub-menu').slideToggle('900');
-      var topParent = jQuery(this).parents('ul.main_menu > li').attr('id');
-      var topChildParent = jQuery(this).parent('li').attr('id');
-      jQuery('ul.main_menu ul.sub-menu').each(function () {
-        if (jQuery(this).parents('ul.main_menu > li').attr('id') !== topParent) {
-          jQuery(this).slideUp('700');
-        } else {
-          if (jQuery(this).find('li.menu-item-has-children').length) {
-            getChild(jQuery(this).find('li.menu-item-has-children'), topChildParent);
-          }
-        }
-      });
+      jQuery(this).parent().siblings().find('ul.sub-menu').slideUp();
+      jQuery(this).next('ul.sub-menu').slideToggle();
+      jQuery(this).parent().siblings().toggleClass('sib');
     });
-
-    function getChild(obj, topChildParent) {
-      obj.each(function () {
-        if (jQuery(this).attr('id') !== topChildParent) {
-          jQuery(this).find('ul.sub-menu').slideUp('700');
-        }
-      });
-    }
+    jQuery("ul.main_menu ul > li.menu-item-has-children > a").on("click", function (event) {
+      event.preventDefault();
+      jQuery('ul.main_menu ul > li.menu-item-has-children > a').not(jQuery(this)).removeClass('active');
+      jQuery(this).toggleClass("active");
+      jQuery(this).parent().siblings().find('ul.sub-menu').slideUp();
+      jQuery(this).siblings('ul.main_menu ul > li > ul.sub-menu').slideToggle();
+    });
   }
+
 
 
   // New edit

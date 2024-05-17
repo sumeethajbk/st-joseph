@@ -1,0 +1,93 @@
+@import url("../css/default-page.css");
+@import url("../css/_patient-staff-stories.css");
+@import url("../css/_team-bios.css");
+
+
+.default-banner-main {min-height: 760px;}
+.default-banner-section .container {max-width: 1280px;}
+.default-banner-section .banner-bg:after {background: rgba(0, 156, 166, 0.50);}
+.default-banner-section .banner-bg:before{background: linear-gradient(180deg, rgba(19, 41, 75, 0.50) 0%, rgba(19, 41, 75, 0.00) 100%); content: ""; position: absolute; top: 0; left: 0; width: 100%; display: block; height: 104px; z-index: 1;}
+.default-banner-main .default-banner-text .default-banner-bg {display: none;}
+.default-banner-main .default-banner-text h1 {font-size: 40px; line-height: 125%; letter-spacing: -0.8px; margin-bottom:19px; font-weight: 500; color: var(--linkhover);}
+.default-banner-main .default-banner-text p {font-size: 22px; font-weight: 300; line-height: 150%; max-width: 600px;}
+.default-banner-main .default-banner-text {max-width: 720px; padding: 80px 0; margin-top: auto;}
+.default-banner-main .default-banner-text figure {width: 720px; margin: 0 0 32px 0;}
+.default-banner-main .default-banner-text .button {margin: 0 16px 0 0; background: var(--linkhover);}
+.default-banner-main .default-banner-text .button.trans-btn {background: transparent;}
+.default-banner-main .default-banner-text .button.trans-btn:hover {background: var(--white);}
+
+
+.short-intro-main {margin-bottom: -20px;}
+.short-intro-list, .short-intro-list:nth-child(4n+1) {width: 30.390625%; margin:5.95% 0 0 4.375%;}
+.short-intro-list:nth-child(3n+1) {margin-left: 0;}
+
+.repeater-bg {background: var(--white);}
+
+.stories-slider {padding-bottom: 0;}
+.stories-slider h2 span {color: var(--white);}
+
+.general-default-container {padding: 80px 0;}
+
+.fluid-cta-module {margin-top: -46px; margin-bottom: -44px; z-index: 2;}
+.single-note .bg {background: var(--lilac);}
+.cta-module.donate-cta {background: var(--optionaltxt);}
+.cta-module.donate-cta .cta-overlay {top: 0; background: var(--elevated)}
+.stories-slider .bg {background: var(--optionaltxt)}
+.stats-module .bg {background: var(--elevated);}
+.gratitude-wall .bg {background: var(--purple); height: 567px; bottom: 0; top: inherit;}
+
+
+.meet-donors-main {padding: 40px 0 80px 0;}
+.meet-our-donors h2 {color: var(--lilac);}
+.meet-our-donors h2 span {color: var(--white);}
+.meet-donors-bg {background: var(--purple); height: 100%;}
+.meet-our-donors .frame-lt:before, .meet-our-donors .frame-mid .the-arrow > .shaft, .meet-our-donors .frame-mid .the-arrow.right > .shaft::before, .meet-our-donors .frame-mid .the-arrow.right > .shaft::after, .meet-our-donors .frame-rt .button{background: var(--white);}
+.meet-our-donors .frame-lt p, .meet-our-donors .frame-mid .animated-arrow {color: var(--white);}
+.meet-our-donors .frame-rt .button {color: var(--purple);}
+
+/*-- media css starts here --*/
+@media only screen and (max-width: 1280px) and (min-width:1024px){
+.default-banner-main .default-banner-text {padding: 64px 0;}
+
+}
+
+@media only screen and (min-width:1024px){
+#mainContent {padding: 0;}
+}
+
+@media (min-width:768px) {}
+
+
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+.default-banner-main {min-height: 1024px;}
+.default-banner-section .banner-bg {height: inherit; position: absolute;}
+.default-banner-section .banner-bg img {object-position: 0 0;}
+.default-banner-main .default-banner-text {padding: 64px 24px; max-width: 688px;}
+.default-banner-main .default-banner-text h1 {font-size: 48px; line-height:125%; margin-bottom: 32px; letter-spacing: -0.96px;}
+.default-banner-main .default-banner-text .optional-text {margin-bottom: 32px;}
+}
+
+@media only screen and (max-width: 1023px) and (min-width:200px){
+.default-banner-section .banner-bg:after {display: block;}
+
+
+}
+
+@media only screen and (max-width: 767px) and (min-width: 200px){
+.default-banner-main {min-height: inherit;}
+.default-banner-main .default-banner-text .default-banner-bg {display: block; background-color: rgb(0, 156, 166);}
+.default-banner-main .default-banner-text {padding: 32px 0; max-width: 100%;}
+.default-banner-main .default-banner-text h1 {font-size: 32px; letter-spacing: -0.64px; line-height: 125%; margin-bottom: 25px;}
+.default-banner-main .default-banner-text .optional-text {margin-bottom: 23px;}
+.default-banner-main .default-banner-text .button {width: 100%; margin: 0 0 19px 0; background: var(--linkhover);}
+.default-banner-main .default-banner-text .button:hover {color: var(--linkhover); background: var(--white);}
+.default-banner-main .default-banner-text .btn-wrap {justify-content: center;}
+.default-banner-section .banner-bg:after {background-color: rgba(157, 151, 154, 0.2);}
+.default-banner-section .banner-bg:before {display: none;}
+
+
+}
+
+
+@media only screen and (max-width: 389px) {}
