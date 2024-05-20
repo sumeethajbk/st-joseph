@@ -1,0 +1,136 @@
+@import url("../css/default-page.css");
+@import url("../css/_split-banner.css");
+@import url("../css/_patient-staff-stories.css");
+
+
+.split-banner-section {min-height: 548px;}
+
+
+.general-default-container {padding: 32px 0 96px 0;}
+.general-default-container .bigger-text {clear: both; width: 100%; margin: 0 0 56px 0;}
+.general-default-container .bigger-text p {font-size: 24px; font-style: normal; font-weight: 500; line-height: 150%;}
+.general-default-container h4 {letter-spacing: -0.64px;}
+
+
+.default-slider {margin: 64px 0 51px 0;}
+.single-quote {margin: 56px 0 56px 0;}
+.single-note .bg {background: var(--green);}
+.accordion-module {padding: 32px 0 24px;}
+.split-main {justify-content: space-between;}
+.split-lt {width:calc(100% - 430px); flex-grow: 1; padding: 14px 0 0 0;}
+.video-wrap {margin: 56px 0 56px 0;}
+.video-caption .video-txt {width: 59.667%;}
+.video-caption .video-btn {min-width:190px;}
+
+.sidebar {width:350px; margin-left:80px;}
+.sidebucket {position: relative; margin: 0 0 80px 0; clear: both; width: 100%;} 
+.sidebucket:last-child {margin: 0;}
+.event-bucket .event-thumb {position: relative;}
+.event-bucket .event-thumb:after {background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display:block;}
+.event-cnt {clear: both; width: 100%;}
+.event-cnt .address {background: var(--teal); color: var(--white); padding:32px 32px 31px 32px; clear: both; width: 100%; line-height: 150%;font-size: 16px;}
+.event-cnt .address .optional-text {color: var(--white); margin: 0 0 25px 0;}
+.event-cnt .address .venue {font-weight: 700; display: block;}
+.event-cnt .address p {margin-bottom: 16px;}
+.event-cnt .address p:last-child {margin-bottom: 0;}
+.event-cnt .address p span {display: block; margin: 0 0 16px 0;}
+.event-cnt .address p span:last-child {margin-bottom: 0;}
+.event-cnt .address p a {color: var(--white);}
+.event-cnt .address p a:hover {color: var(--linkhover);}
+.event-cnt .address p span i {font-size: 20px; margin-right: 12px; position: relative; top: 2px;}
+
+.event-cnt .event-info {background: var(--elevated); color: var(--white); padding: 32px; clear: both; width: 100%;}
+.event-cnt .event-info p {font-size: 14px; font-style: normal; font-weight: 400; line-height: 150%; color: var(--linkhover); margin-bottom: 24px;}
+.event-cnt .event-info .button {width: 100%;}
+
+.attend {background: var(--purple); color: var(--white); padding: 32px;}
+.attend .optional-text {color: var(--white); margin: 0 0 23px 0;}
+.attend .h4 {color: var(--white); letter-spacing: -0.64px; margin-bottom: 24px; font-size: 32px;}
+.attend p {font-size: 16px; line-height: 150%;}
+.attend .button {width: 100%; color: var(--purple);}
+
+
+.ps-bg {background: var(--elevated);}
+
+.stories-slider.fluid-width {width:calc(100vw + 430px) !important; margin-bottom: 80px; margin-top: 80px;} 
+.stories-slider.fluid-width h2 {color: var(--linkhover)!important;}
+
+.supporting-partners {clear: both; width: 100%; margin: 56px 0;}
+.sp-top {position: relative; color: var(--white); padding: 40px 40px 39px 40px;}
+.sp-top .bg {background:var(--purple);}
+.sp-top .optional-text {color: var(--white); margin: 0 0 20px 0;}
+.sp-top h3 {color: var(--white); margin: 0;}
+
+.sp-btm {position: relative; color: var(--white); padding: 0 40px 39px 40px; background: var(--lilictint); z-index: 1;}
+.sp-btm .bg {background:var(--purple); height: 80px; bottom: inherit;}
+.sp-btm .partners-wrap {position: relative; z-index: 1; background: var(--lilictint); gap:1px;}
+.sp-btm .partners-grid {display: inline-block; width: 33.15974025974026%;}
+
+.sp-btm .bottom-frame {margin: 40px auto 0 auto;}
+.sp-btm .frame-lt-inner {align-items: center;}
+.sp-btm .frame-lt {padding: 0 6px 0 26px; min-width: inherit; width: 50.70312500000001%;}
+.sp-btm .frame-lt p, .sp-btm .frame-mid .animated-arrow {color: var(--purple);}
+.sp-btm .frame-lt::before, .sp-btm .frame-mid .the-arrow > .shaft, .sp-btm .frame-mid .the-arrow.right > .shaft::before, .sp-btm .frame-mid .the-arrow.right > .shaft::after {background: var(--purple);}
+.sp-btm .frame-mid {margin-right: 7px; width: 32%;}
+.sp-btm .frame-rt .button {background: var(--purple);}
+
+
+
+/*-- media css starts here --*/
+
+@media only screen and (max-width:1400px){
+    .stories-slider.fluid-width .container {padding:0 64px; }
+    
+}
+@media only screen and (max-width: 1279px) and (min-width:1024px){
+    .stories-slider.fluid-width .container {padding:0 179px;}
+}
+
+@media only screen and (min-width:1024px){
+    .split-banner-main {min-height: 548px;}
+}
+
+@media (min-width:768px) {}
+
+
+
+
+
+@media only screen and (max-width: 1023px) and (min-width:200px){
+    .split-main {flex-direction: column-reverse;}
+    .split-lt {width: 100%; margin: 0; padding: 0;}
+    .sidebar {width: 100%; margin: 0;}
+    .stories-slider.fluid-width {width: 100vw!important; margin-bottom: 66px; margin-top: 66px;}
+    .stories-slider.fluid-width .container {padding:0 24px;}
+    .sidebucket {margin: 0 0 47px 0;}
+    .attend {margin: 80px 0 -26px 0;}
+    
+    
+    
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .stories-slider.fluid-width .container {padding:0 32px;}
+    .sp-btm .frame-mid {width: 40%;}
+}
+@media only screen and (max-width: 767px) and (min-width: 200px){
+    .general-default-container {padding: 32px 0 96px 0;}
+    .general-default-container .bigger-text p {font-size: 20px; line-height: 150%;}
+    .single-quote {margin: 48px 0 47px 0;}
+    .default-slider {margin: 56px 0 48px 0;}
+    
+    .supporting-partners {margin:47px 0 51px;}
+    .sp-top {padding: 24px 24px 23px 24px;}
+    .sp-top h3 {font-size: 24px; line-height: 125%; letter-spacing: -0.48px;}
+    .sp-btm {padding: 0 24px 23px 24px;}
+    .sp-btm .partners-grid {width: 49.668874172185426%;}
+    
+    .sp-btm .frame-lt {width: 100%; text-align: center; padding: 0; order: 1; margin-top: 15px;}
+    .sp-btm .frame-mid {display: block; width: 46.26%;}
+    .sp-btm .frame-mid.hide-in-desktop {transform: scale(-1, 1); margin-left: auto; margin-right: 0;}
+    .sp-btm .frame-mid.hide-in-desktop:before {content: ""; width: 12px; height: 12px; display: block; background: var(--purple); border-radius: 50%; position: absolute; left: inherit; right: -12.5%; top: 0; bottom: 0; margin: auto;}
+    .sp-btm .bottom-frame {margin: 27px auto 0 auto;}
+    
+}
+
+
+@media only screen and (max-width: 389px) {}

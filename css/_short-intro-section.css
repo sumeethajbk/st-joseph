@@ -16,6 +16,8 @@
 .row-of-five .short-intro-list, .row-of-five .short-intro-list:nth-child(4n+1) {width: 16.484375%; margin: 4.375% 0 0 4.375%;}
 .row-of-five .short-intro-list:nth-child(5n+1) {margin-left: 0;}
 
+.row-of-six .short-intro-list, .row-of-six .short-intro-list:nth-child(4n+1) {width: 30.390625%; margin:5.95% 0 0 4.375%;}
+.row-of-six .short-intro-list:nth-child(3n+1) {margin-left: 0;}
 
 /* media starts here */
 @media only screen and (max-width: 1280px) and (min-width: 1024px){
@@ -29,8 +31,10 @@
     .short-intro-lt {width: 100%; margin: 0;}
     
     .short-intro-rt {width: 100%; padding: 13px 0 0 0;}
-    .short-intro-list, .short-intro-list:nth-child(4n+1), .row-of-five .short-intro-list, .row-of-five .short-intro-list:nth-child(4n+1) {width: 45.93023255813954%; margin: 7.55813953488372% 0 0 8.13953488372093%;}
-    .short-intro-list:nth-child(2n+1), .row-of-five .short-intro-list:nth-child(2n+1) {margin-left: 0;}
+    .short-intro-list, .short-intro-list:nth-child(4n+1), 
+    .row-of-five .short-intro-list, .row-of-five .short-intro-list:nth-child(4n+1),
+    .row-of-six .short-intro-list, .row-of-six .short-intro-list:nth-child(4n+1), .row-of-six .short-intro-list:nth-child(3n+1) {width: 45.93023255813954%; margin: 7.55813953488372% 0 0 8.13953488372093%;}
+    .short-intro-list:nth-child(2n+1), .row-of-five .short-intro-list:nth-child(2n+1), .row-of-six .short-intro-list:nth-child(2n+1) {margin-left: 0;}
     
 
 }
@@ -41,5 +45,5 @@
     
     .short-intro-row {padding: 20px 0 0 0;}
     .short-intro-rt {width: 100%; padding: 13px 0 0 0;}
-    .short-intro-list, .row-of-five .short-intro-list, .row-of-five .short-intro-list:nth-child(4n+1) {width: 100%; margin: 44px 0 0 0;}
+    .short-intro-list, .row-of-five .short-intro-list, .row-of-five .short-intro-list:nth-child(4n+1), .row-of-six .short-intro-list, .row-of-six .short-intro-list:nth-child(4n+1) {width: 100%; margin: 44px 0 0 0;}
 }

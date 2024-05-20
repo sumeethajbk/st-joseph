@@ -10,7 +10,7 @@
 .default-banner-main .default-banner-text .button {margin: 0 20px 0 0;}
 .default-banner-main .default-banner-text .button.btn-white {color: var(--linkhover);}
 .default-banner-main .default-banner-text .button.btn-white:hover {background: var(--white); outline: 6px solid var(--tealborder);}
-.default-banner-main .default-banner-text .button:last-child {margin-right: 0;}
+.default-banner-main .default-banner-text .button:last-child {margin-right: 0; margin-bottom: 0;}
 .default-banner-main .default-banner-text .readmore {color: var(--white); padding-bottom: 1px; padding-right: 25px;}
 
 
@@ -31,7 +31,6 @@
 
 @media only screen and (max-width: 767px) and (min-width: 200px){
     .default-banner-section .banner-bg {height:390px;}
-    .default-banner-section .container {padding: 0 32px;}
     .default-banner-main .default-banner-text {padding: 32px 0; max-width: 100%;}
     .default-banner-main .default-banner-text .optional-text {margin-bottom: 23px;}
     .default-banner-main .default-banner-text h1 {font-size: 32px; letter-spacing: -0.64px; line-height: 125%; margin-bottom: 25px;}
