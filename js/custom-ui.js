@@ -4,10 +4,10 @@ const ui_icon = jQuery(".ui-tab-icon");
     jQuery(".ui-tab-btn").on("click", function (event) {
         event.preventDefault();
         jQuery(this).toggleClass("active");
-        jQuery(this).siblings(".ui-tabs-nav").slideToggle("slow");
+        jQuery(this).siblings(".browse-all").slideToggle("slow");
     });
     if (jQuery(window).width() <=767) { 
-    jQuery("ul.ui-tabs-nav li a").on("click", function(e){
+    jQuery("ul.browse-all li a").on("click", function(e){
         e.preventDefault();
         jQuery(".ui-tab-btn").removeClass("active");
         let tab_text  = jQuery(this).text();
@@ -15,7 +15,7 @@ const ui_icon = jQuery(".ui-tab-icon");
         let tab_icon = jQuery(this).find(".normal-icon").html();
         console.log(tab_icon)
         ui_icon.html(tab_icon);
-        jQuery("ul.ui-tabs-nav").slideUp("slow");
+        jQuery("ul.browse-all").slideUp("slow");
 
     }); }
 });
