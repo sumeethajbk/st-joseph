@@ -9,21 +9,19 @@ jQuery(document).ready(function () {
       jQuery(".main_header").removeClass("fixed-header");
     }
   });
-    
-
 
 
   /* Menu */
-     if (jQuery(window).width() >= 1024) {
- jQuery("ul.main_menu ul.sub-menu > li.menu-item-has-children > a").on("click", function (event) {
-    event.preventDefault();
-    jQuery(this).toggleClass("active");
-    jQuery(this).parent().siblings('li').find("a").removeClass("active");
-    jQuery(this).siblings("ul").slideToggle();
-    jQuery(this).parent().siblings('li').find("ul.sub-menu").slideUp();
-  });
-     }
-    
+  if (jQuery(window).width() >= 1024) {
+    jQuery("ul.main_menu ul.sub-menu > li.menu-item-has-children > a").on("click", function (event) {
+      event.preventDefault();
+      jQuery(this).toggleClass("active");
+      jQuery(this).parent().siblings('li').find("a").removeClass("active");
+      jQuery(this).siblings("ul").slideToggle();
+      jQuery(this).parent().siblings('li').find("ul.sub-menu").slideUp();
+    });
+  }
+
   /* Menu */
 
   if (jQuery(window).width() <= 1023) {
@@ -52,7 +50,6 @@ jQuery(document).ready(function () {
   }
 
 
-
   // New edit
   jQuery(".accordion-item .accordion-heading").on("click", function (e) {
     e.preventDefault();
@@ -75,7 +72,7 @@ jQuery(document).ready(function () {
   });
 
 
-  /* Bottom Video Slide*/
+  /* Bottom Video Slide
   jQuery('.play-btn').on('click', function (e) {
     e.preventDefault();
     jQuery('body').addClass('pull_bottom');
@@ -84,6 +81,22 @@ jQuery(document).ready(function () {
   jQuery('.pop_connect_close').on('click', function () {
     jQuery('body').removeClass('pull_bottom');
     jQuery('.overlay_main_sec').removeClass('active');
+  });*/
+
+
+  // Event delegation for opening the popup
+  jQuery('body').on('click', '.trigger-popup', function (e) {
+    e.preventDefault();
+    var popupId = jQuery(this).data('popup-id');
+    jQuery('body').addClass('pull_bottom');
+    jQuery('#' + popupId).addClass('active');
+  });
+
+  // Close the popup when the close button is clicked
+  jQuery('body').on('click', '.pop_connect_close', function () {
+    var popupId = jQuery(this).data('popup-id');
+    jQuery('body').removeClass('pull_bottom');
+    jQuery('#' + popupId).removeClass('active');
   });
 
 
