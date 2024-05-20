@@ -26,10 +26,10 @@
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px){
-    .patient-staff-main {padding: 64px 0 48px 0;}
-    .ps-lists {column-count: 2; column-gap: 30px; white-space: normal; display: initial;}
-    .ps-grid {padding: 0 0 40px 0; width: 100%; margin: 10px 0 0 0;}
-    .ps-grid .ps-cnt {break-inside: avoid;}
+    .patient-staff-main {padding:64px 0 56px 0;}
+    .ps-grid {width: 47.093023255813954%; margin: 40px 0 0 40px;}
+    .ps-grid:nth-child(2n+1) {margin-left: 0;}
+    .ps-grid:nth-child(1), .ps-grid:nth-child(2) {margin-top: 0;}
     .ps-bg {height: 77.9%;}
 }
 
