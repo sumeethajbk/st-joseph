@@ -35,6 +35,13 @@
 .repeaters-single-grid .repeaters-single-rt::after {content: ""; height: 2px; width: 100%; background: rgba(0, 156, 166, 0.25); position: absolute; right: 0; top: 0; bottom: inherit; display: block; }
 
 
+/* micro cta popup */
+.overlay_main_sec.micro-cta-popup .micro-cta { max-width: 900px;}
+.overlay_main_sec.micro-cta-popup .micro-cta .bg {border-radius: 20px;}
+.overlay_main_sec.micro-cta-popup .micro-cta-img { width: 420px; height: 420px; top: -13px;}
+.overlay_main_sec.micro-cta-popup  .micro-cta-rt { width: 400px;}
+.overlay_main_sec.micro-cta-popup .micro-cta-lt { width: calc(100% - 450px); padding: 36px 40px 40px;}
+.overlay_main_sec.micro-cta-popup .micro-cta-lt p {color: var(--white);}
 
 /*-- media css starts here --*/
 @media only screen and (min-width:1281px){
