@@ -22,6 +22,8 @@
 .main_header .header {padding: 25px 0;}
 */
 
+.overlay_main_sec.campaign-popup .overlay-main {width: 512px; height: 512px;}
+
 /*-- media css starts here --*/
 @media only screen and (max-width: 1400px){
     .car-lt {padding-right: 64px;}
