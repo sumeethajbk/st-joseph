@@ -1,0 +1,4 @@
+/* .page-not-found-section{background-color: var(--teal);} */
+.page-not-found-main{padding:120px 0 150px; text-align: center; width: 100%; margin: 0 auto; max-width: 650px; position: relative;}
+.page-not-found-main h1{font-size: 100px; line-height: 1; margin-bottom: 15px;}
+.page-txt{ margin-bottom: 24px; font-size: 2rem; line-height: 2.5rem; -webkit-text-stroke-width: 2px; display: block; color: var(--teal); }
