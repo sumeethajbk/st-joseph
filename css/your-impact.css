@@ -43,22 +43,26 @@
 .overlay_main_sec.gate-popup-sec .gate-main .gate-lt .gate-btns .button{background-color: var(--linkhover);}
 .gate-btns .gate-btn-lt.readmore{padding-left: 24px; padding-right: 0; color: var(--teal);}
 .gate-btns .gate-btn-lt.readmore:after{left: 0; right: inherit; content: "\f060"; color: var(--teal);}
-.overlay_main_sec.gate-popup-sec  .overlay-main .pop_connect_close {right: 65px;}
-.gate-img img{border-radius: 0 20px 20px 0; max-height: 541px; overflow: hidden;}
+.overlay_main_sec.gate-popup-sec  .overlay-main .pop_connect_close {right: -15px; top: 0;}
+.gate-img img{border-radius: 0 20px 20px 0;  max-height: 541px; overflow: hidden;}
 .gate-lt .selectBox-dropdown{font-size: 16px; line-height: 24px; background-color: var(--elevated); border-radius: 8px!important; padding: 12px 12px 11px 12px; font-family: "Poppins", sans-serif;; border: 0 none;}
 .gate-lt .selectBox-dropdown .selectBox-arrow{font-size: 20px; color: var(--teal);}
 .gate-lt .selectBox-dropdown .selectBox-label{color: var(--foreground); opacity: 0.4;}
+.overlay_main_sec.gate-popup-sec .overlay-wrap {text-align: left; padding: 0; border-radius: 20px;}
+.overlay_main_sec.gate-popup-sec .overlay-wrap input { text-align: left;}
+
+
 
 @media only screen and (min-width: 1024px){
   .ui-tab-mobile{ align-items: center;}
   ul.browse-all  {flex: 0 0 76.5%; margin-bottom: 0; padding-right: 24px;}
   ul.browse-all li {flex: 0 0 calc(33.33% - 16px);}
-
+  
   .story-btn{flex: 0 0 calc(100% - 77%);}
   .story-btn .button{ padding: 19px 16px 19px 16px; border-radius: 32px;}
   .gratitude-wall { padding: 80px 0 80px 0; }
   .browse-tab-section{padding: 80px 0 40px;}
-  }
+}
 
 
 
@@ -72,6 +76,12 @@
   .browse-tab-heading h2 { width: 60%; margin-right: 20px; margin-bottom: 0; }
   .browse-tab-heading .browse-search { width: 32%;}
   .story-btn{margin-bottom: 0;}
+  
+  .gate-img {height: 100%;} 
+  .gate-img img {max-height: inherit;}
+  .overlay_main_sec.gate-popup-sec .overlay-main .pop_connect_close { right: 2px;}
+
+
   }
 @media only screen and (max-width: 767px) and (min-width: 200px) {
   .impact-short-main{padding: 40px 0 47px;}
@@ -85,6 +95,10 @@
   .repeaters-main::after {bottom: -48px;}
   ul.browse-all{margin-bottom: 0;}
   .ui-tab-mobile{margin-bottom: 36px;}
+
+  .overlay_main_sec.gate-popup-sec .gate-main .gate-wrap{display: block;}
+  .overlay_main_sec.gate-popup-sec .overlay-main .pop_connect_close { right: 10px; top: 10px; z-index: 2; }
+  .overlay_main_sec.gate-popup-sec .gate-main .gate-lt { padding: 40px 32px 80px; }
   }
 
  
