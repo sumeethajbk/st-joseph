@@ -474,7 +474,7 @@
             <h4>A section to show the distribution of funds</h4>
           </div>
           <div class="fund-rt hide-in-mobile">
-            <a href="#" class="button">view financial statements</a>
+            <a data-popup-id="gate-popup" href="#" class="button trigger-popup">view financial statements</a>
           </div>
         </div>
         <div class="funds-row flex">
@@ -927,6 +927,68 @@
         
       </div>
     </footer>
+    <section class="overlay_main_sec gate-popup-sec" id="gate-popup">
+      <div class="overlay_center flex flex-center">
+        <div class="overlay-main"> <span class="pop_connect_close" data-popup-id="gate-popup"><i class="fa-sharp fa-light fa-xmark"></i></span>
+          <div class="overlay-wrap">
+            <div class="gate-main pos-relative">
+               
+              <div class="bg"></div>
+              <div class="gate-wrap flex">
+                <div class="gate-lt"> 
+                  <div class="h5">Content Gate Heading</div>
+                  <p>Opacity thumbnail rotate strikethrough font inspect conneMollis arcu viverra platea iaculis ucibus sed volutpat nulla.</p>
+                  <form method="post" class="frm-show-form frm_js_validate " id="">
+                    <div class="frm_form_fields ">
+                      <fieldset>
+                        <div class="frm_fields_container">
+                          <div class="frm_form_field form-field">
+                            <label for="" id="" class="frm_primary_label">your name</label>
+                            <input type="text" id="" name="" value="" placeholder="Ex: Jane" aria-required="true">
+                          </div>
+                          <div class="frm_form_field form-field">
+                            <label for="" id="" class="frm_primary_label">your email address</label>
+                            <input type="text" id="" name="" value="" placeholder="Ex: Smith" aria-required="true">
+                          </div>
+                          <div class="frm_form_field form-field">
+                            <label for="" id="" class="frm_primary_label">Additional data point</label>
+                            <div class="custom-select">
+                              <select>
+                                <option class="" value="">pick one</option>
+                                <option class="" value="">pick one</option>
+                                <option class="" value="">pick one</option>
+                                <option class="" value="">pick one</option>
+
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  <div class="gate-btns flex flex-vcenter"> 
+                    <a href="" class="gate-btn-lt readmore">cancel</a>
+                    <a href="" class="button">submit</a>
+                   </div>
+                </div>
+                <!-- end of micro-cta lt -->
+                <div class="gate-rt">
+                  <div class="gate-img">
+                    <figure class="object-fit"> <img src="images/gate-img@2x.jpg" alt="Micro CTA" title="Micro CTA"> </figure>
+                  </div>
+                </div>
+                <!-- end of micro-cta rt --> 
+              </div>
+              <!-- end of micro-cta wrap --> 
+           
+          </div>
+
+
+
+          </div>
+        </div>
+      </div>
+      <!-- end of overlay center --> 
+    </section>
     <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/slick.css" media="all"/>
     <link rel="stylesheet" href="css/jquery-ui.css" media="all"/>
