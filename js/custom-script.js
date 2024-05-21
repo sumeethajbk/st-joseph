@@ -72,7 +72,7 @@ jQuery(document).ready(function () {
   });
 
 
-  /* Bottom Video Slide
+  /* Bottom Video Slide*/
   jQuery('.play-btn').on('click', function (e) {
     e.preventDefault();
     jQuery('body').addClass('pull_bottom');
@@ -81,7 +81,7 @@ jQuery(document).ready(function () {
   jQuery('.pop_connect_close').on('click', function () {
     jQuery('body').removeClass('pull_bottom');
     jQuery('.overlay_main_sec').removeClass('active');
-  });*/
+  });
 
 
   // Event delegation for opening the popup

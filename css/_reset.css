@@ -113,14 +113,20 @@ button:focus, .button:focus {background-color: var(--teal); color: var(--white);
 .trans-btn:hover {background: var(--white); border-color: var(--white); color: var(--teal); outline: 0 none; }
 .trans-btn:focus, .trans-btn:active {background: transparent;}
 
+/* Button Dark */
+.btn-dark {background: var(--linkhover); color: var(--white); outline: 6px solid transparent;}
+.btn-dark:hover {background: var(--linkhover); color: var(--white); outline: 6px solid var(--tealborder);}
+.btn-dark:focus {background: var(--linkhover); color: var(--white);}
+
+
 input[type="submit"] {background-image: url('../images/search.svg') !important; background-repeat: no-repeat !important; position: absolute; right: 22px; top:2px;
   bottom: 0; padding: 0 !important; width: 18px; height: 18px; margin: auto; background-color: transparent !important; border: 0 none; border-radius: 0;}
 
 
-::-webkit-input-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 0.4; font-size: 16px; font-weight: 400; line-height: 24px;}
-:-moz-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 0.4; font-size: 16px; font-weight: 400; line-height: 24px;}
-::-moz-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 0.4; font-size: 16px; font-weight: 400; line-height: 24px;}
-:-ms-input-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 0.4; font-size: 16px; font-weight: 400; line-height: 24px;}
+::-webkit-input-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 0.4; font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: normal;}
+:-moz-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 0.4; font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: normal;}
+::-moz-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 0.4; font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: normal;}
+:-ms-input-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 0.4; font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: normal;}
 
 
 embed, iframe, object, video {margin-bottom: 7px; max-width: 100%; border-radius: 0;}
