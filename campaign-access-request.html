@@ -79,7 +79,7 @@
               </li>
             </ul>
           </nav>
-          <div class="header-btns"> <a href="#" class="button outline-btn">Contact Us</a> <a href="#" class="button">Donate Now</a> </div>
+          <div class="header-btns"> <a href="#" class="button outline-btn">Contact Us</a> <a data-popup-id="donatepopup" href="#" class="button trigger-popup">Donate Now</a> </div>
           <!-- end of header btns -->
           <div class="hdr-tagline hide-in-desktop">
             <p>A proud part of Unity Health Toronto network.</p>
@@ -114,9 +114,8 @@
           <!-- end of car lt -->
           <div class="car-rt">
             <div class="car-intro">
-              <h1>Be part of something
-              <span> <img src="images/extraordinary.svg" alt="Extraordinary" title="Extraordinary"/> </span></h1>
-                <p>The contact form allows users to enter their name, email, and message to gain access to an exclusive fundraising campaign for a renowned healthcare foundation. By filling out the form, individuals can express their interest in contributing to the foundation's noble cause and receive updates on upcoming events and donation opportunities.</p>
+              <h1>Be part of something <span> <img src="images/extraordinary.svg" alt="Extraordinary" title="Extraordinary"/> </span></h1>
+              <p>The contact form allows users to enter their name, email, and message to gain access to an exclusive fundraising campaign for a renowned healthcare foundation. By filling out the form, individuals can express their interest in contributing to the foundation's noble cause and receive updates on upcoming events and donation opportunities.</p>
               <div class="default_form_dark">
                 <div class="frm_forms">
                   <form method="post" class="frm-show-form frm_js_validate " id="">
@@ -143,16 +142,17 @@
                             <label for="" id="" class="frm_primary_label">Your Message</label>
                             <textarea name="" value="" placeholder="Please tell us why you’d like to have access to the campign"></textarea>
                           </div>
-                            <div class="frm_wrap">
-                          <div class="frm_submit">
-                            <button class="frm_button_submit frm_final_submit button request-campaing" type="submit" formnovalidate="formnovalidate">Request Campaign access</button>
+                          <div class="frm_wrap">
+                            <div class="frm_submit">
+                              <button class="frm_button_submit frm_final_submit button request-campaing" type="submit" formnovalidate="formnovalidate">Request Campaign access</button>
+                            </div>
+                            <p>Already have access? <a data-popup-id="loginpopup" href="#" class="readmore trigger-popup">Login now</a></p>
                           </div>
-                          <p>Already have access? <a data-popup-id="loginpopup" href="#" class="readmore trigger-popup">Login now</a></p>
-                        </div></div>
+                        </div>
                       </fieldset>
                     </div>
                   </form>
-                </div>         
+                </div>
               </div>
               <!-- end of default form --> 
             </div>
@@ -290,61 +290,105 @@
     
   </div>
 </footer>
-    
+<section class="overlay_main_sec donate-popup" id="donatepopup">
+  <div class="overlay_center flex flex-center">
+    <div class="overlay-main"> <span class="pop_connect_close" data-popup-id="donatepopup"><i class="fa-sharp fa-light fa-xmark"></i></span>
+      <div class="overlay-wrap">
+        <div class="donate-pop flex">
+          <div class="donate-lt pos-relative">
+            <div class="bg">
+              <figure class="object-fit"><img src="images/donor-icon.svg" alt="Donor" title="Donor"/></figure>
+            </div>
+            <div class="icon"></div>
+            <h4>Helps us create lasting change in our community.</h4>
+            <p>Mollis arcu viverra platea iaculis nisl. Faucibus sed volutpat nulla nec sed ipsum. Sit nulla faucibus ultrices sit.</p>
+          </div>
+          <!-- end of donate lt -->
+          <div class="donate-rt">
+            <div class="donation-form">
+              <form action="#" method="post">
+                <div class="form-group">
+                  <label class="frequency-label">
+                    <input type="radio" name="frequency" value="monthly" required>
+                    Monthly </label>
+                  <label class="frequency-label">
+                    <input type="radio" name="frequency" value="yearly" required>
+                    Yearly </label>
+                </div>
+                <div id="monthly-content" class="extra-content">
+                  <p>You have selected a <strong>monthly</strong> donation. Thank you for your ongoing support!</p>
+                </div>
+                <div id="yearly-content" class="extra-content">
+                  <p>You have selected a <strong>yearly</strong> donation. Your generosity is greatly appreciated!</p>
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="Donate">
+                </div>
+              </form>
+            </div>
+            <!-- end of donate rt --></div>
+          <!-- end of donate popupup --> 
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of overlay center --> 
+</section>
 <section class="overlay_main_sec campaign-popup" id="loginpopup">
   <div class="overlay_center flex flex-center">
     <div class="overlay-main"> <span class="pop_connect_close" data-popup-id="loginpopup"><i class="fa-sharp fa-light fa-xmark"></i></span>
       <div class="overlay-wrap">
-          <div class="login-pop">
-        <h5>Campaign Login</h5>
+        <div class="login-pop" style="display: none;">
+          <h5>Campaign Login</h5>
           <p>Opacity thumbnail rotate strikethrough font inspect connection ellipse bol.</p>
           <div class="frm_forms">
-                <form method="post" class="frm-show-form frm_js_validate " id="">
-                  <div class="frm_form_fields ">
-                    <fieldset>
-                      <div class="frm_fields_container">
-                        
-                        <div class="frm_form_field form-field frm_full">
-                            <label for="" id="" class="frm_primary_label">Your Password</label>
-                          <input type="password" id="" name="" value="" placeholder="Password" aria-required="true">
-                        </div>
-                        <div class="frm-wrapper">
-                          <div class="frm_submit">
-                            <button class="frm_button_submit frm_final_submit button btn-dark" type="submit" formnovalidate="formnovalidate">Log in to the campaign</button>
-                          </div>
-                          <p class="lost_password"><a href="#">Forgot your password?</a></p>
-                        </div>
+            <form method="post" class="frm-show-form frm_js_validate " id="">
+              <div class="frm_form_fields ">
+                <fieldset>
+                  <div class="frm_fields_container">
+                    <div class="frm_form_field form-field frm_full">
+                      <label for="" id="" class="frm_primary_label">Your Password</label>
+                      <input type="password" id="" name="" value="" placeholder="Password" aria-required="true">
+                    </div>
+                    <div class="frm-wrapper">
+                      <div class="frm_submit">
+                        <button class="frm_button_submit frm_final_submit button btn-dark" type="submit" formnovalidate="formnovalidate">Log in to the campaign</button>
                       </div>
-                    </fieldset>
+                      <p class="lost_password"><a href="#">Forgot your password?</a></p>
+                    </div>
                   </div>
-                </form>
+                </fieldset>
               </div>
-              <span class="poplink"><a href="#" class="readmore">Request Access</a></span>
-          </div><!-- end of login pop -->
-                    <div class="request-pop" style="display: none;">
-        <h5>Request Campaign Access</h5>
+            </form>
+          </div>
+          <span class="poplink"><a href="#" class="readmore">Request Access</a></span> </div>
+        <!-- end of login pop -->
+        <div class="request-pop">
+          <h5>Request<br>
+            Campaign Access</h5>
           <p>Opacity thumbnail rotate strikethrough font inspect connection ellipse bol.</p>
           <div class="frm_forms">
-                <form method="post" class="frm-show-form frm_js_validate " id="">
-                  <div class="frm_form_fields ">
-                    <fieldset>
-                      <div class="frm_fields_container">
-                        
-                        <div class="frm_form_field form-field frm_full">
-                          <input type="text" id="" name="" value="" placeholder="Enter your email address" aria-required="true">
-                        </div>
-                        <div class="frm-wrapper">
-                          <div class="frm_submit">
-                            <button class="frm_button_submit frm_final_submit button btn-dark" type="submit" formnovalidate="formnovalidate">Request Access</button>
-                          </div>
-                        </div>
+            <form method="post" class="frm-show-form frm_js_validate " id="">
+              <div class="frm_form_fields ">
+                <fieldset>
+                  <div class="frm_fields_container">
+                    <div class="frm_form_field form-field frm_full">
+                      <label for="" id="" class="frm_primary_label">Your Email Address</label>
+                      <input type="text" id="" name="" value="" placeholder="Enter your email address" aria-required="true">
+                    </div>
+                    <div class="frm-wrapper">
+                      <div class="frm_submit">
+                        <button class="frm_button_submit frm_final_submit button btn-dark" type="submit" formnovalidate="formnovalidate">Request Access</button>
                       </div>
-                    </fieldset>
+                    </div>
                   </div>
-                </form>
+                </fieldset>
               </div>
-              <span class="poplink"><a href="#" class="readmore">Back to login</a></span>
-          </div><!-- end of login pop -->
+            </form>
+          </div>
+          <span class="poplink"><a href="#" class="readmore back">Back to login</a></span> </div>
+        <!-- end of request pop --> 
       </div>
     </div>
   </div>
@@ -357,6 +401,26 @@
 <script src="js/custom-slick.js"></script>
 <link rel="stylesheet" href="css/jquery.selectBox.css" media="all"/>
 <script src="js/jquery.selectBox.js"></script> 
-<script src="js/custom-script.js"></script>
+<script src="js/custom-script.js"></script> 
+<!-- Donation Popup --> 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var frequencyRadios = document.querySelectorAll('input[name="frequency"]');
+    var monthlyContent = document.getElementById('monthly-content');
+    var yearlyContent = document.getElementById('yearly-content');
+
+    frequencyRadios.forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        if (this.value === 'monthly') {
+          monthlyContent.style.display = 'block';
+          yearlyContent.style.display = 'none';
+        } else if (this.value === 'yearly') {
+          monthlyContent.style.display = 'none';
+          yearlyContent.style.display = 'block';
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
