@@ -38,11 +38,14 @@
 /* micro cta popup */
 .overlay_main_sec.micro-cta-popup .micro-cta { max-width: 900px;}
 .overlay_main_sec.micro-cta-popup .micro-cta .bg {border-radius: 20px;}
-.overlay_main_sec.micro-cta-popup .micro-cta-img { width: 420px; height: 420px; top: -13px;}
+.overlay_main_sec.micro-cta-popup .micro-cta-img { width: 420px; height: 420px; top: -27px;}
 .overlay_main_sec.micro-cta-popup  .micro-cta-rt { width: 400px;}
-.overlay_main_sec.micro-cta-popup .micro-cta-lt { width: calc(100% - 450px); padding: 36px 40px 40px;}
-.overlay_main_sec.micro-cta-popup .micro-cta-lt p {color: var(--white);}
-
+.overlay_main_sec.micro-cta-popup .micro-cta-lt { width: calc(100% - 450px); padding: 36px 40px 38px;}
+.overlay_main_sec.micro-cta-popup .micro-cta-lt p {color: var(--white); margin-bottom: 20px;}
+.overlay_main_sec.micro-cta-popup .overlay-main .pop_connect_close { top: -92px; right: 40px;}
+.overlay_main_sec.micro-cta-popup .micro-cta-lt .h4 { line-height: 120%; margin-bottom: 20px;}
+.overlay_main_sec.micro-cta-popup .micro-cta-lt .optional-text {margin: 0 0 20px 0;}
+.overlay_main_sec.micro-cta-popup .micro-cta-lt .button {padding: 13px 16px 15px 16px;}
 /*-- media css starts here --*/
 @media only screen and (min-width:1281px){
     .community-text-block{width: 513px; padding: 40px;}
@@ -71,6 +74,7 @@
     .community-banner-lt{width: 66%; }
     .community-banner-rt{ width: calc(100% - 70.6%); }
     .community-banner-lt .h4{max-width: 230px;}
+    .overlay_main_sec.micro-cta-popup .overlay-main .pop_connect_close { top: -94px; right: 20px; }
   }
   @media only screen and (min-width: 1024px){
     .community-banner-rt{margin: 0 0 0 4.4%;}

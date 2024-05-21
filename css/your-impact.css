@@ -26,6 +26,29 @@
 .masonry-main{position: relative;}
 .masonry-main::after { content: ""; height: 1px; width: 100%; display: block; background: rgba(0, 156, 166, 0.25); position: absolute; bottom: -80px; left: 0; }
 
+
+/* gate popup */
+.gate-main.pos-relative { width: 100%; clear: both; z-index: 1; margin: 0 auto; max-width: 840px;}
+.overlay_main_sec.gate-popup-sec .gate-main .bg{border-radius: 20px; background-color: var(--white);}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt{flex: 0 0 50%; padding: 40px 40px 36px;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-rt{flex: 0 0 50%;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt p{font-size: 1rem; margin-bottom: 12px; line-height: 22px;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt .h5{font-weight: 500; color: var(--teal); margin-bottom: 19px;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt .form-field{margin-bottom: 18px;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt .form-field input{padding: 11px 12px 10px 12px;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt .form-field:last-child{margin-bottom: 25px;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt .form-field:last-child input{position: relative;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt .form-field .frm_primary_label{color: var(--linkhover); font-size: 18px; font-weight: 600; text-transform: capitalize; line-height: 150%; padding: 0 0 3px 0; display: block;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt .gate-btns{justify-content: space-between;}
+.overlay_main_sec.gate-popup-sec .gate-main .gate-lt .gate-btns .button{background-color: var(--linkhover);}
+.gate-btns .gate-btn-lt.readmore{padding-left: 24px; padding-right: 0; color: var(--teal);}
+.gate-btns .gate-btn-lt.readmore:after{left: 0; right: inherit; content: "\f060"; color: var(--teal);}
+.overlay_main_sec.gate-popup-sec  .overlay-main .pop_connect_close {right: 65px;}
+.gate-img img{border-radius: 0 20px 20px 0; max-height: 541px; overflow: hidden;}
+.gate-lt .selectBox-dropdown{font-size: 16px; line-height: 24px; background-color: var(--elevated); border-radius: 8px!important; padding: 12px 12px 11px 12px; font-family: "Poppins", sans-serif;; border: 0 none;}
+.gate-lt .selectBox-dropdown .selectBox-arrow{font-size: 20px; color: var(--teal);}
+.gate-lt .selectBox-dropdown .selectBox-label{color: var(--foreground); opacity: 0.4;}
+
 @media only screen and (min-width: 1024px){
   .ui-tab-mobile{ align-items: center;}
   ul.browse-all  {flex: 0 0 76.5%; margin-bottom: 0; padding-right: 24px;}
