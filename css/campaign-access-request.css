@@ -27,6 +27,14 @@
   flex-direction: column; align-items: center; text-align: center; padding: 40px; box-sizing: border-box; outline:46px rgba(0, 156, 166, 0.25) solid;}
 .overlay_main_sec.campaign-popup .overlay-wrap .frm_forms .frm_form_fields .frm_form_field label.frm_primary_label {display: none;}
 
+/*
+.overlay_main_sec.campaign-popup ::-webkit-input-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 1; font-size: 16px; font-weight: 700; line-height: 24px; letter-spacing: normal;}
+.overlay_main_sec.campaign-popup :-moz-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 1; font-size: 16px; font-weight: 700; line-height: 24px; letter-spacing: normal;}
+.overlay_main_sec.campaign-popup  ::-moz-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 1; font-size: 16px; font-weight: 700; line-height: 24px; letter-spacing: normal;}
+.overlay_main_sec.campaign-popup  :-ms-input-placeholder {color: var(--linkhover); font-family:"Poppins", sans-serif; opacity: 1; font-size: 16px; font-weight: 700; line-height: 24px; letter-spacing: normal;}*/
+
+
+
 /*-- media css starts here --*/
 @media only screen and (max-width: 1400px){
     .car-lt {padding-right: 64px;}
@@ -64,6 +72,11 @@
     
     .overlay_main_sec.campaign-popup .overlay-main {width: 100%; height: auto;}
     .overlay_main_sec.campaign-popup .overlay-wrap {outline: none; width: 100%;  height: 100%; border-radius: 20px 20px 0px 0px; text-align: left;  padding: 39px 32px 76px 32px;}
+    
+    
+    .overlay_main_sec.campaign-popup .request-pop {margin-bottom: 4px;}
+    .overlay_main_sec.campaign-popup .request-pop .poplink {float: left; margin-top: -35px;}
+    .overlay_main_sec.campaign-popup .request-pop .frm_forms .frm_submit .button {float: right; width: auto;}
 }
 
 @media only screen and (max-width: 389px) and (min-width: 200px){
