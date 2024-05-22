@@ -1,8 +1,8 @@
 .signup-module {clear: both; width: 100%; background: var(--lightwhite); position: relative; min-height: 512px; z-index: 2;}
 .signup-module .optional-text {color: var(--link); margin:0 0 28px 0;}
 .signup-module .signup-wrap {justify-content: space-between; align-items: center; padding:94px 0; position: relative;}
-.signup-module .signup-lt {width:45.875%; flex-grow: 1; padding-right: 5.5%;}
-.signup-module .signup-lt .h4 {margin-bottom: 29px;}
+.signup-module .signup-lt {width: 47.875%; flex-grow: 1; padding-right: 8.5%;}
+.signup-module .signup-lt .h4 {margin-bottom: 29px; letter-spacing: -0.45px;}
 
 .signup-module .signup-info {clear: both; width: 100%;}
 .signup-module .signup-info .h5 {line-height: 150%; font-weight: 700; letter-spacing: -0.48px; color: var(--purple);}
@@ -55,7 +55,10 @@
         .signup-module .signup-wrap {padding:64px 0 0;}
 
 }
+@media only screen and (max-width: 1140px) and (min-width: 1024px) {
+    .signup-module .signup-form .disclaimer {max-width: 100%}
 
+}
 
 @media only screen and (max-width: 767px) and (min-width: 200px){
     .signup-module .optional-text {margin: 0 0 20px 0;}

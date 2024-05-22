@@ -15,8 +15,8 @@
 
 .slider-for .slick-list {overflow: visible;}
 .slider-for .slick-arrow {width: 64px; height: 64px; outline: 12px solid rgba(0, 131, 139, 0.20);}
-.slider-for .slick-arrow.prev-arrow {left:40px;}
-.slider-for .slick-arrow.next-arrow {right:40px;}
+.slider-for .slick-arrow.prev-arrow {left: 52px;}
+.slider-for .slick-arrow.next-arrow {right: 52px;}
 
 /* Stories Thumb Nav */
 .slider-nav {max-width: 1280px; margin: 0 auto;}

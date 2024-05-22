@@ -87,6 +87,10 @@
     .members-grid:nth-child(2n+1) {margin-left: 0;}
 }
 
+@media only screen and (min-width: 1024px){
+    .contact-rt{padding: 0 0 120px 0;}
+
+}
 @media only screen and (max-width: 1023px) and (min-width:768px){    
         .split-banner-main .split-banner-thumb .contact-img {height: 512px;}
     .split-banner-main .split-banner-text {padding:40px 40px 36px 40px;}
