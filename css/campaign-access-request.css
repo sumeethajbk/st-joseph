@@ -12,7 +12,7 @@
 .car-rt h1 span {display: block; margin: 15px 0 0 0;}
 .car-rt h1 span img {max-height: 69px; width: auto;}
 .car-rt .car-intro > p { font-size: 14px; color: var(--linkhover); line-height: 150%;}
-.car-rt .car-intro .frm_forms .frm_submit {text-align: center;}
+.car-rt .car-intro .frm_forms .frm_submit {text-align: center; justify-content: center;}
 .car-rt .default_form_dark {margin-top: 40px;}
 .car-rt .default_form_dark .frm_forms .frm_form_fields .frm_form_field{margin-bottom:24px;}
 .car-rt .default_form_dark .frm_forms .frm_form_fields textarea {min-height: 163px;}
