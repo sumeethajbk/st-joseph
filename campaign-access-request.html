@@ -297,32 +297,76 @@
         <div class="donate-pop flex">
           <div class="donate-lt pos-relative">
             <div class="bg">
-              <figure class="object-fit"><img src="images/donor-icon.svg" alt="Donor" title="Donor"/></figure>
+              <div class="bgimg">
+                <figure class="object-fit"><img src="images/donate-thumb@2x.jpg" alt="Donor" title="Donor"/></figure>
+              </div>
             </div>
-            <div class="icon"></div>
+              <div class="donate-cnt">
+            <div class="icon">
+              <figure class="object-fit hide-in-mobile"><img src="images/donor-icon.svg" alt="Donor" title="Donor"/></figure>
+                <figure class="object-fit hide-in-desktop hide-in-tab"><img src="images/donor-icon-teal.svg" alt="Donor" title="Donor"/></figure>
+            </div>
             <h4>Helps us create lasting change in our community.</h4>
             <p>Mollis arcu viverra platea iaculis nisl. Faucibus sed volutpat nulla nec sed ipsum. Sit nulla faucibus ultrices sit.</p>
-          </div>
+          </div></div>
           <!-- end of donate lt -->
           <div class="donate-rt">
-            <div class="donation-form">
-              <form action="#" method="post">
-                <div class="form-group">
-                  <label class="frequency-label">
-                    <input type="radio" name="frequency" value="monthly" required>
-                    Monthly </label>
-                  <label class="frequency-label">
-                    <input type="radio" name="frequency" value="yearly" required>
-                    Yearly </label>
+            <div class="donation-form frm_forms">
+              <form action="#" method="post" class="frm_form_fields">
+                <div class="form-group form-head flex">
+                  <input class="pd_radio" type="radio" name="frequency" value="monthly" checked required>
+                  <label class="frequency-label"> Give Once </label>
+                  <input class="pd_radio" type="radio" name="frequency" value="yearly" required>
+                  <label class="frequency-label"> Give Monthly </label>
                 </div>
                 <div id="monthly-content" class="extra-content">
-                  <p>You have selected a <strong>monthly</strong> donation. Thank you for your ongoing support!</p>
+                  <div class="donate-amount-box">
+                    <div class="donate-amount">
+                      <div class="denomination selected">
+                        <input autocomplete="off" type="radio" name="amount" id="amount25" value="25" checked="">
+                        <label for="amount5">$25</label>
+                      </div>
+                      <div class="denomination">
+                        <input autocomplete="off" type="radio" name="amount" id="amount50" value="50">
+                        <label for="amount50">$50</label>
+                      </div>
+                      <div class="denomination">
+                        <input autocomplete="off" type="radio" name="amount" id="amount100" value="100">
+                        <label for="amount100">$100</label>
+                      </div>
+                    </div>
+                    <div class="denomination-other"> <span>$</span>
+                      <input autocomplete="off" type="text" name="amount" value="" placeholder="CAD">
+                    </div>
+                  </div>
+                  <div class="frm_form_field form-field frm_top_container vertical_radio">
+                      <div id="field_j9r9c_label" class="frm_primary_label">This gift is...
+<span class="frm_required"></span>
+</div>
+                    <div class="frm_opt_container" aria-labelledby="field_j9r9c_label" role="group">
+                      <div class="frm_checkbox" id="frm_checkbox_944-933-0">
+                        <label for="field_j9r9c-0">
+                          <input type="checkbox" name="item_meta[944][]" id="field_j9r9c-0" value="Option 1" data-sectionid="933" data-invmsg="Checkboxes is invalid" aria-invalid="false">
+                          <span></span> in memory or honour of someone.</label>
+                      </div>
+                      <div class="frm_checkbox" id="frm_checkbox_944-933-1">
+                        <label for="field_j9r9c-1">
+                          <input type="checkbox" name="item_meta[944][]" id="field_j9r9c-1" value="Option 2" data-sectionid="933" data-invmsg="Checkboxes is invalid" aria-invalid="false">
+                          <span></span> to thank a St. Joe’s care provider, staff member,  or team by naming them to the St. Joe's Circle.</label>
+                      </div>
+                      <div class="frm_checkbox" id="frm_checkbox_944-933-2">
+                        <label for="field_j9r9c-2">
+                          <input type="checkbox" name="item_meta[944][]" id="field_j9r9c-2" value="Option 3" data-sectionid="933" data-invmsg="Checkboxes is invalid" aria-invalid="false">
+                          <span></span> on behalf of an organization.</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div id="yearly-content" class="extra-content">
                   <p>You have selected a <strong>yearly</strong> donation. Your generosity is greatly appreciated!</p>
                 </div>
-                <div class="form-group">
-                  <input type="submit" value="Donate">
+                <div class="frm_submit frm_flex">
+                  <button class="frm_button_submit frm_final_submit button btn-dark" type="submit" formnovalidate="formnovalidate">Continue</button>
                 </div>
               </form>
             </div>
@@ -404,22 +448,27 @@
 <script src="js/custom-script.js"></script> 
 <!-- Donation Popup --> 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+ document.addEventListener('DOMContentLoaded', function() {
     var frequencyRadios = document.querySelectorAll('input[name="frequency"]');
     var monthlyContent = document.getElementById('monthly-content');
     var yearlyContent = document.getElementById('yearly-content');
 
+    function updateContent() {
+      if (document.querySelector('input[name="frequency"]:checked').value === 'monthly') {
+        monthlyContent.style.display = 'block';
+        yearlyContent.style.display = 'none';
+      } else {
+        monthlyContent.style.display = 'none';
+        yearlyContent.style.display = 'block';
+      }
+    }
+
     frequencyRadios.forEach(function(radio) {
-      radio.addEventListener('change', function() {
-        if (this.value === 'monthly') {
-          monthlyContent.style.display = 'block';
-          yearlyContent.style.display = 'none';
-        } else if (this.value === 'yearly') {
-          monthlyContent.style.display = 'none';
-          yearlyContent.style.display = 'block';
-        }
-      });
+      radio.addEventListener('change', updateContent);
     });
+
+    // Initial call to set the correct content display on page load
+    updateContent();
   });
 </script>
 </body>
