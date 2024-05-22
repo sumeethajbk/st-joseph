@@ -63,17 +63,18 @@
     
 }
 @media only screen and (max-width: 767px) and (min-width: 200px){
-   .car-lt {padding: 104px 0;}
+    .car-lt {padding: 104px 0;}
     .car-lt .e-anim-icon {width: 156px; height: 182px;}
     .car-rt {padding: 40px 0;}
     .car-rt h1 span img {width: 340px; height: 43px;}
     .car-rt h1 {margin-bottom: 31px;}
     .car-rt .default_form_dark {margin-top: 41px;}
-    
+    .car-rt .default_form_dark .frm_forms .frm_form_fields .frm_form_field {margin-bottom: 16px;}
+
     .overlay_main_sec.campaign-popup .overlay-main {width: 100%; height: auto;}
     .overlay_main_sec.campaign-popup .overlay-wrap {outline: none; width: 100%;  height: 100%; border-radius: 20px 20px 0px 0px; text-align: left;  padding: 39px 32px 76px 32px;}
-    
-    
+
+
     .overlay_main_sec.campaign-popup .request-pop {margin-bottom: 4px;}
     .overlay_main_sec.campaign-popup .request-pop .poplink {float: left; margin-top: -35px;}
     .overlay_main_sec.campaign-popup .request-pop .frm_forms .frm_submit .button {float: right; width: auto;}
