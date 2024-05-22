@@ -64,7 +64,8 @@ width: 18.984375%;}
 .donor-tabs .donor-tab.accordion-active:before, .accordion-active .donor-item__label:before {outline: 6px solid var(--elevated); background:var(--teal);}
 .donor-tab, .donor-item {transition: all 0.3s ease-in-out;}
  
-
+.default_form_dark .frm_forms .frm_form_fields textarea{height: 126px;}
+.frm_wrapper{justify-content: space-between;}
 /*-- media css starts here --*/
 @media only screen and (max-width: 1280px) and (min-width:1024px){
   .donor-item__container ul li {width:21.5625%;}
@@ -73,7 +74,11 @@ width: 18.984375%;}
 @media only screen and (min-width:1024px){
   .stories-slider {padding: 80px 0 24px;}
   .short-intro-wrap { padding: 135px 0 76px; }
-
+  .frm_forms .frm_form_fields input{padding: 13px 12px 12px 12px;;}
+  .testimonial-rt{padding: 0 0 48px 0;}
+  .frm_forms .frm_form_fields .frm_form_field {
+    margin-bottom: 32px;}
+  .donor-listing.no-sec{padding: 40px 0 80px;}
 }
 
 @media (min-width:768px) {
@@ -127,9 +132,11 @@ width: 18.984375%;}
     .testimonial-lt .bubble {margin-bottom: 33px;}
     .testimonial-lt .bubble p {line-height: 150%;}
     .testimonial-lt .bubble-img {margin: 0 auto;}
-    .testimonial-rt {width: 100%;}
+    .testimonial-rt {width: 100%; padding: 0 0 64px 0;}
     
     .stories-slider .bg {height: 44.6%;}
+    #frm_field_25_container{margin-bottom: 0;}
+    #frm_field_23_container{width: 100%;}
 }
 @media only screen and (max-width: 389px) {
 }
