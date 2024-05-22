@@ -29,6 +29,7 @@
 @media only screen and (min-width:1024px){
     .gt-bios-grid:hover .gt-bios-header {transform: translateY(0);}
     .gt-bios-grid:hover .gt-bios-overlay {transform: translateY(0);}
+    .bios-toggle {display: none;}
 
 }
 @media only screen and (max-width: 1023px) and (min-width:200px){
