@@ -36,7 +36,7 @@
 .timeline-thumb-nav p {font-size: 14px; line-height: 150%; font-weight: 400; padding:0 0 28px 0;}
 
 
-.timeline-thumb.slick-current {/*transform: translateY(-211px)*/; min-height: 343px!important;}
+.timeline-thumb.slick-current {/*transform: translateY(-211px);*/ min-height: 343px!important;}
 
 /* Timeline For */
 .timeline-for .slick-track {display: flex;}
@@ -51,7 +51,7 @@
 
 
 .our-story {width: 100%; padding:81px 0 0 0; clear: both; position: relative; overflow: hidden;}
-.our-story hr {margin: 0;}
+.our-story hr {margin: 0; background-color: var(--purple); opacity: 0.5;}
 .our-story-lt {width: 47.65625%; flex-grow: 1;}
 .our-story-lt h2 {font-size: 40px; font-weight: 500; line-height: 125%; letter-spacing: -0.8px; margin-bottom: 23px;}
 .our-story-rt {width: 47.65625%; margin-left: 4.6875%;}
@@ -96,6 +96,7 @@
 
 @media only screen and (min-width:1024px){
 .meet-donors-main {padding: 80px 0 72px 0;}
+
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 200px){
@@ -159,5 +160,7 @@
     .timeline-slider .slick-arrow.next-arrow {right: 44px; left: auto; margin-bottom: 25px; width: 48px; height: 48px; outline-width: 8px;}
     .timeline-slider .slick-track, .timeline-thumb, .timeline-thumb.slick-current {min-height: inherit!important;}
     .timeline-thumb-nav p {padding: 0 0 26px 0;}
+
+    .stories-slider { padding: 25px 0 22px; }
 
 }
