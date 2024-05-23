@@ -6,6 +6,7 @@
 .repeaters-grid .repeaters-lt {width: 46.875%; margin-right: 6.25%;}
 .repeaters-grid .repeaters-lt .h3 {margin-bottom: 24px;}
 .repeaters-grid .repeaters-rt {width: 46.875%; flex-grow: 1; padding: 20px 0 120px 0; display: flex; position: relative; margin-top: auto;}
+.repeaters-grid .repeaters-rt p{color: var(--linkhover);}
 .repeaters-grid .repeaters-rt:after {content: ""; height: 2px; width: 100%; background: rgba(0, 156, 166, 0.25); position: absolute; right: 0; bottom: 0; display: block;}
 .repeaters-grid .repeaters-thumb {width: 100%; clear: both; height: 100%;}
 .repeaters-grid .repeaters-thumb:before {background-color: rgba(157, 151, 154, 0.2); content: ""; position: absolute; left: 0; top:0; display: block; width: 100%; height: 100%;}
