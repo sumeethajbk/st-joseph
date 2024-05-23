@@ -80,7 +80,7 @@
     .signup-module .signup-form .frm_forms.frm_style_formidable-style.with_frm_style .frm_form_fields .frm_form_field .frm_error {top: 56px;}
 
     
-    .signup-module .signup-info {padding: 0 32px;}
+    .signup-module .signup-info {padding: 0 32px; max-width: 342px; margin: 0 auto;}
     .signup-module .signup-info .signup-info-txt .h5 {display: none;}
     
     .signup-module .signup-info .signup-links {flex-direction: column-reverse;}

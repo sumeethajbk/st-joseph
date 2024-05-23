@@ -32,7 +32,7 @@
     .home-story-main {margin: 0;}
     .home-our-story {padding: 40px 0;}
     .home-our-story h2 {margin-bottom: 39px;}
-    .home-our-story .bottom-frame {text-align: center;}
+    .home-our-story .bottom-frame {text-align: center; margin-bottom: 17px;}
     .home-story-grid {width: 100%; margin:22px 0 0 0;}
     .home-story-grid:first-child .home-story-grid-inner {flex-direction: column-reverse;}
     .home-story-grid:first-child .home-story-thumb {margin: 0 0 31px 0;}

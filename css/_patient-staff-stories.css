@@ -40,7 +40,7 @@
     .ps-grid {width: 342px; margin: 0 24px 0 0;}
     .ps-grid .ps-cnt {margin-bottom: 30px;}
     .ps-lists {padding: 0 0 65px 0;}
-    .ps-lists ul.slick-dots {min-height: 72px; width: calc(100% - 151px); margin: 0 auto; position: absolute; left: 0; right: 0;}
+    .ps-lists ul.slick-dots {min-height: 72px; width: calc(100% - 151px); margin: 0 auto; position: absolute; left: 0; right: 0; bottom: -8px;}
     .ps-lists .slick-arrow {top: inherit; bottom: 0;}
 }
 
