@@ -19,6 +19,8 @@
 .row-of-six .short-intro-list, .row-of-six .short-intro-list:nth-child(4n+1) {width: 30.390625%; margin:5.95% 0 0 4.375%;}
 .row-of-six .short-intro-list:nth-child(3n+1) {margin-left: 0;}
 
+.short-intro-wrap.no-main{padding-top: 20px;}
+
 /* media starts here */
 @media only screen and (max-width: 1280px) and (min-width: 1024px){
     .short-intro-row {padding: 0; margin-top: -5px;} 
