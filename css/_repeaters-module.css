@@ -10,6 +10,7 @@
 .repeaters-grid .repeaters-rt:after {content: ""; height: 2px; width: 100%; background: rgba(0, 156, 166, 0.25); position: absolute; right: 0; bottom: 0; display: block;}
 .repeaters-grid .repeaters-thumb {width: 100%; clear: both; height: 100%;}
 .repeaters-grid .repeaters-thumb:before {background-color: rgba(157, 151, 154, 0.2); content: ""; position: absolute; left: 0; top:0; display: block; width: 100%; height: 100%;}
+.repeaters-grid.no-image{min-height: 380px; margin-top: -80px;}
 
 .repeaters-loop:nth-child(even) .repeaters-grid {flex-direction: row-reverse;}
 .repeaters-loop:nth-child(even) .repeaters-grid .repeaters-lt {width: 46.875%; margin-left: 6.25%; margin-right: 0;}
