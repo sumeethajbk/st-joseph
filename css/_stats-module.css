@@ -1,5 +1,6 @@
 .stats-module{ clear: both; width: 100%; z-index: 1; position: relative; padding: 80px 0 76px;}
-.stats-module .bottom-frame {margin: 80px auto 16px auto; padding: 0;}
+.stats-module h2 {margin-bottom: 80px;}
+.stats-module .bottom-frame {margin: 0 auto 16px auto; padding: 0;}
 .stats-row {justify-content: center;}
 .stats-list {width: 21.25%; margin: 4.84375% 0 0 5%; display: inline-block; vertical-align: top; padding: 0 0 0 32px; position: relative;}
 .stats-list:nth-child(4n+1) {margin-left: 0;}
