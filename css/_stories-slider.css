@@ -79,7 +79,7 @@
 }
 @media only screen and (max-width: 767px) and (min-width: 200px){  
     .stories-slider {padding: 39px 0 22px;}
-    .stories-slider h2 {margin-bottom: 33px;}
+    .stories-slider h2 {margin-bottom: 33px; margin-left: 8px; margin-right: 8px;}
     .stories-slider .bg {height: 52.6%;}
     .stories-slider-wrap {display: flex; flex-direction: column-reverse;}
     .stories-slide .play-btn {background: none; width: auto; backdrop-filter: none; padding: 8px 8px 8px 8px;}
