@@ -7,7 +7,7 @@
 .short-intro-lt h2 {font-size: 40px; line-height: 125%; letter-spacing: -0.8px;}
 
 .short-intro-rt {font-size: 18px; line-height: 150%; width: calc(100% - 53.125%); padding: 18px 0 0 0; flex-grow: 1;}
-.short-intro-row {padding: 5px 0 0 0;}
+.short-intro-row {padding: 5px 0 0 0; justify-content: center;}
 .short-intro-list {width: 21.71875%; margin: 4.375% 0 0 4.375%; display: inline-block; vertical-align: top;}
 .short-intro-list:nth-child(4n+1) {margin-left: 0;}
 .short-intro-list p {color: var(--linkhover); line-height: 150%; letter-spacing: -0.4px; font-size: 20px; font-family: 'Poppins', sans-serif; margin-bottom: 15px; font-weight: 500;}
