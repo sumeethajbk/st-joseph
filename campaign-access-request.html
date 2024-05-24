@@ -314,12 +314,15 @@
             <div class="donation-form frm_forms">
               <form action="#" method="post" class="frm_form_fields">
                 <div class="form-group form-head flex">
-                  <input class="pd_radio" type="radio" name="frequency" value="monthly" checked required>
-                  <label class="frequency-label"> Give Once </label>
-                  <input class="pd_radio" type="radio" name="frequency" value="yearly" required>
-                  <label class="frequency-label"> Give Monthly </label>
+                     <label for="once"  class="frequency-label">
+        <input type="radio" name="frequency" value="once" id="once" checked> Give Once
+    </label>
+                    <label for="monthly" class="frequency-label">
+        <input type="radio" name="frequency" value="monthly" id="monthly" > Give Monthly
+    </label>
+   
                 </div>
-                <div id="monthly-content" class="extra-content">
+                <div id="once-content" class="extra-content">
                   <div class="donate-amount-box">
                     <div class="donate-amount">
                       <div class="denomination selected">
@@ -362,8 +365,8 @@
                     </div>
                   </div>
                 </div>
-                <div id="yearly-content" class="extra-content">
-                  <p>You have selected a <strong>yearly</strong> donation. Your generosity is greatly appreciated!</p>
+                <div id="monthly-content" class="extra-content">
+                  <p>You have selected a <strong>once</strong> donation. Your generosity is greatly appreciated!</p>
                 </div>
                 <div class="frm_submit frm_flex">
                   <button class="frm_button_submit frm_final_submit button btn-dark" type="submit" formnovalidate="formnovalidate">Continue</button>
@@ -448,28 +451,28 @@
 <script src="js/custom-script.js"></script> 
 <!-- Donation Popup --> 
 <script>
- document.addEventListener('DOMContentLoaded', function() {
-    var frequencyRadios = document.querySelectorAll('input[name="frequency"]');
-    var monthlyContent = document.getElementById('monthly-content');
-    var yearlyContent = document.getElementById('yearly-content');
+jQuery(document).ready(function() {
+    var $frequencyRadios = jQuery('input[name="frequency"]'),
+        $monthlyContent = jQuery('#monthly-content'),
+        $onceContent = jQuery('#once-content');
 
     function updateContent() {
-      if (document.querySelector('input[name="frequency"]:checked').value === 'monthly') {
-        monthlyContent.style.display = 'block';
-        yearlyContent.style.display = 'none';
-      } else {
-        monthlyContent.style.display = 'none';
-        yearlyContent.style.display = 'block';
-      }
+        var isMonthly = jQuery('input[name="frequency"]:checked').val() === 'monthly';
+        $monthlyContent.toggle(isMonthly);
+        $onceContent.toggle(!isMonthly);
+
+        $frequencyRadios.each(function() {
+            jQuery('label[for="' + this.id + '"]').toggleClass('active', this.checked);
+        });
     }
 
-    frequencyRadios.forEach(function(radio) {
-      radio.addEventListener('change', updateContent);
-    });
-
-    // Initial call to set the correct content display on page load
-    updateContent();
-  });
+    if ($frequencyRadios.length && $monthlyContent.length && $onceContent.length) {
+        $frequencyRadios.on('change', updateContent);
+        updateContent();
+    } else {
+        console.error('Required elements not found.');
+    }
+});
 </script>
 </body>
 </html>
