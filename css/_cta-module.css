@@ -9,7 +9,7 @@
 .cta-txt p {font-size: 16px; line-height: 150%;}
 .cta-btns .button {margin: 0 28px 15px 0;}
 .cta-btns .button:hover {outline: 6px solid var(--tealborder); background: var(--white);}
-.cta-btns .readmore{color: var(--white)!important;}
+.cta-btns .readmore{color: var(--white)!important; margin-bottom: 15px;}
 .cta-btns .readmore:after {color: var(--white);}
 
 .cta-image{position: relative; text-align: right; width: 50%; margin-left: auto;}

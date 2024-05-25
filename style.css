@@ -110,8 +110,8 @@ img.mobile {display:none;}
 .video-wrap {margin:56px 0 25px 0; position: relative; clear: both; overflow: hidden;}
 .video-caption {font-size: 14px; font-style: normal; font-weight: 400; line-height: 150%; width:100%;  color: var(--linkhover); background:var(--elevated);}
 .video-wrap .video-thumbnail:before {background-color: rgba(157, 151, 154, 0.2); content: ""; position: absolute; left: 0; top: 0; display: block; width: 100%; height: 100%;}
-.video-caption .video-txt {width:69.667%; position: relative; flex-grow: 1; padding:24px;}
-.video-caption .video-btn {width: calc(100% - 75.66666666666667%); background: var(--teal); color: var(--white); padding:24px; display: flex;
+.video-caption .video-txt {width:69.667%; position: relative; flex-grow: 1; padding:27px 24px;}
+.video-caption .video-btn {width: calc(100% - 75.66666666666667%); background: var(--teal); color: var(--white); padding:27px 24px; display: flex;
 align-items: center; flex-wrap: wrap; justify-content: center; min-width: 206px;}
 .video-caption .video-btn a {color: var(--white);}
 .video-wrap .video-thumbnail > img {min-height:506px;}
