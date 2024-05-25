@@ -12,8 +12,17 @@
 .default-banner-main .default-banner-text .button.btn-white:hover {background: var(--white); outline: 6px solid var(--tealborder);}
 .default-banner-main .default-banner-text .button:last-child {margin-right: 0; margin-bottom: 0;}
 .default-banner-main .default-banner-text .readmore {color: var(--white); padding-bottom: 1px; padding-right: 25px;}
+.default-banner-section.no-banner-img .default-banner-main .default-banner-text .default-banner-bg {width: 10000%; right: -1000%;}
+.default-banner-section.no-banner-img .default-banner-main .default-banner-text {max-width: 100%; width: 100%;}
 
 
+/* Right Aligned */
+.default-banner-section.right-content .default-banner-main {flex-direction: row-reverse;}
+.default-banner-section.right-content .default-banner-main .default-banner-text {padding: 40px 0 40px 55px;}
+.default-banner-section.right-content .default-banner-main .default-banner-text .default-banner-bg {left: 0;}
+.default-banner-section.right-content.no-banner-img .default-banner-main .default-banner-text .default-banner-bg {left: inherit;}
+.default-banner-section.right-content.no-banner-img .default-banner-main .default-banner-text {text-align: right;}
+.default-banner-section.right-content.no-banner-img .default-banner-main .default-banner-text  .btn-wrap {justify-content: flex-end;}
 
 /*-- media starts here --*/
 @media only screen and (max-width: 1023px) and (min-width: 200px){
@@ -23,6 +32,8 @@
     .default-banner-main {min-height: inherit;}
     .default-banner-main .default-banner-text {max-width: 100%; padding: 64px 0; width: 100%;}
     .default-banner-main .default-banner-text .default-banner-bg {height: 100%; width: calc(100% + 80px); right: -40px; top: 0;}
+    
+    .default-banner-section.right-content .default-banner-main .default-banner-text .default-banner-bg {left: -40px; right: inherit;}
 }
 
 @media only screen and (max-width: 1023px) and (min-width:768px){

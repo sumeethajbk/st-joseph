@@ -3,7 +3,7 @@
 .fs-lt{width: calc(100% - 372px); padding:40px; flex-grow: 1; }
 .fs-lt .optional-text {color: var(--white); margin: 0 0 24px 0;}
 .fs-lt {display: flex; flex-direction: column; align-items: flex-start; justify-content: center; height: 100%;}
-.fs-lt .h4{line-height: 125%; letter-spacing: -0.64px; margin-bottom: 20px;}
+.fs-lt .h4{line-height: 125%; letter-spacing: -0.64px; margin-bottom: 23px;}
 .fs-lt p {font-size: 16px; line-height: 150%;}
 .fs-btns .button {margin: 0 28px 0 0;}
 .fs-btns .readmore{color: var(--white);}

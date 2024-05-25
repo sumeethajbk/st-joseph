@@ -2,7 +2,8 @@
 @import url("../css/_patient-staff-stories.css");
 @import url("../css/_financial-statements.css");
 
-.repeater-bg {height: calc(100% - 90.95%);}
+.repeater-bg {height: calc(100% - 90.95%); top: inherit; bottom: 0;}
+.cta-module.donate-cta .cta-overlay {bottom: inherit; top: 0;}
 .ps-bg {background: var(--elevated);}
 
 
@@ -11,6 +12,16 @@
 .meet-donors-main::after {display: none;}
 
 /*-- media css starts here --*/
+@media only screen and (max-width:1280px) and (min-width: 1024px){
+    .stats-module {padding: 80px 0 40px;}
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .cta-module.donate-cta {padding-bottom: 40px;}   
+    .gratitude-wall {padding: 80px 0;}
+}
+
 @media only screen and (max-width: 1023px) and (min-width:200px){
 	    .repeater-bg {background: var(--white);}
 
@@ -24,7 +35,7 @@
     
     .meet-donors-main {padding: 40px 0 39px;}
     .meet-our-donors {padding: 0;}
-    .meet-our-donors h2 {margin-bottom: 26px;}
+    .meet-our-donors h2 {margin-bottom: 30px;}
     
     .general-default-container {padding: 43px 0 80px;}
     

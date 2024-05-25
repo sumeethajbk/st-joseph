@@ -10,7 +10,7 @@
 
 .gratitude-by {width: 100%; clear: both; position: relative; padding:4px 0 4px 16px;}
 .gratitude-by .grat-line {position: absolute; left: 0; top: 0; width: 1px; height: 100%; display: block; background: var(--linkhover);}
-
+.gratitude-wall .heading-lt {padding-right: 20px;}
 
 /*-- media starts here --*/
 @media only screen and (max-width: 1023px) and (min-width:768px){

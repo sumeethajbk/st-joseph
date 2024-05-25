@@ -44,6 +44,7 @@ jQuery(document).ready(function () {
     touchThreshold: 200,
     swipeToSlide: true,
     speed: 1500,
+    infinite:false,
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
     responsive: [{
@@ -73,6 +74,7 @@ jQuery(document).ready(function () {
     draggable: true,
     touchThreshold: 200,
     swipeToSlide: true,
+      infinite:false,
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
     responsive: [{

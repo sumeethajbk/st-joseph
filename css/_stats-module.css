@@ -11,17 +11,17 @@ letter-spacing: -1.6px;}
 
 .stats-module.stats-filter .stats-list p {margin-bottom: 0;}
 .stats-module.stats-filter .stats-list .line {height: 100%;}
-.stats-module.stats-filter .stats-intro-main {align-items: center; justify-content: space-between; margin: 0 0 43px 0;}
+.stats-module.stats-filter .stats-intro-main {justify-content: space-between; margin: 0 0 43px 0;}
 .stats-module.stats-filter .stats-intro-lt {width: 46.875%; margin-right: 6.25%; flex-grow: 1;}
-.stats-module.stats-filter .stats-intro-lt h2 {font-size: 40px; line-height: 125%; letter-spacing: -0.8px;}
+.stats-module.stats-filter .stats-intro-lt h2 {font-size: 40px; line-height: 125%; letter-spacing: -0.8px; margin-bottom: 19px;}
 
-.stats-module.stats-filter .stats-intro-rt {font-size: 18px; line-height: 150%; width: calc(100% - 53.125%);flex-grow: 1;}
+.stats-module.stats-filter .stats-intro-rt {font-size: 18px; line-height: 150%; width: calc(100% - 53.125%);flex-grow: 1; padding: 21px 0 0 0;}
 .stats-module.stats-filter .bottom-frame {margin: 64px auto 4px auto}
 
 /* media starts here */
 @media only screen and (max-width: 1023px) and (min-width: 200px){
     .stats-module.stats-filter .stats-intro-lt {width: 100%; margin: 0 0 13px 0;}
-    .stats-module.stats-filter .stats-intro-rt {width: 100%; margin: 0;}
+    .stats-module.stats-filter .stats-intro-rt {width: 100%; margin: 0; padding: 0;}
     
 }
 @media only screen and (max-width: 1023px) and (min-width: 768px){
@@ -45,7 +45,7 @@ letter-spacing: -1.6px;}
     .stats-cnt {width: calc(100% - 135px); flex-grow: 1;}
     .stats-list p {font-size: 18px; line-height: 140%; letter-spacing: -0.36px; margin-bottom: 2px;}
     
-    .stats-module.stats-filter .stats-intro-main {margin: 0 0 38px 0;}
+    .stats-module.stats-filter .stats-intro-main {margin:0 0 36px 0;}
     .stats-module.stats-filter .stats-intro-lt h2 {font-size: 32px; line-height: 125%;letter-spacing: -0.64px;}
     .stats-module.stats-filter .stats-list {margin:32px 0 0 0;}
     .stats-module.stats-filter .bottom-frame {margin: 40px auto 4px auto;}
