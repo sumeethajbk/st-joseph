@@ -205,6 +205,13 @@ background: rgba(0, 131, 139, 0.50); text-align: center;}
 .overlay_main_sec.donate-popup .denomination-other  :-ms-input-placeholder {color: var(--teal); font-family:"Poppins", sans-serif; opacity: 0.5; font-size: 18px; font-weight: 600; line-height: 24px; letter-spacing: -0.36px; text-align: right!important}
 
 
+/* Login */
+.overlay_main_sec.campaign-popup {z-index: 999; overflow-y: auto; visibility: visible; transform: translateY(0); -webkit-transform: translateY(0);  -moz-transform: translateY(0);}
+.overlay_main_sec.campaign-popup .overlay-main {width: 512px; height: 512px; justify-content: center; display: flex; align-items: center;}
+.overlay_main_sec.campaign-popup .overlay-wrap {width: 420px; height: 420px; background: var(--white); border-radius: 50%; display: flex; justify-content: center;
+  flex-direction: column; align-items: center; text-align: center; padding: 40px; box-sizing: border-box; outline:46px rgba(0, 156, 166, 0.25) solid;}
+.overlay_main_sec.campaign-popup .overlay-wrap .frm_forms .frm_form_fields .frm_form_field label.frm_primary_label {display: none;}
+
 
 
 body .mfp-image-holder .mfp-close, body .mfp-iframe-holder .mfp-close {padding-right: 9px; width: 40px;height: 40px; opacity: 1;line-height: 40px; top: -45px; background-color: transparent; right: -45px;}
@@ -325,6 +332,7 @@ body ul.selectBox-dropdown-menu li.selectBox-selected a, body ul.selectBox-dropd
 
 .readmore {position: relative; display: inline-block; font-size:18px; padding-right: 24px; font-weight: 600; color: var(--linkhover); letter-spacing: -0.36px;
 text-transform: capitalize; line-height: 100%;}
+.readmore:hover {opacity: 0.8;}
 .readmore:after {right: 0px; content:"\f061"; font-family:"Font Awesome 6 Pro"; font-weight: 400; transition: all .3s ease-in-out; position: absolute; display: flex; align-items: center; flex-wrap: wrap; font-size: 18px; line-height: 100%; top: 0; bottom: 0;}
 .readmore:hover:after {animation-name: bounceAlpha; animation-duration: 1.4s; animation-iteration-count: infinite; animation-timing-function: linear;}
 .bg {left: 0; top: 0; width: 100%; height: 100%; z-index: -1; display: block; position: absolute;}
@@ -655,6 +663,14 @@ position: relative; z-index: 1; text-decoration: none; border-radius: 50%!import
     .overlay_main_sec.donate-popup .donate-amount {width: 164px;}
     .overlay_main_sec.donate-popup .denomination-other {width: calc(100% - 174px);}
     .overlay_main_sec.donate-popup .overlay-main .pop_connect_close {top: 8px; right: 8px;}
+    
+    
+    
+    .overlay_main_sec.campaign-popup .overlay-main {width: 100%; height: auto;}
+    .overlay_main_sec.campaign-popup .overlay-wrap {outline: none; width: 100%;  height: 100%; border-radius: 20px 20px 0px 0px; text-align: left;  padding: 39px 32px 76px 32px;}
+    .overlay_main_sec.campaign-popup .request-pop {margin-bottom: 4px;}
+    .overlay_main_sec.campaign-popup .request-pop .poplink {float: left; margin-top: -35px;}
+    .overlay_main_sec.campaign-popup .request-pop .frm_forms .frm_submit .button {float: right; width: auto;}
     
     
     
