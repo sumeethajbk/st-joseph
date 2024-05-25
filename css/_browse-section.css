@@ -1,14 +1,15 @@
 
 
 .browse-tab-section{padding: 40px 0;}
-.browse-tab-heading{margin-bottom: 56px; align-items: center; gap: 32px}
+.browse-tab-heading{margin-bottom: 56px; align-items: center; gap: 30px}
 .browse-tab-heading h2{width: 50%; font-size: 40px; width: 624px; margin-bottom: 0;}
-.browse-tab-heading .browse-search{width: calc(100% - 656px); border: 2px solid var(--tealborder); border-radius: 32px; position: relative; z-index: 1; clear: both; }
+.browse-tab-heading .browse-search{width: calc(100% - 654px); border: 2px solid var(--tealborder); border-radius: 32px; position: relative; z-index: 1; clear: both; }
 .browse-search-field input{padding: 18px 20px 18px 50px; background-color: transparent; font-weight: 500; font-size: 16px; color: var(--linkhover);}
 .browse-search-button{position: absolute; display: block; top: 50%; left: 15px; right: auto; width: 24px; height: 30px; transform: translateY(-50%);}
 .browse-search-button button{width: 100%; height: 100%; padding: 0; border-radius: 6px; background: transparent; color: var(--teal); font-size: 24px; line-height: 32px; outline: none;}
 .browse-search-button button:hover{outline: none;}
 
+.browse-search input[type="search"] {border: none;}
 .browse-search-field input::-webkit-input-placeholder{color: var(--linkhover); font-family: "Poppins";}
 .browse-search-field input:-moz-placeholder{color: var(--linkhover); font-family: "Poppins"; opacity: 0.5;}
 .browse-search-field input::-moz-placeholder{color: var(--linkhover); font-family: "Poppins"; opacity: 0.5;}
@@ -23,6 +24,8 @@
 .browse-grid .browse-cnt {clear: both; width: 100%;}
 .browse-grid .browse-cnt p {font-size: 20px; font-weight: 500; line-height: 150%; color: var(--linkhover);}
 .browse-grid .browse-cnt p a{color: var(--linkhover);}
+.browse-grid .browse-cnt p a:hover { color: var(--teal); }
+
 #mainContent .ui-tabs .ui-tabs-nav li{min-width: inherit; max-width: inherit; width: calc(20% - 18px); margin-right: 22px; } 
 
 

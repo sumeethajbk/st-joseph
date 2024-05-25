@@ -21,6 +21,8 @@
 .community-banner-rt-img::after{background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display: block;}
 .community-banner-rt-text{padding: 34px 32px 34px;}
 .community-banner-rt-text p{font-size: 20px; font-family: Oswald; color: var(--linkhover); line-height: 1.5;}
+.community-banner-rt-text p a{color: var(--linkhover);}
+.community-banner-rt-text p a:hover{color: var(--link);}
 
 .micro-cta { max-width: 1280px; margin: -95px auto 65px; z-index: 1;}
 .micro-cta-lt .h4 {font-size: 40px; margin-bottom: 24px;}
@@ -30,10 +32,27 @@
 
 .meet-donors-main::after {display: none;}
 .repeater-single-bg { bottom: 0; top: inherit; height: calc(100% - 547px)}
-.repeaters-single-grid .repeaters-single-rt { padding: 90px 0 20px 0;}
+.repeaters-single-grid .repeaters-single-rt { padding: 98px 0 20px 0;}
 .repeaters-single-grid .repeaters-single-rt .h3{font-size: 48px;}
 .repeaters-single-grid .repeaters-single-rt::after {content: ""; height: 2px; width: 100%; background: rgba(0, 156, 166, 0.25); position: absolute; right: 0; top: 0; bottom: inherit; display: block; }
 
+.browse-search-field input { padding: 17px 20px 17px 50px;}
+
+/* .button.btn-primary {
+  background-color: var(--lightwhite);
+  color: var(--teal);
+  position: relative;
+} */
+
+/* .more.blog_more.load-more::before { position: absolute; display: block; content: ""; width: 100%; left: 0; right: auto; top: 50%; transform: translateY(-50%); background-color: var(--optionaltxt); background-position: center center; background-size: 8px 2px; background-repeat: repeat-x; height: 2px; z-index: -1; opacity: 0.5; */
+
+/* }
+.more.blog_more.load-more{
+position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  margin-top: 55px;} */
 
 /* micro cta popup */
 .overlay_main_sec.micro-cta-popup .micro-cta { max-width: 900px;}
@@ -76,9 +95,13 @@
   .overlay_main_sec.micro-cta-popup .overlay-main .pop_connect_close { top: -60px; right: 40px; }
 }
 @media only screen and (min-width: 1024px){
+  .browse-tab-section{padding: 36px 0 40px;}
   .community-banner-rt{margin: 0 0 0 4.4%;}
   .community-text-block{z-index: 1;}
   
+  .meet-donors-main {padding: 80px 0 82px 0;}
+  .repeaters-single {padding: 40px 0 55px 0;}
+
   .overlay_main_sec.micro-cta-popup  .micro-cta-rt { width: 400px;}
   .overlay_main_sec.micro-cta-popup .micro-cta-img { width: 420px; height: 420px;}
   .overlay_main_sec.micro-cta-popup .micro-cta-lt { width: calc(100% - 450px);}
