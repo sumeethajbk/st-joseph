@@ -37,6 +37,8 @@
 .signup-module .signup-form .frm_forms .frm_submit button {font-size: 21.9px; font-weight: 600; line-height: 100%; letter-spacing: -0.438px; text-transform: capitalize; background: var(--link); border-radius: 48.667px; font-family: 'Poppins', sans-serif; padding: 18.25px 20px 18.25px 21px; outline: 0 none; border:0 none; box-shadow: none; margin: 0;}
 .signup-module .signup-form .frm_forms .frm_submit button:hover {background: var(--linkhover); color: var(--white);}
 .signup-module .signup-form .frm_forms.frm_style_formidable-style.with_frm_style .frm_form_fields .frm_form_field .frm_error {top: 70px; color: var(--white) !important;}
+.signup-module .signup-form .frm_forms .frm_message p {margin: 0; text-align: center; color: var(--white);}
+
 
 .signup-module.whitebg {background: var(--white);}
 

@@ -206,12 +206,7 @@ background: rgba(0, 131, 139, 0.50); text-align: center;}
 
 
 /* Login */
-.overlay_main_sec.campaign-popup {z-index: 999;
-  overflow-y: auto;
-  visibility: visible;
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);}
+.overlay_main_sec.campaign-popup {z-index: 999; overflow-y: auto; visibility: visible; transform: translateY(0); -webkit-transform: translateY(0);  -moz-transform: translateY(0);}
 .overlay_main_sec.campaign-popup .overlay-main {width: 512px; height: 512px; justify-content: center; display: flex; align-items: center;}
 .overlay_main_sec.campaign-popup .overlay-wrap {width: 420px; height: 420px; background: var(--white); border-radius: 50%; display: flex; justify-content: center;
   flex-direction: column; align-items: center; text-align: center; padding: 40px; box-sizing: border-box; outline:46px rgba(0, 156, 166, 0.25) solid;}

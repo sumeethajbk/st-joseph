@@ -42,8 +42,9 @@ footer#main_footer .footer-menu {width:23.98989898989899%; flex-wrap: wrap; disp
 footer#main_footer .footer-menu:first-of-type {margin-left: 0; width: 18.055555555555554%;}
 footer#main_footer .footer-menu:nth-child(2) {width: 34.974747474747474%;}
 
-footer#main_footer .footer-menu > ul > li > a {color: var( --linkhover); text-transform: uppercase; font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 500; line-height: 125%;}
-footer#main_footer .footer-menu ul li {font-size:16px; line-height: 150%;  margin-bottom: 11px; letter-spacing: normal;}
+footer#main_footer .footer-menu > ul > li > a, footer#main_footer .footer-menu > ul > li:first-child {color: var( --linkhover); text-transform: uppercase; font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 500; line-height: 125%;}
+footer#main_footer .footer-menu ul li {font-size:16px; line-height: 150%;  margin-bottom: 12px; letter-spacing: normal; font-family: 'Poppins', sans-serif;
+  text-transform: none; font-weight: 400;}
 footer#main_footer .footer-menu ul li:last-child {margin-bottom: 0;}
 footer#main_footer .footer-menu ul.sub-menu {margin:8px 0 0;}
 footer#main_footer .footer-menu ul.sub-menu li a {color: var(--white);}
@@ -137,7 +138,7 @@ footer#main_footer .footer_btm .privacy-links ul li > a:hover {color: var(--link
     footer#main_footer .ftr-logos figure:nth-child(2) {margin-right: 0;}
     footer#main_footer .ftr-logos figure img {height: 33px;}
     
-    footer#main_footer .footer_lt .footer-lt-cnt .mail-links {margin: 0 0 12px 0;}    
+    footer#main_footer .footer_lt .footer-lt-cnt .mail-links {margin:0 0 24px 0;}    
     footer#main_footer .footer_lt .footer-lt-cnt .mail-links li {display: inline-block; width: auto; margin:0 10px 11px 0;}
     footer#main_footer .footer_lt .footer-lt-cnt .mail-links li:last-child {margin: 0;}
     footer#main_footer .footer_lt .footer-lt-cnt .mail-links li i {color: var(--optionaltxt); margin-right: 6px; top: 3px; position: relative;}

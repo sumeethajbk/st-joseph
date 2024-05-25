@@ -37,9 +37,12 @@
     .repeaters-grid .repeaters-rt {padding: 20px 0 60px 0;}
     
     .repeaters-full-txt::before {width: 601px; height: 601px;}
+    .repeaters-full-txt {margin-top: 56px;}
     .repeaters-full-txt h2 {font-size: 40px; line-height: 125%; letter-spacing: -0.8px;}
     
+    .repeaters-loop {margin-top: 64px;}
     .repeaters-loop:nth-child(2n) .repeaters-grid .repeaters-rt {padding:60px 0 20px 0;}
+    
     
     
 }
