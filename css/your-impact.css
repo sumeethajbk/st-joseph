@@ -28,7 +28,8 @@
 
 
 /* gate popup */
-.gate-main.pos-relative { width: 100%; clear: both; z-index: 1; margin: 0 auto; max-width: 840px;}
+.overlay_main_sec.gate-popup-sec .gate-main.pos-relative { width: 100%; clear: both; z-index: 1; margin: 0 auto; max-width: 840px;}
+.overlay_main_sec.gate-popup-sec .overlay-main{max-width: 840px;}
 .overlay_main_sec.gate-popup-sec .gate-main .bg{border-radius: 20px; background-color: var(--white);}
 .overlay_main_sec.gate-popup-sec .gate-main .gate-lt{flex: 0 0 50%; padding: 40px 40px 36px;}
 .overlay_main_sec.gate-popup-sec .gate-main .gate-rt{flex: 0 0 50%;}
@@ -41,17 +42,42 @@
 .overlay_main_sec.gate-popup-sec .gate-main .gate-lt .form-field .frm_primary_label{color: var(--linkhover); font-size: 18px; font-weight: 600; text-transform: capitalize; line-height: 150%; padding: 0 0 3px 0; display: block;}
 .overlay_main_sec.gate-popup-sec .gate-main .gate-lt .gate-btns{justify-content: space-between;}
 .overlay_main_sec.gate-popup-sec .gate-main .gate-lt .gate-btns .button{background-color: var(--linkhover);}
-.popuplink .gate-btn-lt.readmore{padding-left: 24px; padding-right: 0; color: var(--teal);}
-.popuplink .gate-btn-lt.readmore:after{left: 0; right: inherit; content: "\f060"; color: var(--teal);}
+.overlay_main_sec.gate-popup-sec .popuplink .gate-btn-lt.readmore{padding-left: 24px; padding-right: 0; color: var(--teal);}
+.overlay_main_sec.gate-popup-sec .popuplink .gate-btn-lt.readmore:after{left: 0; right: inherit; content: "\f060"; color: var(--teal);}
 .overlay_main_sec.gate-popup-sec  .overlay-main .pop_connect_close {right: -15px; top: 0;}
-.gate-img img{border-radius: 0 20px 20px 0;  max-height: 541px; overflow: hidden;}
-.gate-lt .selectBox-dropdown{font-size: 16px; line-height: 24px; background-color: var(--elevated); border-radius: 8px!important; padding: 12px 12px 11px 12px; font-family: "Poppins", sans-serif;; border: 0 none;}
-.gate-lt .selectBox-dropdown .selectBox-arrow{font-size: 20px; color: var(--teal);}
-.gate-lt .selectBox-dropdown .selectBox-label{color: var(--foreground); opacity: 0.4;}
+.overlay_main_sec.gate-popup-sec .gate-img img{border-radius: 0 20px 20px 0;  max-height: 541px; overflow: hidden;}
+.overlay_main_sec.gate-popup-sec .gate-lt .selectBox-dropdown{font-size: 16px; line-height: 24px; background-color: var(--elevated); border-radius: 8px!important; padding: 12px 12px 11px 12px; font-family: "Poppins", sans-serif;; border: 0 none;}
+.overlay_main_sec.gate-popup-sec .gate-lt .selectBox-dropdown .selectBox-arrow{font-size: 20px; color: var(--teal);}
+.overlay_main_sec.gate-popup-sec .gate-lt .selectBox-dropdown .selectBox-label{color: var(--foreground); opacity: 0.4;}
 .overlay_main_sec.gate-popup-sec .overlay-wrap {text-align: left; padding: 0; border-radius: 20px;}
 .overlay_main_sec.gate-popup-sec .overlay-wrap input { text-align: left;}
-.gate-wrap .frm_submit{justify-content: flex-end;}
-.gate-lt .popuplink{display: block; margin-top: -35px; width: calc(100% - 100px);}
+.overlay_main_sec.gate-popup-sec .gate-wrap .frm_submit{justify-content: flex-end;}
+.overlay_main_sec.gate-popup-sec .gate-lt .popuplink{display: block; margin-top: -35px; width: calc(100% - 100px);}
+
+
+
+.overlay_main_sec.impact-popup .frm_forms .frm_form_fields input:focus, .frm_forms .frm_form_fields textarea:focus{background-color: var(--elevated)!important;}
+.overlay_main_sec.impact-popup .frm_forms .frm_form_fields textarea {height: 126px!important;}
+
+.overlay_main_sec.impact-popup .overlay-main{max-width: 640px;}
+.overlay_main_sec.impact-popup .impact-popup-main{width: 480px;}
+.overlay_main_sec.impact-popup .overlay-wrap{justify-content: inherit; text-align: inherit!important;}
+.overlay_main_sec.impact-popup .frm_upload_text{display: none;}
+.overlay_main_sec.impact-popup .frm_small_text::before{content: "Select an image from your device";}
+.overlay_main_sec.impact-popup .frm_small_text{flex: 1; display: block; text-align: left; font-size: 1rem; line-height: 1.75rem; color: rgba(52,53,54,.5);}
+.overlay_main_sec.impact-popup .frm_small_text p{display: none!important;}
+.overlay_main_sec.impact-popup .dz-message.needsclick svg{display: none;}
+.overlay_main_sec.impact-popup .frm_dropzone .dz-message {border: none; background-color: var(--elevated); display: flex!important; justify-content: flex-end!important; padding: 12px 12px 11px 11px;}
+.overlay_main_sec.impact-popup .frm_dropzone.frm_single_upload { max-width: inherit; }
+.overlay_main_sec.impact-popup .dz-message.needsclick::after { content: "\f093"; flex: 0 0 20px; font-weight: 400; font-family: "Font Awesome 6 Pro"; color: #343536; font-size: 1.25rem;}
+.overlay_main_sec.impact-popup .overlay-main .pop_connect_close {top: 0; right: 0;}
+
+.overlay_main_sec.impact-popup .frm_submit button:hover { background: var(--linkhover)!important; border-color: inherit!important; color: var(--white)!important; }
+.overlay_main_sec.impact-popup .overlay-wrap input { text-align: inherit; }
+.overlay_main_sec.impact-popup .frm_forms .frm_form_fields .selectBox-dropdown { border: none; padding: 12px 12px 11px 12px; color: rgba(52,53,54,.5); background-color: var(--elevated); }
+.overlay_main_sec.impact-popup .selectBox-dropdown {border-radius: 6px!important;}
+.overlay_main_sec.impact-popup .frm_forms .frm_submit button.btn-dark {border-radius: 24px;}
+
 
 @media only screen and (min-width: 1024px){
   .ui-tab-mobile{ align-items: center;}
@@ -81,6 +107,8 @@
   .gate-img img {max-height: inherit;}
   .overlay_main_sec.gate-popup-sec .overlay-main .pop_connect_close { right: 2px;}
 
+  .overlay_main_sec.impact-popup .frm_forms .frm_form_fields textarea { height: 126px!important; }
+  .frm_forms .frm_form_fields textarea { min-height: inherit!important; }
 
   }
 @media only screen and (max-width: 767px) and (min-width: 200px) {
@@ -105,6 +133,9 @@
   .overlay_main_sec.gate-popup-sec .gate-main .bg { border-radius: 20px 20px 0 0; }
   .overlay_main_sec.gate-popup-sec .gate-main .gate-lt .form-field:last-child { margin-bottom: 29px; }
   .overlay_main_sec.gate-popup-sec .gate-main .gate-lt .form-field { margin-bottom: 20px; }
+
+  .overlay_main_sec.impact-popup .impact-popup-main { width: inherit;}
+  .overlay_main_sec.impact-popup .overlay-main .pop_connect_close { top: 12px; right: 12px; z-index: 1; }
 }
 
  
