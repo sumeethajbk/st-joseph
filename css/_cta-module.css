@@ -2,12 +2,12 @@
 .cta-overlay {height: calc(100% - 50%); width: 100%; background: var(--elevated); display: block; top: 0;}
 .cta-main {background-color: var(--green); position: relative; color: var(--white); min-height: 428px;}
 
-.cta-main-text{width: calc(100% - 50%); padding:64px; flex-grow: 1; }
+.cta-main-text{width: calc(100% - 50%); padding:64px 64px 50px 64px; flex-grow: 1; }
 .cta-txt .optional-text {color: var(--white); margin: 0 0 24px 0;}
 .cta-txt {display: flex; flex-direction: column; align-items: flex-start; justify-content: center; height: 100%;}
-.cta-txt .h3{color: var(--white); line-height: 125%; letter-spacing: -0.8px; margin-bottom: 20px;}
+.cta-txt .h3{color: var(--white); line-height: 125%; letter-spacing: -0.8px; margin-bottom:16px;}
 .cta-txt p {font-size: 16px; line-height: 150%;}
-.cta-btns .button {margin: 0 28px 0 0;}
+.cta-btns .button {margin: 0 28px 15px 0;}
 .cta-btns .button:hover {outline: 6px solid var(--tealborder); background: var(--white);}
 .cta-btns .readmore{color: var(--white)!important;}
 .cta-btns .readmore:after {color: var(--white);}

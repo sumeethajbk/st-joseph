@@ -12,7 +12,7 @@
 @import url("../css/_stories-slider.css");
 
 
-.cta-module.donate-cta .cta-overlay {background: var(--elevated); bottom: 0; top: inherit; height: calc(100% - 55.8%);}
+.cta-module.donate-cta .cta-overlay {background: var(--elevated); bottom: 0; top: inherit; height:calc(100% - 51.7%);}
 
 .general-default-container {clear: both; width: 100%; position: relative; padding:80px 0 119px 0;}
 .general-default-container h1, .general-default-container h2, .general-default-container h3, .general-default-container h4, .general-default-container h5, .general-default-container h6 {color: var(--teal);}
@@ -77,6 +77,8 @@
 /*-- media css starts here --*/
 @media only screen and (min-width:1024px){
 	.gratitude-wall {padding: 80px 0 40px 0;}
+    .cta-module.donate-cta {padding-bottom: 80px;}
+    .stories-slider {padding-top: 80px;}
 
 }
 @media only screen and (max-width: 1023px) and (min-width: 768px){
