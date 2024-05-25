@@ -82,7 +82,7 @@
 
 }
 @media only screen and (max-width: 1023px) and (min-width:200px){
-    .default-slider .default-slide {height: inherit;} 
+    .default-slider .default-slide {height: 49.5vw;} 
 }
 @media only screen and (max-width: 1023px) and (min-width: 768px){
     .general-default-container {padding: 64px 0;}

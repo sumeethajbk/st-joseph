@@ -83,8 +83,8 @@ text-transform: capitalize; padding: 14px 16px 16px 16px; cursor: pointer; borde
     ul.main_menu > li ul ul {margin: 0;}
     ul.main_menu > li ul ul li {padding: 0; border-top:1px solid rgba(0, 156, 166, 0.25);}
     ul.main_menu > li ul ul li:first-child {border-top: 0 none;}   
-    ul.main_menu > li ul li.menu-item-has-children > a:after {content: "\f078"; font-family: 'Font Awesome 6 Pro'; font-weight: 400; font-size: 18px; display: inline-block; right: 0; transform: none; margin: auto; position: absolute; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; color: var(--teal); line-height: 14px;} 
-    ul.main_menu > li ul li.menu-item-has-children > a.active:after {transform: rotate(180deg);} 
+    ul.main_menu > li ul li.menu-item-has-children > a:after {content: "\f078"; font-family: 'Font Awesome 6 Pro'; font-weight: 400; font-size: 18px; display: inline-block; right: 0; transform: none; margin: auto; position: absolute; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; color: var(--teal); line-height: 14px; transform: rotate(180deg);} 
+    ul.main_menu > li ul li.menu-item-has-children > a.active:after {transform: rotate(-180deg);} 
     ul.main_menu > li ul li.no-link.menu-item-has-children > a:after {display: none;}
     
     /* Level 3 */
@@ -95,7 +95,7 @@ text-transform: capitalize; padding: 14px 16px 16px 16px; cursor: pointer; borde
 
     
     ul.main_menu li ul li.current-page-ancestor a, ul.main_menu li ul li.current_page_item a, ul.main_menu li ul li a:hover, ul.main_menu li ul li a.active{color: var(--teal);}
-
+    ul.main_menu li#menu-item-1402.flex-menu > ul > li {padding: 24px 40px 25px 40px;}
 
     nav.navigation {width:auto; display:inline-block; margin-top: 10px; position: relative; vertical-align: top;}
 	
