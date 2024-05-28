@@ -20,6 +20,7 @@ jQuery(document).ready(function () {
     draggable: true,
     touchThreshold: 200,
     swipeToSlide: true,
+
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
     responsive: [{
@@ -44,7 +45,7 @@ jQuery(document).ready(function () {
     touchThreshold: 200,
     swipeToSlide: true,
     speed: 1500,
-    infinite:false,
+    infinite: false,
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
     responsive: [{
@@ -74,7 +75,7 @@ jQuery(document).ready(function () {
     draggable: true,
     touchThreshold: 200,
     swipeToSlide: true,
-      infinite:false,
+    infinite: false,
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
     responsive: [{
@@ -107,6 +108,47 @@ jQuery(document).ready(function () {
 
 
   /* Donors */
+
+
+  var $slider = jQuery('.meet-donors-wrap');
+  var $sliderLength = $slider.find('.our-donor-thumb').length; 
+    if (jQuery(window).width() >= 768) {
+    if ($sliderLength >=5) {
+      $slider.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        variableWidth: true,
+        draggable: true,
+        touchThreshold: 200,
+        swipeToSlide: true,
+        speed: 1000,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+      });
+    }
+    } else {    
+      $slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        variableWidth: true,
+        draggable: true,
+        touchThreshold: 200,
+        swipeToSlide: true,
+        speed: 1000,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+      });  
+    
+    }
+
+
+  /*
   jQuery('.meet-donors-wrap').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -117,11 +159,11 @@ jQuery(document).ready(function () {
     touchThreshold: 200,
     swipeToSlide: true,
     speed: 1000,
-    infinite: true,
+    infinite: false,
     autoplay: true,
     autoplaySpeed: 1000,
   });
-
+*/
 
   /* Timeline Slider */
   jQuery('.timeline-slider').slick({
@@ -137,17 +179,17 @@ jQuery(document).ready(function () {
     swipeToSlide: true,
     speed: 1000,
     cssEase: "linear",
-      centerMode:true,
-      centerPadding:0,
+    centerMode: true,
+    centerPadding: 0,
     prevArrow: '<span class="slick-arrow prev-arrow fa-sharp fa-light fa-arrow-left-long flex flex-center"></span>',
     nextArrow: '<span class="slick-arrow next-arrow fa-sharp fa-light fa-arrow-right-long flex flex-center"></span>',
     responsive: [{
         breakpoint: 1024,
         settings: {
-           centerMode:false,
+          centerMode: false,
         }
       },
-      
+
     ]
   });
 

@@ -5,7 +5,7 @@
 .stories-slide{height: 720px!important; width: 100%; position: relative; margin: 0 12px;}
 .stories-slide:before {position: absolute; left:0; top: 0; width: 100%; height: 100%; display: block; background-color: rgba(157, 151, 154, 0.2); content: "";}
 
-.stories-slide .play-btn {display: flex; flex-wrap: wrap; width: 100%; max-width: 333px; border: 0 none; height: auto; justify-content: flex-start; padding: 8px 21px 8px 8px; border-radius: 60px; background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(6px); box-sizing: border-box; outline: none !important;}
+.stories-slide .play-btn {display: flex; flex-wrap: wrap; width: auto; min-width: 255px; max-width: 333px; border: 0 none; height: auto; justify-content: flex-start; padding: 8px 21px 8px 8px; border-radius: 60px; background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(6px); box-sizing: border-box; outline: none !important;}
 .stories-slide .play-btn-wrap {width: 64px; height: 64px; outline: 8px solid rgba(0, 131, 139, 0.20); border-radius: 50%; margin-right:19px; background: var(--teal); display: flex; justify-content: center; align-items: center; transition: 0.3s all ease-in-out; left: 0; bottom: 0;}
 .stories-slide .play-btn i {line-height: 32px; font-size: 32px; position: relative; left: 4px; bottom: 1px;}
 .stories-slide .play-btn-txt {font-size: 20px; font-family: 'Oswald', sans-serif; font-weight: 500; line-height: 125%; text-transform: uppercase; width: calc(100% - 96px); color: var(--teal); transition: 0.3s all ease-in-out;}
@@ -82,7 +82,7 @@
     .stories-slider h2 {margin-bottom: 33px; margin-left: 8px; margin-right: 8px;}
     .stories-slider .bg {height: 52.6%;}
     .stories-slider-wrap {display: flex; flex-direction: column-reverse;}
-    .stories-slide .play-btn {background: none; width: auto; backdrop-filter: none; padding: 8px 8px 8px 8px;}
+    .stories-slide .play-btn {background: none; width: auto; backdrop-filter: none; padding: 8px 8px 8px 8px; min-width: inherit;}
     .stories-slide .play-btn-txt {display: none;}
     .stories-slide .play-btn-wrap {width: 56px; height: 56px;}
     .stories-slide {height:47.36vw !important; margin: 0 8px; overflow: hidden;} 

@@ -40,3 +40,7 @@
     .micro-cta-btns .button.btn-white {width: 100%;}
     .micro-cta-btns .button:last-child {margin-bottom: 0;}
 }
+
+@media only screen and (max-width: 389px) and (min-width: 200px){
+.micro-cta-img {width: 280px;  height: 280px;}
+}

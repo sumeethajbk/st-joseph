@@ -30,7 +30,16 @@
 .rolling-btn:hover .support-camp a {font-size:20px; width: auto; line-height: 125%; font-weight: 600; letter-spacing: -0.4px;}
 .rolling-btn:hover .rolling-icon img {/*animation: spin 3s linear infinite;*/ transform: rotate(-90deg);}
 
+ul.main_menu li.current-menu-item > a, 
+ul.main_menu li.current-menu-parent > a, 
+ul.main_menu li.current-page-ancestor > a, 
+ul.main_menu li.current-menu-ancestor > a, ul.main_menu li.current-menu-ancestor > a, 
+ul.main_menu li.menu-item-has-children a:hover, 
+ul.main_menu li.current_page_item > a, 
+ul.main_menu li > a:hover {color: var(--teal)!important;}
 
+
+.main_header.fixed-header {box-shadow: -1px 3px 17px -10px rgba(0,0,0,.75); -webkit-box-shadow: -1px 3px 17px -10px rgba(0,0,0,.75); -moz-box-shadow: -1px 3px 17px -10px rgba(0,0,0,.75);}
 
 /*-- media css starts here --*/
 @media only screen and (max-width: 1400px){	
@@ -43,12 +52,7 @@
     ul.main_menu > li{margin-left: 32.4px; display: inline-block; margin-bottom: 0;}
 	ul.main_menu > li:first-child {margin-left: 0;}
     ul.main_menu > li > a{color: var(--linkhover); font-size:16px; display: inline-block; font-weight: 500; line-height: 18px;}
-    ul.main_menu > li.current-menu-item > a, 
-    ul.main_menu > li.current-menu-parent > a, 
-    ul.main_menu > li.current-page-ancestor > a, 
-    ul.main_menu > li.menu-item-has-children > a:hover, 
-    ul.main_menu .current_page_item > a, 
-    ul.main_menu > li > a:hover {color: var(--teal)!important;}
+    
 
 
     ul.main_menu > li.flex-menu > ul{margin: 0; max-width: 704px; top: calc(100% + 33px); background-color: var(--elevated); position: absolute; left: 50%; text-align: left; transform: translateX(-50%); width: 100vw; display: flex; flex-wrap: wrap; opacity: 0; visibility: hidden;}
@@ -57,7 +61,7 @@
     ul.main_menu > li.flex-menu > ul > li:last-child img {width: 64px; height: 64px; margin: 0 0 24px 0; display: block; padding: 0;}
     ul.main_menu > li.flex-menu > ul > li:last-child span {font-size: 24px; font-style: normal; font-weight: 500; line-height: 125%; letter-spacing: -0.48px; color: var(--linkhover); display: block; margin: 0 0 11px 0;}
     ul.main_menu > li.flex-menu > ul > li:last-child span span {color: var(--white); display: inline-block; margin: 0;}
-    ul.main_menu > li.flex-menu > ul > li:last-child .menu-btn a:hover {background: var(--white); color: var(--teal);}
+    ul.main_menu > li.flex-menu > ul > li:last-child .menu-btn a:hover {background: var(--white); color: var(--teal)!important;}
     ul.main_menu > li.flex-menu > ul > li:last-child.menu-item-has-children > a::after {display: none;}
     ul.main_menu > li > ul:before {top:-6px; left:0; right: 0; margin: auto; content: ""; height: 12px; width: 64px; position: absolute; pointer-events: none;	background-color: var(--linkhover); border-radius:8px; z-index: 1;}
     ul.main_menu > li > ul:after {content: " "; position: absolute; top: 0; left: 0;  width: 100%; height: 50px; margin-top: -50px; background-color: transparent;
@@ -74,7 +78,7 @@
 text-transform: capitalize; padding: 14px 16px 16px 16px; cursor: pointer; border: 0 none; border-radius: 24px; background-color: var(--teal); position: relative;
   transition: all 400ms ease-in-out; -webkit-transition: all 400ms ease-in-out; -moz-transition: all 400ms ease-in-out; text-align: center; color: var(--white);
   font-family: "Poppins", sans-serif; text-decoration: none; outline: 6px solid transparent; display: inline-block;}
-    ul.main_menu > li ul li.menu-btn a:hover, ul.main_menu > li ul li .button:hover {color: var(--white); background-color: var(--teal);  outline: 6px solid var(--tealborder);}
+    ul.main_menu > li ul li.menu-btn a:hover, ul.main_menu > li ul li .button:hover {color: var(--white)!important; background-color: var(--teal);  outline: 6px solid var(--tealborder);}
     ul.main_menu > li ul li.menu-btn.full-width-btn a {width: 100%;}
     ul.main_menu .remove-link > a {pointer-events: none; padding: 0; margin: 0; text-transform: none;}
     ul.main_menu .menu-image-title {display: none!important;}
@@ -84,7 +88,7 @@ text-transform: capitalize; padding: 14px 16px 16px 16px; cursor: pointer; borde
     ul.main_menu > li ul ul li {padding: 0; border-top:1px solid rgba(0, 156, 166, 0.25);}
     ul.main_menu > li ul ul li:first-child {border-top: 0 none;}   
     ul.main_menu > li ul li.menu-item-has-children > a:after {content: "\f078"; font-family: 'Font Awesome 6 Pro'; font-weight: 400; font-size: 18px; display: inline-block; right: 0; transform: none; margin: auto; position: absolute; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; color: var(--teal); line-height: 14px; transform: rotate(180deg);} 
-    ul.main_menu > li ul li.menu-item-has-children > a.active:after {transform: rotate(-180deg);} 
+    ul.main_menu > li ul li.menu-item-has-children > a.active:after {transform: rotate(0deg);} 
     ul.main_menu > li ul li.no-link.menu-item-has-children > a:after {display: none;}
     
     /* Level 3 */

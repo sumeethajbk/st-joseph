@@ -13,21 +13,59 @@ $home_banner_button_text = get_field('home_banner_button_text');
 $home_banner_button_link = get_field('home_banner_button_link');
 $home_banner_link = get_field('home_banner_link');
 $home_banner_link_text = get_field('home_banner_link_text');
+$video_or_static_image = get_field('home_banner_static_image_or_video');
+$home_banner_video_type = get_field('home_banner_video_type');
+$home_banner_youtube_id = get_field('home_banner_youtube_id');
+$home_banner_vimeo_id = get_field('home_banner_vimeo_id');
+$banner_fallback_desktop_image = get_field('home_banner_fallback_desktop_image');
+$banner_fallback_mobile_image = get_field('home_banner_fallback_mobile_image');
 
-if ($home_banner_desktop_image || $home_banner_mobile_image ||  $home_banner_sub_heading ||  $home_banner_heading || $home_banner_button_text ||  $home_banner_button_link ||  $home_banner_link_text || $home_banner_link) { ?>
+if ($home_banner_desktop_image || $home_banner_mobile_image || $home_banner_sub_heading || $home_banner_heading || $home_banner_button_text || $home_banner_button_link || $home_banner_link_text || $home_banner_link) { ?>
 
   <section class="default-banner-section pos-relative">
-    <?php if ($home_banner_mobile_image ||  $home_banner_desktop_image) {
-      $home_banner_mobile_image = $home_banner_mobile_image ? $home_banner_mobile_image : $home_banner_desktop_image;
-      $home_banner_desktop_image = $home_banner_desktop_image ? $home_banner_desktop_image : $home_banner_mobile_image; ?>
-      <div class="banner-bg object-fit">
-        <picture class="object-fit">
-          <source srcset="<?php echo $home_banner_desktop_image['url']; ?>" media="(min-width: 1024px)">
-          <source srcset="<?php echo $home_banner_mobile_image['url']; ?>" media="(min-width: 768px)">
-          <img src="<?php echo $home_banner_mobile_image['url']; ?>" alt="<?php echo $home_banner_mobile_image['alt']; ?>" title="<?php echo $home_banner_mobile_image['title']; ?>" />
-        </picture>
-      </div>
-    <?php } ?>
+    <?php if ($video_or_static_image == 'static_image') {
+      if ($home_banner_mobile_image || $home_banner_desktop_image) {
+        $home_banner_mobile_image = $home_banner_mobile_image ?: $home_banner_desktop_image;
+        $home_banner_desktop_image = $home_banner_desktop_image ?: $home_banner_mobile_image;
+    ?>
+        <div class="banner-bg object-fit">
+          <picture class="object-fit">
+            <source srcset="<?php echo $home_banner_desktop_image['url']; ?>" media="(min-width: 1024px)">
+            <source srcset="<?php echo $home_banner_mobile_image['url']; ?>" media="(min-width: 768px)">
+            <img src="<?php echo $home_banner_mobile_image['url']; ?>" alt="<?php echo $home_banner_mobile_image['alt']; ?>" title="<?php echo $home_banner_mobile_image['title']; ?>" />
+          </picture>
+        </div>
+      <?php }
+    } else {
+      if ($video_or_static_image === 'video') {
+        $background_image_url = isset($banner_fallback_desktop_image['url']) ? $banner_fallback_desktop_image['url'] : '';
+        $background_mobile_image_url = isset($banner_fallback_mobile_image['url']) ? $banner_fallback_mobile_image['url'] : '';
+        $mobile_image_alt = isset($banner_fallback_mobile_image['alt']) ? $banner_fallback_mobile_image['alt'] : '';
+
+        if (empty($background_mobile_image_url) || !$background_mobile_image_url) {
+          $background_mobile_image_url = $background_image_url;
+          if (empty($mobile_image_alt) || !$mobile_image_alt) {
+            $mobile_image_alt = isset($banner_fallback_desktop_image['alt']) ? $banner_fallback_desktop_image['alt'] : '';
+          }
+        }
+      ?>
+
+        <div class="poster-bg background-bg">
+          <picture class="banner-thumb object-fit">
+            <?php if ($background_image_url) { ?>
+              <source srcset="<?php echo $background_image_url; ?>" media="(min-width: 768px)">
+              <img loading="eager" class="poster-img" src="<?php echo $background_mobile_image_url; ?>" alt="<?php echo $mobile_image_alt; ?>">
+            <?php } ?>
+          </picture>
+        </div>
+
+        <?php if ($home_banner_video_type === 'vimeo' && $home_banner_vimeo_id) { ?>
+          <div class="banner-bg background-bg home-banner-iframe" data-ytbg-fade-in="true" data-youtube="https://vimeo.com/<?php echo $home_banner_vimeo_id; ?>"> </div>
+        <?php } elseif ($home_banner_video_type === 'youtube' && $home_banner_youtube_id) { ?>
+          <div class="banner-bg background-bg home-banner-iframe" data-ytbg-fade-in="true" data-youtube="https://www.youtube.com/watch?v=<?php echo $home_banner_youtube_id; ?>"> </div>
+        <?php } ?>
+    <?php }
+    } ?>
     <div class="container">
       <div class="default-banner-main flex flex-vcenter">
         <div class="default-banner-text">
@@ -56,6 +94,7 @@ if ($home_banner_desktop_image || $home_banner_mobile_image ||  $home_banner_sub
 <?php
 }
 ?>
+
 <?php
 $home_statistics_heading = get_field('home_statistics_heading');
 $home_statistics_description = get_field('home_statistics_description');
@@ -64,7 +103,8 @@ $home_statistics_button_link = get_field('home_statistics_button_link');
 $home_statistics_repeater = get_field('home_statistics_repeater');
 
 $stats_list_classes = array('teal', 'purple', 'mauve', 'lilac');
-?>
+if ($home_statistics_heading || $home_statistics_description || ($home_statistics_button_text && $home_statistics_button_link) || $home_statistics_repeater) {
+  ?>
 
 <section class="stats-module">
   <div class="container">
@@ -90,7 +130,7 @@ $stats_list_classes = array('teal', 'purple', 'mauve', 'lilac');
         </div>
       <?php } ?>
       <?php if ($home_statistics_repeater) {  ?>
-        <div class="stats-row stats-type flex">
+        <div class="stats-row stats-type flex " data-counter-main="counter-main">
           <?php $index = 0; ?>
           <?php foreach ($home_statistics_repeater as $statistics) { ?>
             <?php
@@ -104,11 +144,10 @@ $stats_list_classes = array('teal', 'purple', 'mauve', 'lilac');
               <?php $current_class = $stats_list_classes[$index % count($stats_list_classes)]; ?>
               <div class="stats-list <?php echo $current_class; ?>">
                 <div class="line pos-absolute">&nbsp;</div>
-                <span class="big"><?php
-                                  if ($home_statistics_number) {
+                <span class="number">
+                <span class="big" data-duration="2500" data-count-to="<?php echo $home_statistics_number; ?>"><?php
                                     echo $home_statistics_number;
-                                  }
-                                  if ($home_statistics_after_text) {
+                                  ?></span><?php if ($home_statistics_after_text) {
                                     echo $home_statistics_after_text;
                                   } ?></span>
                 <div class="stats-cnt">
@@ -128,72 +167,75 @@ $stats_list_classes = array('teal', 'purple', 'mauve', 'lilac');
     </div>
   </div>
 </section>
+<?php } ?>
 
 <?php
 $home_donor_stories_heading = get_field('home_donor_stories_heading');
-$home_donor_stories_repeater = get_field('home_donor_stories_repeater'); 
+$home_donor_stories_repeater = get_field('home_donor_stories_repeater');
 ?>
 
 <?php if ($home_donor_stories_heading || ($home_donor_stories_repeater && have_rows($home_donor_stories_repeater))) { ?>
-<section class="stories-slider">
-  <div class="bg"></div>
-  <div class="container">
-    <?php if ($home_donor_stories_heading) { ?>
-      <h2><?php echo $home_donor_stories_heading; ?></h2>
-    <?php } ?>
-    <div class="stories-slider-wrap">
-      <div class="slider slider-nav">
-        <?php if ($home_donor_stories_repeater ) { ?>
-          <?php foreach ($home_donor_stories_repeater as $stories) { 
-            $home_donor_stories_repeater_heading = $stories['home_donor_stories_repeater_heading'];
-            $home_donor_stories_description = $stories['home_donor_stories_description'];
+  <section class="stories-slider">
+    <div class="bg"></div>
+    <div class="container">
+      <?php if ($home_donor_stories_heading) { ?>
+        <h2><?php echo $home_donor_stories_heading; ?></h2>
+      <?php } ?>
+      <div class="stories-slider-wrap">
+        <div class="slider slider-nav">
+          <?php if ($home_donor_stories_repeater) { ?>
+            <?php foreach ($home_donor_stories_repeater as $stories) {
+              $home_donor_stories_repeater_heading = $stories['home_donor_stories_repeater_heading'];
+              $home_donor_stories_description = $stories['home_donor_stories_description'];
             ?>
-            <div class="stories-thumb">
-              <div class="stories-thumb-nav">
-                <?php if ($home_donor_stories_repeater_heading) { ?>
-                  <div class="h6"><?php echo $home_donor_stories_repeater_heading; ?></div>
-                <?php } ?>
-                <?php if ($home_donor_stories_description) { ?>
-                  <?php echo $home_donor_stories_description; ?>
-                <?php } ?>
+              <div class="stories-thumb">
+                <div class="stories-thumb-nav">
+                  <?php if ($home_donor_stories_repeater_heading) { ?>
+                    <div class="h6"><?php echo $home_donor_stories_repeater_heading; ?></div>
+                  <?php } ?>
+                  <?php if ($home_donor_stories_description) { ?>
+                    <?php echo $home_donor_stories_description; ?>
+                  <?php } ?>
+                </div>
               </div>
-            </div>
-          <?php } ?>
-      </div>
-      <div class="slider slider-for">
-          <?php foreach ($home_donor_stories_repeater as $stories) { 
-            $home_donor_stories_image = $stories['home_donor_stories_image'];
-            $home_donor_stories_repeater_heading = $stories['home_donor_stories_repeater_heading']; 
-            $repeater_video_type = $stories['home_donor_stories_image_video_type'];
-            $repeater_youtube_id = $stories['home_donor_stories_repeater_youtube_id'];
-            $repeater_vimeo_id = $stories['home_donor_stories_repeater_vimeo_id'];
-            ?>
+            <?php } ?>
+        </div>
+        <div class="slider slider-for">
+          <?php foreach ($home_donor_stories_repeater as $stories) {
+              $home_donor_stories_image = $stories['home_donor_stories_image'];
+              $home_donor_stories_repeater_heading = $stories['home_donor_stories_repeater_heading'];
+              $repeater_video_type = $stories['home_donor_stories_image_video_type'];
+              $repeater_youtube_id = $stories['home_donor_stories_repeater_youtube_id'];
+              $repeater_vimeo_id = $stories['home_donor_stories_repeater_vimeo_id'];
+          ?>
             <div class="stories-slide">
               <?php if ($home_donor_stories_image) { ?>
-                <figure class="object-fit"> <img src="<?php echo $home_donor_stories_image['url']; ?>" alt="<?php echo $home_donor_stories_image['alt']; ?>" title="<?php echo $home_donor_stories_image['title']; ?>"/></figure>
-            
-              <?php if ($repeater_video_type === 'youtube' && !empty($repeater_youtube_id)) { ?>
-                                <div class="play-btn-main flex flex-center">
-                                    <a class="play-btn flex popup-youtube flex-center" href="https://www.youtube.com/watch?v=<?php echo $repeater_youtube_id; ?>" tabindex="0">
-                                        <span class="play-btn-wrap"><i class="fa-sharp fa-light fa-play" aria-hidden="true"> </i> </span>
-                                        <span class="play-btn-txt"> <?php echo $home_donor_stories_repeater_heading; ?> Promise</span>
-                                    </a>
-                                </div>
-                            <?php } elseif ($repeater_video_type === 'vimeo' && !empty($repeater_vimeo_id)) { ?>
-                                <div class="play-btn-main flex flex-center">
-                                    <a class="play-btn flex popup-youtube flex-center" href="https://vimeo.com/<?php echo $repeater_vimeo_id; ?>" tabindex="0">
-                                        <span class="play-btn-wrap"><i class="fa-sharp fa-light fa-play" aria-hidden="true"> </i> </span>
-                                        <span class="play-btn-txt"> <?php echo $home_donor_stories_repeater_heading; ?> Promise</span>
-                                        </a>
-                                </div>
-                            <?php } } ?>
-                        </div>
-                    <?php } }?>
-                </div>
+                <figure class="object-fit"> <img src="<?php echo $home_donor_stories_image['url']; ?>" alt="<?php echo $home_donor_stories_image['alt']; ?>" title="<?php echo $home_donor_stories_image['title']; ?>" /></figure>
 
+                <?php if ($repeater_video_type === 'youtube' && !empty($repeater_youtube_id)) { ?>
+                  <div class="play-btn-main flex flex-center">
+                    <a class="play-btn flex popup-youtube flex-center" href="https://www.youtube.com/watch?v=<?php echo $repeater_youtube_id; ?>" tabindex="0">
+                      <span class="play-btn-wrap"><i class="fa-sharp fa-light fa-play" aria-hidden="true"> </i> </span>
+                      <span class="play-btn-txt"> <?php echo $home_donor_stories_repeater_heading; ?> </span>
+                    </a>
+                  </div>
+                <?php } elseif ($repeater_video_type === 'vimeo' && !empty($repeater_vimeo_id)) { ?>
+                  <div class="play-btn-main flex flex-center">
+                    <a class="play-btn flex popup-youtube flex-center" href="https://vimeo.com/<?php echo $repeater_vimeo_id; ?>" tabindex="0">
+                      <span class="play-btn-wrap"><i class="fa-sharp fa-light fa-play" aria-hidden="true"> </i> </span>
+                      <span class="play-btn-txt"> <?php echo $home_donor_stories_repeater_heading; ?> </span>
+                    </a>
+                  </div>
+              <?php }
+              } ?>
             </div>
+        <?php }
+          } ?>
         </div>
-    </section>
+
+      </div>
+    </div>
+  </section>
 <?php } ?>
 
 
@@ -204,48 +246,48 @@ $home_meet_our_donors_button_text = get_field('home_meet_our_donors_button_text'
 $home_meet_our_donors_button_link = get_field('home_meet_our_donors_button_link');
 $home_meet_our_donors_repeater = get_field('home_meet_our_donors_repeater');
 
-if ($home_meet_our_donors_heading || $home_meet_our_donors_description || ($home_meet_our_donors_button_text && $home_meet_our_donors_button_link) || ($home_meet_our_donors_repeater && have_rows($home_meet_our_donors_repeater ))) {
-  ?>
+if ($home_meet_our_donors_heading || $home_meet_our_donors_description || ($home_meet_our_donors_button_text && $home_meet_our_donors_button_link) || ($home_meet_our_donors_repeater)) {
+?>
 
-<section class="meet-our-donors">
-  <div class="meet-donors-bg pos-absolute">&nbsp;</div>
-  <div class="container">
-    <div class="meet-donors-main">
-      <?php if ($home_meet_our_donors_heading) { ?>
-        <h2><?php echo $home_meet_our_donors_heading; ?></h2>
-      <?php } ?>
-      <?php if ($home_meet_our_donors_description || ($home_meet_our_donors_button_link && $home_meet_our_donors_button_text)) { ?>
-        <div class="bottom-frame">
-          <?php if ($home_meet_our_donors_description) { ?>
-            <div class="frame-lt">
-              <?php echo $home_meet_our_donors_description; ?>
-            </div>
-            <div class="frame-mid">
-              <div class="animated-arrow"> <span class="the-arrow right"> <span class="shaft"></span> </span></div>
-            </div>
-          <?php } ?>
-          <div class="frame-rt">
-            <?php if ($home_meet_our_donors_button_link && $home_meet_our_donors_button_text) { ?>
-              <a href="<?php echo $home_meet_our_donors_button_link; ?>" class="button"><?php echo $home_meet_our_donors_button_text; ?></a>
-            <?php } ?>
-          </div>
-        </div>
-      <?php } ?>
-      <?php if ($home_meet_our_donors_repeater) { ?>
-        <div class="meet-donors-wrap">
-          <?php foreach ($home_meet_our_donors_repeater as $donor) {
-            $home_meet_our_donors_add_donor = $donor['home_meet_our_donors_add_donor'];
-            if ($home_meet_our_donors_add_donor) { ?>
-              <div class="our-donor-thumb">
-                <figure class="object-fit"> <img src="<?php echo $home_meet_our_donors_add_donor['url']; ?>" alt="<?php echo $home_meet_our_donors_add_donor['alt']; ?>" title="<?php echo $home_meet_our_donors_add_donor['title']; ?>" /></figure>
+  <section class="meet-our-donors">
+    <div class="meet-donors-bg pos-absolute">&nbsp;</div>
+    <div class="container">
+      <div class="meet-donors-main">
+        <?php if ($home_meet_our_donors_heading) { ?>
+          <h2><?php echo $home_meet_our_donors_heading; ?></h2>
+        <?php } ?>
+        <?php if ($home_meet_our_donors_description || ($home_meet_our_donors_button_link && $home_meet_our_donors_button_text)) { ?>
+          <div class="bottom-frame">
+            <?php if ($home_meet_our_donors_description) { ?>
+              <div class="frame-lt">
+                <?php echo $home_meet_our_donors_description; ?>
+              </div>
+              <div class="frame-mid">
+                <div class="animated-arrow"> <span class="the-arrow right"> <span class="shaft"></span> </span></div>
               </div>
             <?php } ?>
-          <?php } ?>
-        </div>
-      <?php } ?>
+            <div class="frame-rt">
+              <?php if ($home_meet_our_donors_button_link && $home_meet_our_donors_button_text) { ?>
+                <a href="<?php echo $home_meet_our_donors_button_link; ?>" class="button"><?php echo $home_meet_our_donors_button_text; ?></a>
+              <?php } ?>
+            </div>
+          </div>
+        <?php } ?>
+        <?php if ($home_meet_our_donors_repeater) { ?>
+          <div class="meet-donors-wrap">
+            <?php foreach ($home_meet_our_donors_repeater as $donor) {
+              $home_meet_our_donors_add_donor = $donor['home_meet_our_donors_add_donor'];
+              if ($home_meet_our_donors_add_donor) { ?>
+                <div class="our-donor-thumb">
+                  <figure class="object-fit"> <img src="<?php echo $home_meet_our_donors_add_donor['url']; ?>" alt="<?php echo $home_meet_our_donors_add_donor['alt']; ?>" title="<?php echo $home_meet_our_donors_add_donor['title']; ?>" /></figure>
+                </div>
+              <?php } ?>
+            <?php } ?>
+          </div>
+        <?php } ?>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 <?php } ?>
 
 <?php $home_testimonials_heading = get_field('home_testimonials_heading');
@@ -334,8 +376,9 @@ $index = 0; ?>
         ?>
       <?php } ?>
     </div>
+    <div class="hide-in-desktop hide-in-tab heading-btn btn-full"> <a href="/our-thanks/" class="button outline-btn-white">View all thanks</a> </div>
   </div>
-  <div class="hide-in-desktop hide-in-tab heading-btn btn-full"> <a href="/our-thanks/" class="button outline-btn-white">View all thanks</a> </div>
+
   </div>
 </section>
 
@@ -401,68 +444,68 @@ $home_history_button_link = get_field('home_history_button_link');
 $home_history_repeater = get_field('home_history_repeater');
 
 if ($home_history_heading || $home_history_description || ($home_history_button_text && $home_history_button_link) || ($home_history_repeater && have_rows($home_history_repeater))) {
-  ?>
+?>
 
-<section class="home-our-story pos-relative">
-  <div class="home-story-bg pos-absolute">&nbsp;</div>
-  <div class="container">
-    <div class="home-story-wrap">
-      <?php if ($home_history_heading) { ?>
-        <h2><?php echo $home_history_heading; ?></h2>
-      <?php } ?>
-      <div class="bottom-frame">
-      <?php if ($home_history_description) { ?>
-      <div class="frame-lt">
-            <?php echo $home_history_description; ?>
-        </div>
-        <div class="frame-mid">
-          <div class="animated-arrow"> <span class="the-arrow right"> <span class="shaft"></span> </span></div>
-        </div>
+  <section class="home-our-story pos-relative">
+    <div class="home-story-bg pos-absolute">&nbsp;</div>
+    <div class="container">
+      <div class="home-story-wrap">
+        <?php if ($home_history_heading) { ?>
+          <h2><?php echo $home_history_heading; ?></h2>
         <?php } ?>
-        <div class="frame-rt">
-          <?php if ($home_history_button_text && $home_history_button_link) { ?>
-            <a href="<?php echo $home_history_button_link; ?>" class="button"><?php echo $home_history_button_text; ?></a>
-          <?php } ?>
-        </div>
-      </div>
-      <?php if ($home_history_repeater && have_rows('home_history_repeater')) { ?>
-        <div class="home-story-main">
-          <?php foreach ($home_history_repeater as $history) { ?>
-            <?php
-            $home_history_repeater_image = $history['home_history_repeater_image'];
-            $home_history_repeater_heading = $history['home_history_repeater_heading'];
-            $home_history_repeater_description = $history['home_history_repeater_description'];
-            $home_history_repeater_link_text = $history['home_history_repeater_link_text'];
-            $home_history_repeater_link = $history['home_history_repeater_link'];
-            ?>
-            <div class="home-story-grid">
-              <div class="home-story-grid-inner flex">
-                <?php if ($home_history_repeater_heading || $home_history_repeater_description || $home_history_repeater_link_text) { ?>
-                  <div class="home-story-cnt">
-                    <?php if ($home_history_repeater_heading) { ?>
-                      <div class="h4"> <?php echo $home_history_repeater_heading; ?></div>
-                    <?php } ?>
-                    <?php if ($home_history_repeater_description) { ?>
-                      <?php echo $home_history_repeater_description; ?>
-                    <?php } ?>
-                    <?php if ($home_history_repeater_link_text && $home_history_repeater_link) { ?>
-                      <a href="<?php echo $home_history_repeater_link; ?>" class="readmore"><?php echo $home_history_repeater_link_text; ?></a>
-                    <?php } ?>
-                  </div>
-                <?php } ?>
-                <?php if ($home_history_repeater_image) { ?>
-                  <div class="home-story-thumb pos-relative">
-                    <figure class="object-fit"> <img src="<?php echo $home_history_repeater_image['url']; ?>" alt="<?php echo $home_history_repeater_image['alt']; ?>" title="<?php echo $home_history_repeater_image['title']; ?>" /></figure>
-                  </div>
-                <?php } ?>
-              </div>
+        <div class="bottom-frame">
+          <?php if ($home_history_description) { ?>
+            <div class="frame-lt">
+              <?php echo $home_history_description; ?>
+            </div>
+            <div class="frame-mid">
+              <div class="animated-arrow"> <span class="the-arrow right"> <span class="shaft"></span> </span></div>
             </div>
           <?php } ?>
+          <div class="frame-rt">
+            <?php if ($home_history_button_text && $home_history_button_link) { ?>
+              <a href="<?php echo $home_history_button_link; ?>" class="button"><?php echo $home_history_button_text; ?></a>
+            <?php } ?>
+          </div>
         </div>
-      <?php } ?>
+        <?php if ($home_history_repeater && have_rows('home_history_repeater')) { ?>
+          <div class="home-story-main">
+            <?php foreach ($home_history_repeater as $history) { ?>
+              <?php
+              $home_history_repeater_image = $history['home_history_repeater_image'];
+              $home_history_repeater_heading = $history['home_history_repeater_heading'];
+              $home_history_repeater_description = $history['home_history_repeater_description'];
+              $home_history_repeater_link_text = $history['home_history_repeater_link_text'];
+              $home_history_repeater_link = $history['home_history_repeater_link'];
+              ?>
+              <div class="home-story-grid">
+                <div class="home-story-grid-inner flex">
+                  <?php if ($home_history_repeater_heading || $home_history_repeater_description || $home_history_repeater_link_text) { ?>
+                    <div class="home-story-cnt">
+                      <?php if ($home_history_repeater_heading) { ?>
+                        <div class="h4"> <?php echo $home_history_repeater_heading; ?></div>
+                      <?php } ?>
+                      <?php if ($home_history_repeater_description) { ?>
+                        <?php echo $home_history_repeater_description; ?>
+                      <?php } ?>
+                      <?php if ($home_history_repeater_link_text && $home_history_repeater_link) { ?>
+                        <a href="<?php echo $home_history_repeater_link; ?>" class="readmore"><?php echo $home_history_repeater_link_text; ?></a>
+                      <?php } ?>
+                    </div>
+                  <?php } ?>
+                  <?php if ($home_history_repeater_image) { ?>
+                    <div class="home-story-thumb pos-relative">
+                      <figure class="object-fit"> <img src="<?php echo $home_history_repeater_image['url']; ?>" alt="<?php echo $home_history_repeater_image['alt']; ?>" title="<?php echo $home_history_repeater_image['title']; ?>" /></figure>
+                    </div>
+                  <?php } ?>
+                </div>
+              </div>
+            <?php } ?>
+          </div>
+        <?php } ?>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 <?php } ?>
 
 <?php
@@ -480,9 +523,10 @@ if (empty($select_patient_and_staff_stories)) {
     while ($default_stories_query->have_posts()) {
       $default_stories_query->the_post();
       $default_stories[] = array(
-        'image' => get_field('stories_image'),
+        'image' => get_field('stories_desktop_image'),
         'short_introduction' => get_field('stories_short_introduction'),
         'permalink' => get_permalink(),
+        'category' => get_the_terms(get_the_ID(), 'stories_category'),
         'title' => get_the_title(),
       );
     }
@@ -509,38 +553,56 @@ if (empty($select_patient_and_staff_stories)) {
         <?php if (!empty($select_patient_and_staff_stories)) { ?>
           <?php foreach ($select_patient_and_staff_stories as $story) { ?>
             <div class="ps-grid">
-              <div class="ps-thumb">
-                <?php $story_image = get_field('stories_image', $story->ID); ?>
+            <?php $story_image = get_field('stories_desktop_image', $story->ID); ?>
                 <?php if (!empty($story_image)) { ?>
-                  <figure class="object-fit"><img src="<?php echo $story_image['url']; ?>" alt="<?php echo $story_image['alt']; ?>" title="<?php echo $story_image['title']; ?>" /></figure>
-                <?php } ?>
+              <div class="ps-thumb">
+                  <a href="<?php echo get_permalink($story->ID); ?>">
+                    <figure class="object-fit">
+                      <img src="<?php echo $story_image['url']; ?>" alt="<?php echo $story_image['alt']; ?>" title="<?php echo $story_image['title']; ?>" />
+                    </figure>
+                  </a>
               </div>
+              <?php } ?>
               <div class="ps-cnt">
                 <div class="category flex">
-                  <span class="tag"><?php echo get_the_title($story->ID); ?></span>
+                  <?php $categories = get_the_terms($story->ID, 'stories_category'); ?>
+                  <?php if (!empty($categories) && !is_wp_error($categories)) { ?>
+                    <?php foreach ($categories as $term) { ?>
+                      <span class="tag"><?php echo $term->name; ?></span>
+                    <?php } ?>
+                  <?php } ?>
                 </div>
-                <?php $story_introduction = get_field('stories_short_introduction', $story->ID); ?>
-                <?php if (!empty($story_introduction)) { ?>
-                  <?php echo $story_introduction; ?>
-                <?php } ?>
+                <a href="<?php echo get_permalink($story->ID); ?>">
+                  <p><?php echo get_the_title($story->ID); ?></p>
+                </a>
               </div>
             </div>
           <?php } ?>
         <?php } else { ?>
           <?php foreach ($default_stories as $story) { ?>
             <div class="ps-grid">
+            <?php if (!empty($story['image'])) { ?>
               <div class="ps-thumb">
-                <?php if (!empty($story['image'])) { ?>
-                  <figure class="object-fit"><img src="<?php echo $story['image']['url']; ?>" alt="<?php echo $story['image']['alt']; ?>" title="<?php echo $story['image']['title']; ?>" /></figure>
-                <?php } ?>
+                  <a href="<?php echo $story['permalink']; ?>">
+                    <figure class="object-fit">
+                      <img src="<?php echo $story['image']['url']; ?>" alt="<?php echo $story['image']['alt']; ?>" title="<?php echo $story['image']['title']; ?>" />
+                    </figure>
+                  </a>
               </div>
+              <?php } ?>
               <div class="ps-cnt">
-                <?php if (!empty($story['title'])) { ?>
-                  <div class="category flex"> <span class="tag"> <?php echo $story['title']; ?></span> </div>
-                <?php } ?>
-                <?php if (!empty($story['short_introduction'])) { ?>
-                  <?php echo $story['short_introduction']; ?>
-                <?php } ?>
+                <div class="category flex">
+                  <?php if (!empty($story['category']) && !is_wp_error($story['category'])) { ?>
+                    <?php foreach ($story['category'] as $term) { ?>
+                      <?php if (is_object($term)) { ?>
+                        <span class="tag"><?php echo $term->name; ?></span>
+                      <?php } ?>
+                    <?php } ?>
+                  <?php } ?>
+                </div>
+                <a href="<?php echo $story['permalink']; ?>">
+                  <p><?php echo $story['title']; ?></p>
+                </a>
               </div>
             </div>
           <?php } ?>
@@ -552,6 +614,7 @@ if (empty($select_patient_and_staff_stories)) {
     </div>
   </div>
 </section>
+
 
 
 

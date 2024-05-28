@@ -7,20 +7,30 @@
 
 .community-banner-section{width: 100%; clear: both; position: relative; background-color: var(--lightwhite); z-index: 1;}
 .community-banner-main{padding: 80px 0 160px;}
+<<<<<<< HEAD
+.community-banner-lt {z-index: 1;}
+=======
 .community-banner-lt{z-index: 1;}
 
+>>>>>>> 47b18d408d3e96af7b984fc2d60cad7bdba2a9af
 .community-banner-lt .h4{margin-bottom: 40px; color: var(--link)}
 .community-text-block{background-color: var(--white); width: 513px; padding: 40px; z-index: 1;}
 .community-text-block .category{margin: 0 0 53px 0;}
 .community-text-block h1{font-size: 40px; line-height: 1.25; font-weight: 500; color: var(--linkhover); letter-spacing: -0.8px; margin-bottom: 22px;}
 .community-text-block p{color: var(--linkhover); margin-bottom: 56px;}
 .community-banner-img{z-index: -1; top: 0; position: absolute;}
+<<<<<<< HEAD
+.community-banner-img a {position: relative; z-index: 1; display: block; width: 100%; height: 100%;}
+.community-banner-img a:after{ background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display: block;}
+=======
 .community-banner-img figure a{position: relative; display: block; z-index: 1;}
 .community-banner-img:after{ background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display: block;}
+>>>>>>> 47b18d408d3e96af7b984fc2d60cad7bdba2a9af
 
 .community-banner-list{background-color: var(--white); width: 278px;}
 .community-banner-rt-img{position: relative;}
-.community-banner-rt-img::after{background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display: block;}
+.community-banner-rt-img a {position: relative; z-index: 1; display: block; width: 100%; height: 100%;}
+.community-banner-rt-img a::after{background-color: rgba(157, 151, 154, 0.2); content: ""; width: 100%; height: 100%; top: 0; left: 0; position: absolute; display: block;}
 .community-banner-rt-text{padding: 34px 32px 34px;}
 .community-banner-rt-text p{font-size: 20px; font-family: Oswald; color: var(--linkhover); line-height: 1.5;}
 .community-banner-rt-text p a{color: var(--linkhover);}

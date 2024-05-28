@@ -25,6 +25,7 @@
     .home-story-grid:nth-child(3) .home-story-grid-inner {flex-flow: row nowrap; flex-direction: row-reverse;}
     .home-story-grid:nth-child(3) .home-story-cnt {width: calc(100% - 51%); clear: none; margin:14px 0 0 0; flex-grow: 1;}
     .home-story-grid:nth-child(3) .home-story-thumb {width: 47.674418604651166%; clear: none; margin: 0 4.651162790697675% 0 0;}
+    .home-story-bg {height: 55.2%;}
 }
 
 

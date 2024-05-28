@@ -1,7 +1,7 @@
 @import url("../css/default-page.css");
 @import url("../css/_team-bios.css");
 
-
+main br {display: none;}
 .default-banner-main {min-height: 760px;}
 .default-banner-section .container {max-width: 1280px;}
 .default-banner-section .banner-bg:after {background: rgba(0, 156, 166, 0.50);}
@@ -44,14 +44,19 @@
 
 .repeater-bg {top: 0; bottom: inherit; height: 160px;}
 
-.stories-slider {padding-bottom: 0;}
+.stories-slider {padding-bottom: 0; background: var(--elevated); z-index: 1;}
 .stories-slider h2 span {color: var(--white);}
 
 .general-default-container {padding:88px 0 80px 0; margin-top: 7px;}
 .general-default-inner:before {content: ""; opacity: 0.25; background: var(--optionaltxt); height: 1px; width: 100%; position: absolute; top: 0; left: 0; display: block; max-width: 1280px; margin: 0 auto; right: 0;}
 
-.fluid-cta-module {margin-top: -46px; margin-bottom: -44px; z-index: 2; background: var(--elevated);}
+.fluid-cta-module {margin-top: -46px; margin-bottom: -44px; z-index: 2; }
+
+.single-note {margin: 64px 0 24px;}
 .single-note .bg {background: var(--lilac);}
+
+.default-slider {margin: 56px 0 24px 0;}
+
 .cta-module.donate-cta {background: var(--optionaltxt);}
 .cta-module.donate-cta .cta-overlay {top: 0; background: var(--elevated)}
 .stories-slider .bg {background: var(--optionaltxt)}
@@ -84,6 +89,7 @@
 #mainContent {padding: 0;}
     .vf-grid:nth-child(-n+4) {margin-top: 0;}
 .vf-grid:nth-child(4n+1) {margin-left: 0;}
+    .cta-module.donate-cta {padding-bottom: 40px;}
 }
 
 @media (min-width:768px) {}
@@ -109,6 +115,7 @@
 .default-banner-section .banner-bg:after {display: block;}
     .video-top-lt {width: 100%; margin: 0 0 40px 0;}
     .video-top-rt {width: 100%;}
+    .default-slider .default-slide {height: 52.5vw;}
 
 }
 
@@ -133,9 +140,10 @@
     .video-grid-wrap .bg {height: 92.2%;}
     
     .general-default-container {padding: 53px 0 80px 0;}
-.general-default-inner::before {width: calc(100% - 48px);}
-    .video-wrap {margin: 56px 0 23px 0 !important;}
-    .single-note {margin: 64px 0 22px;}
+    .general-default-inner::before {width: calc(100% - 48px);}
+    .video-wrap {margin: 56px 0 23px 0 !important; }
+    .single-note {margin: 64px 0 22px; padding: 24px 24px 28px 24px;}
+    .single-note p {padding-right: 0;}
     .default-slider {margin: 56px 0 24px 0;}
     
     .subhead-module {padding: 38px 0 72px 0;}
@@ -143,14 +151,16 @@
     
     .meet-donors-main {padding: 40px 0;}
     .gratitude-wall .bg {height: 450px;}
-    .stories-slider {background: var(--elevated); z-index: 1; padding-bottom: 40px;}
+    .stories-slider {background: var(--elevated); z-index: 1; padding-bottom: 31px;}
     .stories-thumb-nav .h6, .stories-thumb.slick-current .h6 {color: var(--teal);}
     .stories-thumb .stories-thumb-nav p {color: var(--foreground);}
     
     .group-team-bios {border-bottom: 0 none; border-top: 1px solid #8ED3D8;}
-    .cta-module.donate-cta {border-top: 1px solid #8ED3D8;}
+    .cta-module.donate-cta {border-top: 1px solid #8ED3D8; padding-bottom: 33px;}
     .cta-module.donate-cta .cta-overlay {height: calc(100% - 78.3%);}
-    .fluid-cta-module {margin-bottom: 0; padding-bottom: 43px; margin-top: -41px;                  }
+    .fluid-cta-module {margin-bottom: 0; padding-bottom: 43px; margin-top: -41px; }
+    
+    .video-wrap .video-thumbnail > img {min-height: 197px;}
 }
 
 

@@ -5,7 +5,7 @@
 .stats-list {width: 21.25%; margin: 4.84375% 0 0 5%; display: inline-block; vertical-align: top; padding: 0 0 0 32px; position: relative;}
 .stats-list:nth-child(4n+1) {margin-left: 0;}
 .stats-list p {color: var(--linkhover); line-height: 150%; letter-spacing: -0.4px; font-size: 20px; font-family: 'Oswald', sans-serif; margin-bottom: 19px;}
-.big {display: block; margin-bottom: 24px; font-family: 'Oswald', sans-serif; font-size: 80px; font-style: normal; font-weight: 500; line-height: 100%;
+.number {display: block; margin-bottom: 24px; font-family: 'Oswald', sans-serif; font-size: 80px; font-style: normal; font-weight: 500; line-height: 100%;
 letter-spacing: -1.6px;}
 .stats-list .line {left: 0; top: 0; width: 1px; height:calc(100% - 4px); display: block;}
 
@@ -41,7 +41,7 @@ letter-spacing: -1.6px;}
     .stats-list {width: 100%; margin:28px 0 0 0; padding: 0 0 0 12px; display: flex; flex-wrap: wrap; align-items: center;}
     
     .stats-module .bottom-frame {margin: 40px auto 12px auto;}
-    .big {font-size: 56px; line-height: 100%; letter-spacing: -1.12px; font-weight: 500; margin-right: 8px; width:119px; margin-bottom: 0;}
+    .number {font-size: 56px; line-height: 100%; letter-spacing: -1.12px; font-weight: 500; margin-right: 8px; width:119px; margin-bottom: 0;}
     .stats-cnt {width: calc(100% - 135px); flex-grow: 1;}
     .stats-list p {font-size: 18px; line-height: 140%; letter-spacing: -0.36px; margin-bottom: 2px;}
     

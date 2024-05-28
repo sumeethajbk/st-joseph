@@ -166,8 +166,19 @@ jQuery(document).ready(function () {
   });
 
     
-    
-    
 
+
+ 
+    //jQuery(this).siblings(".frm_form_field").addClass("input-has-value");
+   // jQuery(this).siblings(".frm_error").hide();
+jQuery(".frm_forms .frm_form_fields input, .frm_forms .frm_form_fields textarea").on('focus input blur', function () {
+                if (!jQuery(this).val()) {
+                    jQuery(this).parent(".frm_form_field").addClass("frm_blank_field");
+                    jQuery(this).siblings(".frm_error").show();
+                } else {
+                    jQuery(this).parent(".frm_form_field").removeClass("frm_blank_field");
+                    jQuery(this).siblings(".frm_error").hide();
+                }
+            });
     
 });
