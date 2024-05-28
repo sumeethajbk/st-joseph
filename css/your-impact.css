@@ -12,6 +12,7 @@
 .impact-short-main h2{margin-bottom: 24px; font-size: 40px;}
 .impact-short-main h2 span{color: var(--teal);}
 .impact-short-main p{font-size: 21px; line-height: 33px; color: var(--foreground);}
+.impact-popup-main hr{margin: 0;}
 
 .repeater-bg{background: none;}
 .micro-cta .bg { background: var(--mauve); }
@@ -87,7 +88,13 @@
   .story-btn{flex: 0 0 calc(100% - 77%);}
   .story-btn .button{ padding: 19px 16px 19px 16px; border-radius: 32px;}
   .gratitude-wall { padding: 80px 0 80px 0; }
-  .browse-tab-section{padding: 80px 0 40px;}
+  .browse-tab-section{padding: 80px 0 80px;}
+
+  .browse-list{padding: 15px 0 0;}
+
+  .repeaters-module {padding: 80px 0 86px;}
+  .gratitude-wall { padding: 88px 0 80px 0; }
+  .foundation-main{padding: 80px 0 30px;}
 }
 
 

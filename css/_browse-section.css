@@ -4,7 +4,7 @@
 .browse-tab-heading{margin-bottom: 56px; align-items: center; gap: 30px}
 .browse-tab-heading h2{width: 50%; font-size: 40px; width: 624px; margin-bottom: 0;}
 .browse-tab-heading .browse-search{width: calc(100% - 654px); border: 2px solid var(--tealborder); border-radius: 32px; position: relative; z-index: 1; clear: both; }
-.browse-search-field input{padding: 18px 20px 18px 50px; background-color: transparent; font-weight: 500; font-size: 16px; color: var(--linkhover);}
+.browse-search-field input{padding: 17px 20px 17px 50px; background-color: transparent; font-weight: 500; font-size: 16px; color: var(--linkhover);}
 .browse-search-button{position: absolute; display: block; top: 50%; left: 15px; right: auto; width: 24px; height: 30px; transform: translateY(-50%);}
 .browse-search-button button{width: 100%; height: 100%; padding: 0; border-radius: 6px; background: transparent; color: var(--teal); font-size: 24px; line-height: 32px; outline: none;}
 .browse-search-button button:hover{outline: none;}
