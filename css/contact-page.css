@@ -55,11 +55,13 @@
 .contact-container .accordion-module {padding: 0;}
 .contact-container .accordion-item  {border: 2px solid var(--elevated);}
 .contact-container .accordion-item .accordion-heading {padding: 13px 30px 15px 14px;}
-.contact-container .accordion-item .accordion-heading::after {right: 14px; top: 16px; content: "\2b"; color: var(--teal);}
-.contact-container .accordion-item .content {padding: 0 16px 29px 16px; font-size: 14px;}
+.contact-container .accordion-item .accordion-heading::after {right: 14px; top: 16px; content: "\2b"; color: var(--teal); align-items: flex-start;}
+.contact-container .accordion-item .content {padding: 0 16px 29px 32px; font-size: 14px;}
+.contact-container .accordion-item .content p {margin-top: 25px;}
+.contact-container .accordion-item .content p:first-child {margin-top: 0}
 .contact-container .accordion-item.active .accordion-heading {color: var(--teal);}
 
-.members-wrap {clear: both; padding: 0 0 0 16px}
+.members-wrap {clear: both;}
 .members-grid {display: inline-block; width:30.829%; margin:26px 0 0 3.0534351145038165%;}
 .members-grid:nth-child(3n+1) {margin-left: 0;}
 .members-thumb {width:76px; height: 76px; display: block; margin: 0 0 12px 0;}
@@ -139,7 +141,7 @@
     .contact-rt h4 {margin-bottom: 33px;}
     .contact-rt .contact-img {display: block;}
     
-    .members-wrap {padding: 3px 0 0 14px;}
+    .members-wrap {padding: 3px 0 0 0;}
     .members-grid {width: 100%; margin:23px 0 0 0;}
     
     .contact-container .accordion-module {margin: 0 0 48px 0;}

@@ -27,5 +27,6 @@
     .masonry-block p {font-size: 18px; line-height: 150%; margin-bottom: 20px;}
     .gratitude-wall {padding: 40px 0;}
     .gratitude-name {margin-bottom: 1px;}
+    .gratitude-wall .heading-lt {padding-right: 0;}
 
 }

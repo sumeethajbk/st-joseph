@@ -17,10 +17,25 @@ $common_sub_heading_one = get_field('common_banner_sub_heading_one');
 $common_sub_heading_two = get_field('common_banner_sub_heading_two');
 $common_heading = get_field('common_banner_heading');
 $common_button_text = get_field('common_banner_button_text');
-$common_button_link = get_field('common_banner_button_link'); ?>
+$common_button_link = get_field('common_banner_button_link'); 
+$video_or_static_image = get_field('common_banner_static_image_or_video');
+$home_banner_video_type = get_field('common_banner_video_type');
+$home_banner_youtube_id = get_field('common_banner_yotube_id');
+$home_banner_vimeo_id = get_field('common_banner_vimeo_id');
+$banner_fallback_desktop_image = get_field('common_banner_fallback_desktop_image');
+$banner_fallback_mobile_image = get_field('common_banner_fallback_mobile_image');
 
-<section class="default-banner-section pos-relative">
-  <?php if ($common_mobile_image ||  $common_desktop_image) {
+if (empty($common_desktop_image) && empty($common_mobile_image)) {
+  $no_banner_img = 'no-banner-img';
+} else {
+  $no_banner_img = '';
+}?>
+
+<section class="default-banner-section pos-relative <?php echo  $no_banner_img; ?>">
+
+  <?php  if ($video_or_static_image == 'static_image') {
+
+  if ($common_mobile_image ||  $common_desktop_image) {
     $common_mobile_image = $common_mobile_image ? $common_mobile_image : $common_desktop_image;
     $common_desktop_image = $common_desktop_image ? $common_desktop_image : $common_mobile_image; ?>
     <div class="banner-bg object-fit">
@@ -30,11 +45,40 @@ $common_button_link = get_field('common_banner_button_link'); ?>
         <img src="<?php echo $common_mobile_image['url']; ?>" alt="<?php echo $common_mobile_image['alt']; ?>" title="<?php echo $common_mobile_image['title']; ?>" />
       </picture>
     </div>
-  <?php } ?>
+  <?php } 
+} else {
+    if ($video_or_static_image === 'video') {
+      $background_image_url = isset($banner_fallback_desktop_image['url']) ? $banner_fallback_desktop_image['url'] : '';
+      $background_mobile_image_url = isset($banner_fallback_mobile_image['url']) ? $banner_fallback_mobile_image['url'] : '';
+      $mobile_image_alt = isset($banner_fallback_mobile_image['alt']) ? $banner_fallback_mobile_image['alt'] : '';
+
+      if (empty($background_mobile_image_url) || !$background_mobile_image_url) {
+        $background_mobile_image_url = $background_image_url;
+        if (empty($mobile_image_alt) || !$mobile_image_alt) {
+          $mobile_image_alt = isset($banner_fallback_desktop_image['alt']) ? $banner_fallback_desktop_image['alt'] : '';
+        }
+      }
+    ?>
+      <div class="poster-bg background-bg">
+        <picture class="banner-thumb object-fit">
+          <?php if ($background_image_url) { ?>
+            <source srcset="<?php echo $background_image_url; ?>" media="(min-width: 768px)">
+            <img loading="eager" class="poster-img" src="<?php echo $background_mobile_image_url; ?>" alt="<?php echo $mobile_image_alt; ?>">
+          <?php } ?>
+        </picture>
+      </div>
+
+      <?php if ($home_banner_video_type === 'vimeo' && $home_banner_vimeo_id) { ?>
+        <div class="banner-bg background-bg home-banner-iframe" data-ytbg-fade-in="true" data-youtube="https://vimeo.com/<?php echo $home_banner_vimeo_id; ?>"> </div>
+      <?php } elseif ($home_banner_video_type === 'youtube' && $home_banner_youtube_id) { ?>
+        <div class="banner-bg background-bg home-banner-iframe" data-ytbg-fade-in="true" data-youtube="https://www.youtube.com/watch?v=<?php echo $home_banner_youtube_id; ?>"> </div>
+      <?php } ?>
+  <?php }
+  } ?>
   <div class="container">
-    <div class="default-banner-main flex flex-vcenter" style="background:<?php echo $common_color_picker; ?>;">
+    <div class="default-banner-main flex flex-vcenter" >
       <div class="default-banner-text">
-        <div class="default-banner-bg pos-absolute">&nbsp;</div>
+        <div class="default-banner-bg pos-absolute" style="background:<?php echo $common_color_picker; ?>;">&nbsp;</div>
         <?php if ($common_sub_heading_one || $common_sub_heading_two) { ?>
           <div class="banner-cat">
             <ul>
@@ -127,7 +171,7 @@ if ($pressures_heading || $pressures_description || $group_name_repeater || $wes
                       ?>
                       <div class="stats-list <?php echo $color_class; ?>">
                         <div class="line pos-absolute">&nbsp;</div>
-                        <span class="big"><?php if ($before_text) {
+                        <span class="big" data-duration="<?php  echo $number; ?>" data-count-to="<?php  echo $number; ?>" ><?php if ($before_text) {
                                             echo $before_text;
                                           }
                                           if ($number) {
@@ -191,6 +235,7 @@ if (empty($select_patient_and_staff_stories)) {
         'image' => get_field('stories_image'),
         'short_introduction' => get_field('stories_short_introduction'),
         'permalink' => get_permalink(),
+        'category' => get_the_terms(get_the_ID(), 'stories_category'),
         'title' => get_the_title(),
       );
     }
@@ -217,38 +262,55 @@ if (empty($select_patient_and_staff_stories)) {
         <?php if (!empty($select_patient_and_staff_stories)) { ?>
           <?php foreach ($select_patient_and_staff_stories as $story) { ?>
             <div class="ps-grid">
+            <?php if (!empty($story_image)) { ?>
               <div class="ps-thumb">
+              <a href="<?php echo $story['permalink']; ?>">
                 <?php $story_image = get_field('stories_image', $story->ID); ?>
-                <?php if (!empty($story_image)) { ?>
-                  <figure class="object-fit"><img src="<?php echo $story_image['url']; ?>" alt="<?php echo $story_image['alt']; ?>" title="<?php echo $story_image['title']; ?>" /></figure>
-                <?php } ?>
+                  <figure class="object-fit"><img src="<?php echo $story_image['url']; ?>" alt="<?php echo $story_image['alt']; ?>" title="<?php echo $story_image['title']; ?>" />
+                </figure>
+                </a>
               </div>
+              <?php } ?>
               <div class="ps-cnt">
                 <div class="category flex">
-                  <span class="tag"><?php echo get_the_title($story->ID); ?></span>
+                <?php $categories = get_the_terms($story->ID, 'stories_category'); ?>
+                  <?php if (!empty($categories) && !is_wp_error($categories)) { ?>
+                    <?php foreach ($categories as $term) { ?>
+                      <span class="tag"><?php echo $term->name; ?></span>
+                    <?php } ?>
+                  <?php } ?>
                 </div>
-                <?php $story_introduction = get_field('stories_short_introduction', $story->ID); ?>
-                <?php if (!empty($story_introduction)) { ?>
-                  <?php echo $story_introduction; ?>
-                <?php } ?>
+                <a href="<?php echo get_permalink($story->ID); ?>">
+                  <p><?php echo get_the_title($story->ID); ?></p>
+                </a>
               </div>
             </div>
           <?php } ?>
         <?php } else { ?>
           <?php foreach ($default_stories as $story) { ?>
             <div class="ps-grid">
+            <?php if (!empty($story['image'])) { ?>
               <div class="ps-thumb">
-                <?php if (!empty($story['image'])) { ?>
-                  <figure class="object-fit"><img src="<?php echo $story['image']['url']; ?>" alt="<?php echo $story['image']['alt']; ?>" title="<?php echo $story['image']['title']; ?>" /></figure>
-                <?php } ?>
+              <a href="<?php echo $story['permalink']; ?>">
+                  <figure class="object-fit"><img src="<?php echo $story['image']['url']; ?>" alt="<?php echo $story['image']['alt']; ?>" title="<?php echo $story['image']['title']; ?>" />
+                </figure>
+                </a>
               </div>
+              <?php } ?>
               <div class="ps-cnt">
                 <?php if (!empty($story['title'])) { ?>
-                  <div class="category flex"> <span class="tag"> <?php echo $story['title']; ?></span> </div>
+                  <div class="category flex"> <?php if (!empty($story['category']) && !is_wp_error($story['category'])) { ?>
+                    <?php foreach ($story['category'] as $term) { ?>
+                      <?php if (is_object($term)) { ?>
+                        <span class="tag"><?php echo $term->name; ?></span>
+                      <?php } ?>
+                    <?php } ?>
+                  <?php } ?>
+                </div>
                 <?php } ?>
-                <?php if (!empty($story['short_introduction'])) { ?>
-                  <?php echo $story['short_introduction']; ?>
-                <?php } ?>
+                <a href="<?php echo $story['permalink']; ?>">
+                  <p><?php echo $story['title']; ?></p>
+                </a>
               </div>
             </div>
           <?php } ?>
@@ -316,11 +378,14 @@ $cta_link = get_field('why_give_cta_link');
 <?php } ?>
 
 
-<?php $why_give_testimonials_heading = get_field('why_give_testimonials_heading');
+<?php
+$why_give_testimonials_display = get_field('why_give_testimonials_display');
+$why_give_testimonials_heading = get_field('why_give_testimonials_heading');
 $why_give_select_testimonials = get_field('why_give_select_testimonials');
 $colors = ['var(--elevated)', 'var(--elevateddark)', 'var(--lilictint)', 'var(--lilicdark)', 'var(--goldtint)', 'var(--gold)'];
-$index = 0; ?>
+$index = 0; 
 
+if ($why_give_testimonials_display === 'yes') { ?>
 <section class="gratitude-wall">
   <div class="container">
     <div class="heading">
@@ -376,10 +441,10 @@ $index = 0; ?>
         ?>
       <?php } ?>
     </div>
-  </div>
   <div class="hide-in-desktop hide-in-tab heading-btn btn-full"> <a href="/our-thanks/" class="button outline-btn-white">View all thanks</a> </div>
-  </div>
+  </div> </div>
 </section>
+<?php } ?>
 
 <?php
 $why_give_repeater_section = get_field('why_give_repeater_section');
@@ -462,21 +527,23 @@ $why_give_meet_our_donors_repeater = get_field('why_give_meet_our_donors_repeate
       <?php if ($why_give_meet_our_donors_heading) { ?>
         <h2><?php echo $why_give_meet_our_donors_heading; ?></h2>
       <?php } ?>
-      <?php if ($why_give_meet_our_donors_description) { ?>
+      
         <div class="bottom-frame">
+        <?php if ($why_give_meet_our_donors_description) { ?>
           <div class="frame-lt">
             <?php echo $why_give_meet_our_donors_description; ?>
           </div>
           <div class="frame-mid">
             <div class="animated-arrow"> <span class="the-arrow right"> <span class="shaft"></span> </span></div>
           </div>
+          <?php } ?>
           <div class="frame-rt">
             <?php if ($why_give_meet_our_donors_button_link && $why_give_meet_our_donors_button_text) { ?>
               <a href="<?php echo $why_give_meet_our_donors_button_link; ?>" class="button"><?php echo $why_give_meet_our_donors_button_text; ?></a>
             <?php } ?>
           </div>
         </div>
-      <?php } ?>
+      
       <?php if ($why_give_meet_our_donors_repeater) { ?>
         <div class="meet-donors-wrap">
           <?php foreach ($why_give_meet_our_donors_repeater as $donor) {
