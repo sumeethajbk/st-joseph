@@ -12,7 +12,7 @@
 .impact-short-main h2{margin-bottom: 24px; font-size: 40px;}
 .impact-short-main h2 span{color: var(--teal);}
 .impact-short-main p{font-size: 21px; line-height: 33px; color: var(--foreground);}
-.impact-popup-main hr{margin: 0;}
+.impact-short-section hr{margin: 0;}
 
 .repeater-bg{background: none;}
 .micro-cta .bg { background: var(--mauve); }
@@ -93,7 +93,7 @@
   .browse-list{padding: 15px 0 0;}
 
   .repeaters-module {padding: 80px 0 86px;}
-  .gratitude-wall { padding: 88px 0 80px 0; }
+  .gratitude-wall { padding: 80px 0 80px 0; }
   .foundation-main{padding: 80px 0 30px;}
 }
 
