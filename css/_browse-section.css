@@ -46,8 +46,12 @@ ul.browse-all li a span.icon-wrap{margin-left: 8px;}
 ul.browse-all li a span.hover-icon { opacity: 0; transform: translateX(20px); transition: opacity 0.3s ease, transform 0.3s ease; width: 0; }
 ul.browse-all li a span.normal-icon {transition: opacity 0.3s ease, transform 0.3s ease;}
 ul.browse-all li a span i{font-size: 24px; font-weight: 300; line-height: 24px; color: var(--optionaltxt); }
+ul.browse-all .normal-icon img{object-fit: contain;}
 
+.browse-tab-section .no_result_found { margin-bottom: 0; margin-top: 60px; }
 
+.page-header{margin-top: 40px;}
+.page-header h2{margin-bottom: 0;}
 
 @media only screen and (min-width: 1024px){
     ul.browse-all li:hover{outline: 6px solid var(--tealborder);}
@@ -64,7 +68,7 @@ ul.browse-all li a span i{font-size: 24px; font-weight: 300; line-height: 24px; 
 
     ul.browse-all {  margin-top: -15px; margin-bottom: 30px; flex-wrap: wrap; width: 70%; gap: 10px 0;}
     ul.browse-all li {width: 56px; height: 56px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-right: 12px;} 
-    ul.browse-all li a {font-size: 0; line-height: 0; padding: 5px;}
+    ul.browse-all li a {font-size: 0; line-height: 0; padding: 0; width: 100%; height: 100%; justify-content: center;}
     ul.browse-all li.active{ width: auto; height: auto;}
     ul.browse-all li.active a{font-size: 16px; line-height: 125%; padding: 14px 20px;}
     ul.browse-all li a span.icon-wrap {margin-left: 0;}
@@ -76,6 +80,12 @@ ul.browse-all li a span i{font-size: 24px; font-weight: 300; line-height: 24px; 
 
     .btn-center{margin-top: 0;}
 
+    ul.browse-all li:hover{outline: 6px solid var(--tealborder);}
+    ul.browse-all li:hover > a{color: var(--teal);  }
+    ul.browse-all li:hover span .normal-icon{opacity: 0; transform: translateX(-20px);}
+    ul.browse-all li:hover span .hover-icon{opacity: 1; transform: translateX(0);}
+
+    .page-header{margin-bottom: 40px;}
 
 }    
 @media only screen and (max-width: 767px) and (min-width:200px){
@@ -110,6 +120,8 @@ ul.browse-all li a span i{font-size: 24px; font-weight: 300; line-height: 24px; 
     ul.browse-all li.active span.icon-wrap { margin-left: 0; }
     ul.browse-all a span.icon-wrap{position: absolute; left: 23px; right: auto; margin-left: 0!important;}
     ul.browse-all li.active {display: none;}
+
+    .page-header{margin-bottom: 40px;}
   } 
 
 

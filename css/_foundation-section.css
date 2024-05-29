@@ -13,19 +13,33 @@
 .foundation-btn li::before{display: none;}
 .foundation-btn li .btn-anchor{padding: 14px 20px; justify-content: space-between; display: flex; align-items: center; color: var(--linkhover);}
 .foundation-btn li .btn-anchor span{color: var(--teal)}
-
+.foundation-btn li:hover{outline: 6px solid var(--tealborder);}
+.foundation-btn li:hover > a{color: var(--teal);}
 
 @media only screen and (min-width: 1024px){
-    .foundation-heading-lt{width: 600px; margin-right: 80px;}
-    .foundation-heading-rt{width: calc(100% - 680px);}
     
     .foundation-list {flex: 0 0 calc(33.33% - 28px);}
     .foundation-thumb { flex: 50%; }
     .foundation-txt{flex: 50%;}
     .foundation-btn{gap: 40px; margin-left: 0;}
     .foundation-btn li{width: calc(17.5% - 44px);}
+    
+@media only screen and (min-width: 1250px){
+    .foundation-heading-lt{width: 600px; margin-right: 80px;}
+    .foundation-heading-rt{width: calc(100% - 680px);}
 
 
+
+} 
+
+
+
+@media only screen and (max-width: 1249px) and (min-width: 1024px) {
+    .foundation-heading-lt { width: 435px; margin-right: 72px; }
+    .foundation-heading-rt { width: calc(100% - 508px); }
+    .foundation-list{ display: block; }
+    
+    }
 
 }
 @media only screen and (max-width: 1023px) and (min-width:200px){
@@ -50,5 +64,12 @@
     .foundation-btn{gap: 20px; margin-left: 0;}
     .foundation-btn li{width: calc(50% - 10px);}
     .foundation-list:last-child{margin-bottom: 0;}
+    .foundation-main { padding: 42px 0 40px; }
+
+    .feature-mobile-head { display: flex; flex-wrap: wrap; width: 100%; margin-bottom: 14px;}
+    .feature-mobile-head span.optional-text { order: 2; flex: 0 0 36px; margin: 0; }
+    .feature-mobile-head .h6 { order: 1; margin: 0; flex: 1; }
+
+    .foundation-thumb{width: 100%;}
 
 }   
