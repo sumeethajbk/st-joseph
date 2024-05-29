@@ -36,7 +36,8 @@
 
 /*-- media css starts here --*/
 @media only screen and (max-width:1280px) and (min-width: 1024px){
-    .cta-main-text {padding: 64px 48px;}
+    .cta-main-text {padding:64px 41px;}
+    .cta-btns .button {margin: 0 18px 15px 0;}
 }
 
 @media only screen and (max-width:1023px) and (min-width:200px){

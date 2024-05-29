@@ -134,7 +134,7 @@
     .contact-lt {margin:0 0 50px 0;}
     .contact-lt .h5 {margin: 0 0 25px 0;}
     .contact-lt .contact-img {display: none;}
-    .contact-lt .cnt-sm {margin: 24px 0 0 0;}
+    .contact-lt .cnt-sm {margin: 24px 0 0 0; text-align: center;}
     .contact-lt .cnt-sm ul li {margin: 0 0 0 15px;}
     
     .contact-rt {padding: 0;}
@@ -150,5 +150,6 @@
 }
 
 @media only screen and (max-width: 389px) and (min-width: 200px){
-    .contact-lt .cnt-sm ul li {margin: 0 0 0 11px;}
+    .contact-lt .cnt-sm ul li {margin: 0 0 0 7px;}
+    
 }

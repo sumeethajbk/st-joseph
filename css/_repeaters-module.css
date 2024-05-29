@@ -17,17 +17,17 @@
 .repeaters-loop:nth-child(even) .repeaters-grid .repeaters-rt {margin-bottom: auto; padding: 122px 0 20px 0; margin-top:inherit;}
 .repeaters-loop:nth-child(even) .repeaters-grid .repeaters-rt:after {top: 0; bottom: inherit;}
 .repeaters-full-txt {width: 100%; clear: both; margin-top: 113px; margin-bottom: -2px; z-index: 1; position: relative;}
-.repeaters-full-txt:before {content: ""; background:var(--optionaltxt) ; position: absolute; top: 0; bottom: 0; margin: auto; display: block; width: 1151px; height: 1151px; opacity: 0.05; border-radius: 50%; left: 0; right: 0; z-index: -1;}
+.repeaters-loop:first-child .repeaters-full-txt:before {content: ""; background:var(--optionaltxt) ; position: absolute; top: 0; bottom: 0; margin: auto; display: block; width: 1151px; height: 1151px; opacity: 0.05; border-radius: 50%; left: 0; right: 0; z-index: -1;}
 .repeaters-full-txt h2 {margin: 0;}
 
 /*-- media css starts here --*/
 
 @media only screen and (max-width: 1280px) and (min-width:1161px){
-    .repeaters-full-txt:before {width: 1043px; height: 1043px;}   
+    .repeaters-loop:first-child .repeaters-full-txt:before {width: 1043px; height: 1043px;}   
 }
 
 @media only screen and (max-width: 1160px) and (min-width:1024px){
-    .repeaters-full-txt:before {width: 900px; height: 900px;}   
+    .repeaters-loop:first-child .repeaters-full-txt:before {width: 900px; height: 900px;}   
 
 }
 
@@ -36,7 +36,7 @@
     .repeaters-grid {min-height: inherit;}
     .repeaters-grid .repeaters-rt {padding: 20px 0 60px 0;}
     
-    .repeaters-full-txt::before {width: 601px; height: 601px;}
+    .repeaters-loop:first-child .repeaters-full-txt::before {width: 601px; height: 601px;}
     .repeaters-full-txt {margin-top: 56px;}
     .repeaters-full-txt h2 {font-size: 40px; line-height: 125%; letter-spacing: -0.8px;}
     
@@ -53,7 +53,7 @@
     .repeaters-grid .repeaters-rt p {font-size: 16px; font-weight: 400; line-height: 150%; margin-bottom: 19px;}
     .repeaters-grid .repeaters-rt::after {display: none;}
     .repeaters-full-txt {padding: 0 14px; position: relative; margin-top: 103px;}
-    .repeaters-full-txt::before {width: 311px; height: 311px;}
+    .repeaters-loop:first-child .repeaters-full-txt::before {width: 311px; height: 311px;}
     .repeaters-loop {margin-top: 106px;}
     
     .repeater-bg {height: calc(100% - 160px); top: inherit; bottom: 0;}

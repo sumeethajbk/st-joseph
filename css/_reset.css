@@ -165,6 +165,7 @@ img.alignnone {margin:34px 0 31px; display: block; clear: both;}
 @media only screen and (max-width: 767px) and (min-width: 200px) {  
     blockquote {padding: 106px 30px 52px 30px;}
 ol > li {margin-bottom: 8px;}
+    td {font-size: 16px; line-height: normal; padding: 31px 11px 31px;}
 h1 {font-size: 48px; line-height:125%; margin-bottom: 32px; letter-spacing: -0.96px;}
 h2 {font-size: 32px; line-height:125%; margin-bottom:19px; letter-spacing:-0.64px;}
 h3 {font-size: 32px; line-height:125%; margin-bottom:19px; letter-spacing: -0.64px; }

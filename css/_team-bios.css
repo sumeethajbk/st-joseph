@@ -16,9 +16,9 @@
 .gt-bios-grid .gt-bios-pos {display: block; width: 100%; font-size: 16px; line-height: 150%; color:var(--white); opacity: 0.8;}
 .gt-bios-links {margin:20px 0 11px 0;}
 .gt-bios-links li:before {display: none;}
-.gt-bios-links li {font-weight: 600; line-height: 100%; letter-spacing: -0.32px; font-size: 16px; margin-bottom: 12px; display: block; width: 100%;}
+.gt-bios-links li {font-weight: 600; line-height: 100%; letter-spacing: -0.32px; font-size: 16px; margin-bottom: 12px; display: block; width: 100%; padding-left:26px; position: relative;}
 .gt-bios-links li i {position: absolute; left: 0; color: var(--linkhover);}
-.gt-bios-links li a {color: var(--white); padding-left:26px;}
+.gt-bios-links li a {color: var(--white);}
 .gt-bios-links li a:hover {color: var(--linkhover);}
 .gt-bios-grid .gt-bios-desc {position: relative; z-index: 1; padding:0 24px 25px 24px; margin: 0; display: block; color:var(--white); font-size: 14px; line-height: 150%; transition: .5s ease-in-out; margin-top: -23px;}  
 .gt-bios-wrap {clear: both; width: 100%; padding: 0 0 15px 0;}

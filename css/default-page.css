@@ -99,12 +99,14 @@
     .single-quote p {font-size: 20px; line-height: 140%; margin-bottom: 24px;}
     .quote-by {padding: 4px 0 5px 11px;}
     
+    
     .default-slider {margin: 64px 0 7px 0;}
     .default-slider .def-slider {padding: 0 0 65px 0;}
     .default-slider .slick-list {margin: 0 0 22px 0;}
     .default-slider .counter-info {display: none;}
     .default-slider .slick-arrow {right: 0; bottom: 0; top: inherit; width: 56px; height: 56px; outline: 8px solid rgba(0, 131, 139, 0.20);}
     .default-slider .slick-arrow.prev-arrow {right: auto; left: 0;}
+    .default-slider.single-slide .def-slider {padding: 0;}
     
     .meet-donors-main {padding: 40px 0 38px;}
     

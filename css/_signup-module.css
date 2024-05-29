@@ -102,3 +102,6 @@
      .signup-module.whitebg .signup-info .signup-links li a:hover {background: var(--link); color: var(--white)}
     
 }
+@media only screen and (max-width: 389px) and (min-width: 200px){
+.signup-module .signup-info .h5 {font-size: 22px;}
+}

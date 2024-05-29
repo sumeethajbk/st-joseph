@@ -14,7 +14,7 @@ main br {display: none;}
 .default-banner-main .default-banner-text .button {margin: 0 16px 0 0; background: var(--linkhover);}
 .default-banner-main .default-banner-text .button.trans-btn {background: transparent;}
 .default-banner-main .default-banner-text .button.trans-btn:hover {background: var(--white);}
-
+.default-banner-main .default-banner-text .bigger-text {color:var(--white); font-size: 117px; font-weight: 600; text-transform: uppercase; font-family: 'Oswald', sans-serif; line-height: 100%; position: relative; left: -5px; display: block; width: 100%;}
 
 .short-intro-main {margin-bottom: -20px;}
 
@@ -72,7 +72,7 @@ main br {display: none;}
 .meet-our-donors .frame-lt p, .meet-our-donors .frame-mid .animated-arrow {color: var(--white);}
 .meet-our-donors .frame-rt .button {color: var(--purple);}
 
-
+#form_forgot-password .frm_submit {justify-content: center;}
 
 /*-- media css starts here --*/
 
@@ -104,6 +104,7 @@ main br {display: none;}
 .default-banner-main .default-banner-text .optional-text {margin-bottom: 32px;}
     .default-banner-main .default-banner-text figure {width: 684px;}
     .default-banner-main .default-banner-text p {max-width: 688px;}
+    .default-banner-main .default-banner-text .bigger-text {font-size: 112px;}
     
     .vf-grid {width: 47.093023255813954%; margin: 40px 0 0 40px;}
     .vf-grid:nth-child(2n+1) {margin-left: 0;}
@@ -131,7 +132,7 @@ main br {display: none;}
 .default-banner-main .default-banner-text .btn-wrap {justify-content: center;}
 .default-banner-section .banner-bg:after {background-color: rgba(157, 151, 154, 0.2);}
 .default-banner-section .banner-bg:before {display: none;}
-
+.default-banner-main .default-banner-text .bigger-text {font-size: 50px;}
     
     .short-intro-rt {margin-bottom: 20px;}
     
@@ -161,6 +162,7 @@ main br {display: none;}
     .fluid-cta-module {margin-bottom: 0; padding-bottom: 43px; margin-top: -41px; }
     
     .video-wrap .video-thumbnail > img {min-height: 197px;}
+    #form_forgot-password .frm_submit {justify-content: flex-end;}
 }
 
 

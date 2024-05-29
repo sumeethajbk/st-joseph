@@ -33,11 +33,11 @@
 .event-cnt .address .venue {font-weight: 700; display: block;}
 .event-cnt .address p {margin-bottom: 16px;}
 .event-cnt .address p:last-child {margin-bottom: 0;}
-.event-cnt .address p span {display: block; margin: 0 0 16px 0;}
+.event-cnt .address p span {display: block; margin: 0 0 16px 0; padding: 0 0 0 32px; position: relative;}
 .event-cnt .address p span:last-child {margin-bottom: 0;}
 .event-cnt .address p a {color: var(--white);}
 .event-cnt .address p a:hover {color: var(--linkhover);}
-.event-cnt .address p span i {font-size: 20px; margin-right: 12px; position: relative; top: 2px;}
+.event-cnt .address p span i {font-size: 20px; margin-right: 12px; position: absolute; top: 2px; left: 0;}
 
 .event-cnt .event-info {background: var(--elevated); color: var(--white); padding: 32px; clear: both; width: 100%;}
 .event-cnt .event-info p {font-size: 14px; font-style: normal; font-weight: 400; line-height: 150%; color: var(--linkhover); margin-bottom: 24px;}
@@ -87,7 +87,8 @@
 }
 
 @media only screen and (min-width:1024px){
-    .split-banner-main {min-height: 548px;}
+    .split-banner-main {min-height: 548px; height: auto; align-items: inherit;}
+    .split-banner-main .split-banner-thumb {height: auto;}
 }
 
 @media (min-width:768px) {}

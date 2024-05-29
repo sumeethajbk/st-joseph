@@ -100,9 +100,6 @@ jQuery(document).ready(function () {
   });
 
 
- 
-
-
   /* Header Toggle */
   jQuery('.rolling-btn').on('click', function () {
     jQuery(this).toggleClass('active');
@@ -165,20 +162,28 @@ jQuery(document).ready(function () {
     tab.addEventListener("click", toggleShow);
   });
 
-    
+
+  /* Form */
+
+  jQuery(".frm_forms .frm_form_fields input, .frm_forms .frm_form_fields textarea").on('focus input blur', function () {
+    if (!jQuery(this).val()) {
+      jQuery(this).parent(".frm_form_field").addClass("frm_blank_field");
+      jQuery(this).siblings(".frm_error").show();
+    } else {
+      jQuery(this).parent(".frm_form_field").removeClass("frm_blank_field");
+      jQuery(this).siblings(".frm_error").hide();
+    }
+  });
 
 
- 
-    //jQuery(this).siblings(".frm_form_field").addClass("input-has-value");
-   // jQuery(this).siblings(".frm_error").hide();
-jQuery(".frm_forms .frm_form_fields input, .frm_forms .frm_form_fields textarea").on('focus input blur', function () {
-                if (!jQuery(this).val()) {
-                    jQuery(this).parent(".frm_form_field").addClass("frm_blank_field");
-                    jQuery(this).siblings(".frm_error").show();
-                } else {
-                    jQuery(this).parent(".frm_form_field").removeClass("frm_blank_field");
-                    jQuery(this).siblings(".frm_error").hide();
-                }
-            });
-    
+  if (jQuery(window).width() >= 767) {
+    var $parentElement = jQuery('.meet-donors-wrap');
+    var $childDivs = $parentElement.find('.our-donor-thumb');
+
+    if ($childDivs.length < 5) {
+      $parentElement.addClass('few-divs');
+    } else {
+      $parentElement.removeClass('few-divs');
+    }
+  }
 });
