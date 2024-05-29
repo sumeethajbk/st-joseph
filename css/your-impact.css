@@ -119,7 +119,7 @@
   .browse-tab-heading h2 { width: 60%; margin-right: 20px; margin-bottom: 0; }
   .browse-tab-heading .browse-search { width: 32%;}
   .story-btn{margin-bottom: 0;}
- .impact-short-main { padding: 64px 0 64px;}
+ .impact-short-main { padding: 64px 0 56px;}
 
   .gate-img {height: 100%;} 
   .gate-img img {max-height: inherit;}
