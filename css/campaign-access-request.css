@@ -57,6 +57,8 @@
     .car-lt::before {left: -40px;}
     .car-rt {width: 100%;}
     .car-rt::before {right: -40px;}
+        .car-rt .car-intro .frm_forms .frm_submit {margin: 25px 0 20px 0;}
+
     
 }
 @media only screen and (max-width: 767px) and (min-width: 200px){

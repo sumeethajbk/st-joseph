@@ -6,10 +6,12 @@ get_header();
 ?>
 
 <?php
+$password_protected_page = get_field('password_protected_page');
 $password_protected_page_password = get_field('password_protected_page_password');
 if(isset($_POST['submit'])){
   $posted_psw = $_POST['campaign_pwd_protect'];
 }
+
 $common_desktop_image = get_field('common_banner_desktop_image');
 $common_mobile_image = get_field('common_banner_mobile_image');
 $common_color_picker = get_field('common_banner_background_color');
@@ -25,9 +27,103 @@ $secondary_button_text = get_field('common_banner_secondary_link_text');
 $secondary_button_link = get_field('common_banner_secondary_link');
 ?>
 
+<?php if($password_protected_page=='yes'){ ?>
+<?php if($posted_psw!=$password_protected_page_password){ ?>
+<section class="overlay_main_sec campaign-popup mfp-hide" id="loginpopup">
+  <div class="overlay_center flex flex-center">
+    <div class="overlay-main"> <span class="login_pop_connect_close" onClick="LoginclosePopup();"><i class="fa-sharp fa-light fa-xmark"></i></span>
+      <div class="overlay-wrap">
+        <div class="login-pop">
+          <h5>Campaign Login</h5>
+          <p>Opacity thumbnail rotate strikethrough font inspect connection ellipse bol.</p>
+          <div class="frm_forms">
+            <form name="" id="psw_protect_form" class="psw_protect_form" action="" method="post">
+              <div class="frm_form_fields ">
+                <fieldset>
+                  <div class="frm_fields_container">
+                    <div class="frm_form_field form-field frm_full">
+                      <label for="" id="" class="frm_primary_label">Your Password</label>
+                      <input type="password" id="campaign_pwd_protect" name="campaign_pwd_protect" value="" placeholder="Password" aria-required="true">
+                      <?php if(isset($_POST['submit']) && $posted_psw != $password_protected_page_password){ ?>
+                        <span class="passwd_err">Invalid Password.</span>
+                      <?php } ?>
+                    </div>
+                    <div class="frm-wrapper">
+                      <div class="frm_submit">
+                        <button class="frm_button_submit frm_final_submit button btn-dark" type="submit" name="submit">Log in to the campaign</button>
+                      </div>
+                      <p class="lost_password"><a href="#password-popup" class="forgot-password-request">Forgot your password?</a></p>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <span class="poplink"><a href="#campagin-access-popup" class="open-campaign-request readmore trigger-popup">Request Access</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php } ?>
 
+<?php if($posted_psw!=$password_protected_page_password){ ?>
+<section class="overlay_main_sec campaign-popup mfp-hide" id="campagin-access-popup">
+  <div class="overlay_center flex flex-center">
+    <div class="overlay-main"> <span class="pop_connect_close close_request_popup"><i class="fa-sharp fa-light fa-xmark"></i></span>
+      <div class="overlay-wrap">
+          <div class="request-pop">
+          <h5>Request<br>
+            Campaign Access</h5>
+          <p>Opacity thumbnail rotate strikethrough font inspect connection ellipse bol.</p>
+          <div class="frm_forms">
+            <form method="get" id="signupForm" action="<?php echo get_permalink(253); ?>">
+              <div class="frm_form_fields ">
+                <fieldset>
+                  <div class="frm_fields_container">
+                    <div class="frm_form_field form-field frm_full">
+                      <label for="" id="" class="frm_primary_label">Your Email Address</label>
+                      <input type="text" id="campaign_email" name="campaign_email" value="" placeholder="Enter your email address" aria-required="true">
+                      <input type="hidden" id="campaign_page" name="campaign_page" value="<?php echo $post->ID; ?>">
+                    </div>
+                    <div class="frm-wrapper">
+                      <div class="frm_submit">
+                        <button class="button btn-dark" type="submit">Request Access</button>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </form>
+          </div>
+          <span class="poplink"><a href="#loginpopup" class="open-campaign-request-login readmore back">Back to login</a></span> </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of overlay center --> 
+</section>
+<?php } ?>
 
-<?php if($posted_psw != $password_protected_page_password){ ?>
+<?php if($posted_psw!=$password_protected_page_password){ ?>
+<section class="overlay_main_sec campaign-popup mfp-hide" id="password-popup">
+  <div class="overlay_center flex flex-center">
+    <div class="overlay-main"> <span class="pop_connect_close close_request_popup"><i class="fa-sharp fa-light fa-xmark"></i></span>
+      <div class="overlay-wrap">
+          <div class="request-pop">
+          <h5>Request password</h5>
+          <p>Opacity thumbnail rotate strikethrough font inspect connection ellipse bol.</p>
+          <div class="frm_forms">
+            <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 7 ) ); ?>
+          </div>
+          <span class="poplink"><a href="#loginpopup" class="open-campaign-request-login readmore back">Back to login</a></span> </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of overlay center --> 
+</section>
+<?php } ?>
+
+<?php if($posted_psw == $password_protected_page_password){ ?>
 <section class="default-banner-section pos-relative">
   <?php if ($common_mobile_image || $common_desktop_image) {
     $common_mobile_image = $common_mobile_image ?: $common_desktop_image;
@@ -434,27 +530,38 @@ $stats_list_classes = array('teal', 'purple', 'mauve', 'lilac');
         </div>
       <?php } ?>
       <?php if ($campaign_statistics_repeater) {  ?>
-        <div class="stats-row stats-type flex">
+        <div class="stats-row stats-type flex" data-counter-main="counter-main">
           <?php $index = 0; ?>
           <?php foreach ($campaign_statistics_repeater as $statistics) { ?>
             <?php
+             $campaign_statistics_number_or_image  = $statistics['campaign_statistics_number_or_image'];
+             $campaign_statistics_image  = $statistics['campaign_statistics_image'];
+             $campaign_statistics_svg  = $statistics['campaign_statistics_svg'];
             $campaign_statistics_number = $statistics['campaign_statistics_number'];
             $campaign_statistics_after_text = $statistics['campaign_statistics_after_text'];
             $campaign_statistics_repeater_description = $statistics['campaign_statistics_description'];
             $campaign_statistics_repeater_link_text = $statistics['campaign_statistics_link_text'];
             $campaign_statistics_repeater_link = $statistics['campaign_statistics_link'];
             ?>
-            <?php if ($campaign_statistics_number) {  ?>
               <?php $current_class = $stats_list_classes[$index % count($stats_list_classes)]; ?>
               <div class="stats-list <?php echo $current_class; ?>">
                 <div class="line pos-absolute">&nbsp;</div>
-                <span class="big"><?php
-                                  if ($campaign_statistics_number) {
-                                    echo $campaign_statistics_number;
-                                  }
-                                  if ($campaign_statistics_after_text) {
-                                    echo $campaign_statistics_after_text;
-                                  } ?></span>
+                <?php  if ($campaign_statistics_number_or_image == 'image' && $campaign_statistics_image) { ?>
+                            <figure class="object-fit">
+                                <img src="<?php echo $campaign_statistics_image['url']; ?>" alt="<?php echo $home_statistics_image['alt']; ?>" />
+                            </figure>
+                        <?php   }  elseif ($campaign_statistics_number_or_image == 'svg' && $campaign_statistics_svg) {
+                            echo $campaign_statistics_svg;
+                                }  elseif ($campaign_statistics_number_or_image == 'number' && $campaign_statistics_number) { ?>
+                        <span class="number">
+                                    <span class="big" data-duration="2500" data-count-to="<?php echo $campaign_statistics_number; ?> "><?php                                                                                       
+                                    
+                                echo $campaign_statistics_number; ?>
+                                </span>
+                                <?php if ($campaign_statistics_after_text) {
+                                 echo $campaign_statistics_after_text;
+                                }
+                            } ?> </span>
                 <div class="stats-cnt">
                   <?php if ($campaign_statistics_repeater_description) {  ?>
                     <?php echo $campaign_statistics_repeater_description; ?>
@@ -465,7 +572,6 @@ $stats_list_classes = array('teal', 'purple', 'mauve', 'lilac');
                 </div>
               </div>
               <?php $index++; ?>
-            <?php } ?>
           <?php } ?>
         </div>
       <?php } ?>
@@ -744,9 +850,9 @@ $index = 0; ?>
         ?>
       <?php } ?>
     </div>
-  </div>
+ 
   <div class="hide-in-desktop hide-in-tab heading-btn btn-full"> <a href="/our-thanks/" class="button outline-btn-white">View all thanks</a> </div>
-  </div>
+  </div> </div>
 </section>
 
 <?php
@@ -867,6 +973,8 @@ $pointed_message_button_link = get_field('campaign_pointed_message_button_link')
     </div>
   </div>
 </section>
+<?php } ?>
+
 <?php } ?>
 
 <?php get_footer();
